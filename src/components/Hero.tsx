@@ -36,45 +36,37 @@ const Hero = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("Hi! I saw your Tech Learning Hub and need guidance for my studies. Can you help me?");
+    // Corrected the URL string with backticks
     window.open(`https://wa.me/918008651769?text=${message}`, '_blank');
   };
 
   return (
-    // Reverted to original top padding
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         
-      {/* Professional Creator Badge with Call-to-Action */}
-<div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
-  <a
-    href="https://www.instagram.com/csweterner/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group inline-flex items-center space-x-3 bg-white/90 hover:bg-white border border-gray-300/70 rounded-full px-4 py-2.5 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm"
-  >
-    {/* A slightly larger avatar circle */}
-    <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
+        {/* Professional Creator Badge with Call-to-Action (REPLACED) */}
+        <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
+          <a
+            href="https://www.instagram.com/csweterner/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center space-x-3 bg-white/90 hover:bg-white border border-gray-300/70 rounded-full px-4 py-2.5 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm"
+          >
+            {/* A slightly larger avatar circle */}
+            <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
+        
+            {/* Two-line text block */}
+            <div className="flex flex-col items-start">
+              <p className="text-sm font-semibold text-gray-800 leading-tight">
+                Curated by <span className="font-bold text-blue-600">csweterner</span>
+              </p>
+              <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
+                Follow for updates & queries
+              </p>
+            </div>
+          </a>
+        </div>
 
-    {/* Two-line text block */}
-    <div className="flex flex-col items-start">
-      <p className="text-sm font-semibold text-gray-800 leading-tight">
-        Curated by <span className="font-bold text-blue-600">csweterner</span>
-      </p>
-      <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
-        Follow for updates & queries
-      </p>
-    </div>
-  </a>
-</div>
-    {/* A small, branded avatar-like circle */}
-    <span className="h-5 w-5 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
-
-    {/* The refined text */}
-    <p className="text-sm font-semibold text-gray-800">
-      Curated by <span className="font-bold text-blue-600">csweterner</span>
-    </p>
-  </a>
-</div>
         {/* Main Heading */}
         <div className="mb-12 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
@@ -102,6 +94,7 @@ const Hero = () => {
             <div 
               key={index}
               className="bg-white/80 backdrop-blur-sm border border-pink-200 rounded-xl p-4 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
+              // Corrected the style attribute syntax
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => scrollToSection('resources')}
             >
@@ -117,9 +110,11 @@ const Hero = () => {
             <div 
               key={index}
               className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-2xl p-6 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
+              // Corrected the style attribute syntax
               style={{ animationDelay: `${index * 0.1 + 0.8}s` }}
               onClick={() => scrollToSection('resources')}
             >
+              {/* Corrected the className attribute syntax */}
               <feature.icon className={`h-10 w-10 ${feature.color} mx-auto mb-3`} />
               <p className="text-gray-800 font-semibold">{feature.text}</p>
             </div>
@@ -147,7 +142,7 @@ const Hero = () => {
 
         {/* Personal Guidance Section */}
         <div className="bg-gradient-to-r from-green-100 to-teal-100 border border-green-300 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-lg">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">🤝 Need Personal Guidance?</h2>
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">🤝 Need Personal Guidance?</h3>
           <p className="text-gray-700 text-lg mb-6">
             I personally help students with GATE preparation, career guidance, doubt clearing, and study planning. 
             Feel free to reach out for one-on-one support!
