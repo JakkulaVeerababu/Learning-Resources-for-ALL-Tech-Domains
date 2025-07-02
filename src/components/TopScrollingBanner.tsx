@@ -7,7 +7,7 @@ const TopScrollingBanner = () => {
 
   // "currentViews" has been removed from the state
   const [viewData, setViewData] = useState({
-    onlineUsers: 10000,
+    onlineUsers: 8500,
     totalVisitors: INITIAL_VISITORS_BASE
   });
 
