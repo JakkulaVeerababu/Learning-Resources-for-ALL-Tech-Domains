@@ -46,7 +46,7 @@ const TopScrollingBanner = () => {
 
   // 3. Define the static items
   const bannerItems = [
-    "🎓 Veerababu Jakkula", "🏫 NEC Student ECE", "📱 @csweterner", "🧠 Neural Compiler", "💻 FussionOS",
+    "🎓 Veerababu Jakkula", "🏫 NEC Student ECE", "📱 @csweterner", "💻 Fussionos",
     "🚀 Tech Learning Hub", "🌟 Free Resources Forever", "💡 Innovation Hub", "🔬 Research Center"
   ];
 
