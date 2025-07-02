@@ -40,8 +40,10 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-32 pb-20 px-6">
+    // Increased top padding from pt-32 to pt-44
+    <section className="pt-44 pb-20 px-6">
       <div className="container mx-auto text-center">
+        
         {/* Personal Introduction */}
         <div className="mb-10 animate-fade-in-up">
           <p className="text-center text-lg text-gray-700">
@@ -56,6 +58,7 @@ const Hero = () => {
             </a>
           </p>
         </div>
+
         {/* Main Heading */}
         <div className="mb-12 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
