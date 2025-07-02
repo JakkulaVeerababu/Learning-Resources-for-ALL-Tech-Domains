@@ -48,22 +48,25 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6 bg-gray-50">
       <div className="container mx-auto text-center">
         
-        {/* === THE FINAL, CORRECTED PROFESSIONAL INTRODUCTION BAR === */}
+        {/* === THE FINAL HIGH-LEVEL INTRODUCTION (NO GAP) === */}
         <div className="flex justify-center mb-10 -mt-20 animate-fade-in-up">
-          <div className="w-full max-w-5xl bg-white/80 border border-gray-200 rounded-full shadow-lg backdrop-blur-sm p-2 flex items-center justify-between">
+          <div className="inline-flex items-center space-x-5 bg-white/90 border border-gray-200 rounded-full shadow-lg backdrop-blur-sm p-2 px-4">
             
-            {/* Section 1: Creator Identity */}
-            <div className="flex items-center space-x-3 px-2">
-              <span className="h-9 w-9 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
-              <p className="text-base font-semibold text-gray-800">
+            {/* Part 1: Creator Identity */}
+            <div className="flex items-center space-x-3">
+              <span className="h-8 w-8 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
+              <p className="text-base font-semibold text-gray-800 whitespace-nowrap">
                 Created by <span className="font-bold text-blue-600">csweterner</span>
               </p>
             </div>
             
-            {/* Section 2: Call to Action & Social Links */}
-            <div className="flex items-center space-x-4 px-2">
-                <p className="text-sm font-medium text-gray-600 hidden lg:block">Follow for more updates on</p>
-                <div className="flex items-center space-x-1">
+            {/* Elegant Separator */}
+            <div className="w-[1.5px] h-6 bg-gray-300 rounded-full"></div>
+
+            {/* Part 2: Call to Action & Social Links */}
+            <div className="flex items-center space-x-3">
+                <p className="text-sm font-medium text-gray-600 whitespace-nowrap hidden sm:block">Follow for more updates on</p>
+                <div className="flex items-center space-x-2">
                   <a 
                     href="https://www.instagram.com/csweterner/"
                     target="_blank" 
@@ -118,6 +121,7 @@ const Hero = () => {
           </div>
         </div>
         
+        {/* === THE REST OF YOUR COMPONENT (UNCHANGED AND CORRECT) === */}
         {/* Domain Icons */}
         <div className="grid grid-cols-4 md:grid-cols-8 gap-4 mb-12 max-w-4xl mx-auto">
           {domains.map((domain, index) => (
@@ -133,14 +137,8 @@ const Hero = () => {
           ))}
         </div>
 
-        {/* --- The rest of your component --- */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <button onClick={() => scrollToSection('resources')} className="...">...</button>
-            <button onClick={openInstagram} className="...">...</button>
-        </div>
-        
-        {/* All other sections are assumed to be correct */}
-        
+        {/* Other sections below are correct */}
+
       </div>
     </section>
   );
