@@ -5,9 +5,9 @@ const TopScrollingBanner = () => {
   const INITIAL_VISITORS_BASE = 1051234; // Over 10 Lakh
   const VISITORS_PER_SECOND = 1.7;     // Simulates ~1-2 new visitors every second
 
-  // We only need one state for all view data
+  // "currentViews" has been removed from the state
   const [viewData, setViewData] = useState({
-    currentViews: 50000,,
+    onlineUsers: 10000,
     totalVisitors: INITIAL_VISITORS_BASE
   });
 
@@ -20,8 +20,8 @@ const TopScrollingBanner = () => {
       if (!storedData || !storedData.firstVisitTimestamp) {
         storedData = {
           firstVisitTimestamp: Date.now(), // Save the time of the very first visit
-          currentViews: 52345,
           onlineUsers: 11482
+          // "currentViews" logic removed from here
         };
       }
 
@@ -50,13 +50,11 @@ const TopScrollingBanner = () => {
     const interval = setInterval(() => {
       setViewData(prev => {
         const newOnline = Math.max(9500, prev.onlineUsers + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 25));
-        const newViews = Math.max(48000, prev.currentViews + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 50));
 
-        // Always increment the total visitors
+        // "currentViews" has been removed from the return object
         return {
           totalVisitors: prev.totalVisitors + Math.floor(Math.random() * 3) + 1,
           onlineUsers: newOnline,
-          currentViews: newViews,
         }
       });
     }, 2500);
@@ -68,8 +66,8 @@ const TopScrollingBanner = () => {
      'veerababu jakkula'
   ];
 
+  // REMOVED: The "Live Views" item has been deleted from this array.
   const dynamicStats = [
-    `👁️ Live Views: ${viewData.currentViews.toLocaleString()}`,
     `👥 Online Now: ${viewData.onlineUsers.toLocaleString()}`,
     `📈 Total Visitors: ${viewData.totalVisitors.toLocaleString()}`
   ];
@@ -79,7 +77,6 @@ const TopScrollingBanner = () => {
   return (
     <div className="fixed top-36 left-0 w-full z-50 shadow-lg overflow-hidden relative">
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-1 overflow-hidden">
-        {/* Replace with your animation class, e.g., 'animate-fast-scroll' or 'animate-scroll-left' */}
         <div className="flex animate-scroll-left whitespace-nowrap">
           {[...allItems, ...allItems, ...allItems, ...allItems].map((text, index) => (
             <span 
