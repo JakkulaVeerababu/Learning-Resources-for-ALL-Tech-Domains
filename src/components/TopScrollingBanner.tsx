@@ -41,9 +41,7 @@ const TopScrollingBanner = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const bannerItems = [
-    "🎓 Veerababu Jakkula","💡 Innovation Hub", "🔬 Research Center"
-  ];
+
 
   const dynamicStats = [
     `👁️ Live Views: ${viewData.currentViews.toLocaleString()}`,
