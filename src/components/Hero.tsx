@@ -43,26 +43,19 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         {/* Personal Introduction */}
-        <div className="mb-8 animate-fade-in-up">
-          <div className="bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 rounded-2xl px-8 py-6 inline-block shadow-lg mb-6">
-            <p className="text-xl text-gray-800 font-medium">
-              A Project by <span className="font-bold text-blue-600">CSWETERNER</span>
-            </p>
-            <p className="text-base text-gray-600 mt-1">Electronics Student & Tech Enthusiast</p>
-            <p className="text-gray-700 mt-4">
-              Please follow for updates on  
-              <a 
-                href="https://www.instagram.com/csweterner/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="font-semibold text-blue-600 hover:text-blue-800 transition-colors ml-1"
-              >
-                Instagram (@csweterner)
-              </a>
-            </p>
-          </div>
+        <div className="mb-10 animate-fade-in-up">
+          <p className="text-center text-lg text-gray-700">
+            A project by <span className="font-bold text-blue-600">CSWETERNER</span> — Follow for updates on 
+            <a 
+              href="https://www.instagram.com/csweterner/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="ml-2 font-semibold text-pink-600 hover:text-pink-800 transition-colors underline"
+            >
+              Instagram
+            </a>
+          </p>
         </div>
-
         {/* Main Heading */}
         <div className="mb-12 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
