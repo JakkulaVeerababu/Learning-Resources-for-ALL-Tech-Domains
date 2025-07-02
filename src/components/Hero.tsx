@@ -58,7 +58,7 @@ const Hero = () => {
             {/* Two-line text block */}
             <div className="flex flex-col items-start">
               <p className="text-sm font-semibold text-gray-800 leading-tight">
-                Curated by <span className="font-bold text-blue-600">csweterner</span>
+                Created by <span className="font-bold text-blue-600">csweterner</span>
               </p>
               <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
                 Follow for updates & queries
