@@ -48,12 +48,12 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         
-        {/* === NEW AND IMPROVED PROFESSIONAL BADGE === */}
+        {/* === NEW Professional Badge with "Follow for Updates" Text === */}
         <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
-          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full p-2 backdrop-blur-sm shadow-xl">
+          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full p-2 pl-4 pr-4 backdrop-blur-sm shadow-xl">
             
-            {/* Creator Info (Unclickable) */}
-            <div className="flex items-center space-x-3 pl-2">
+            {/* Part 1: Creator Info */}
+            <div className="flex items-center space-x-3">
               <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
               <p className="text-sm font-semibold text-gray-800">
                 Created by <span className="font-bold text-blue-600">csweterner</span>
@@ -63,30 +63,32 @@ const Hero = () => {
             {/* Vertical Separator */}
             <div className="w-[1px] h-6 bg-gray-300"></div>
 
-            {/* Social Link "Buttons" with Text and Icons */}
-            <div className="flex items-center space-x-2">
-              <a 
-                href="https://www.instagram.com/csweterner/"
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="Follow on Instagram for updates"
-                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
-              >
-                <Instagram className="h-4 w-4 text-pink-600" />
-                <span className="text-xs font-semibold">Instagram</span>
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/" // Cleaned URL
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="Connect on LinkedIn"
-                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
-              >
-                <Linkedin className="h-4 w-4 text-blue-700" />
-                <span className="text-xs font-semibold">LinkedIn</span>
-              </a>
+            {/* Part 2: Social Action Section */}
+            <div className="flex flex-col items-start">
+                <p className="text-xs text-gray-500 mb-1">Follow for more updates:</p>
+                <div className="flex items-center space-x-1">
+                  <a 
+                    href="https://www.instagram.com/csweterner/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Follow on Instagram"
+                    className="flex items-center space-x-1.5 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors"
+                  >
+                    <Instagram className="h-4 w-4 text-pink-600" />
+                    <span className="text-xs font-semibold">Instagram</span>
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Connect on LinkedIn"
+                    className="flex items-center space-x-1.5 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors"
+                  >
+                    <Linkedin className="h-4 w-4 text-blue-700" />
+                    <span className="text-xs font-semibold">LinkedIn</span>
+                  </a>
+                </div>
             </div>
-
           </div>
         </div>
 
