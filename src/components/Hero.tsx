@@ -55,12 +55,65 @@ const Hero = () => {
             {/* A slightly larger avatar circle */}
             <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
         
-            {/* Two-line text block */}
-            <div className="flex flex-col items-start">
-              <p className="text-sm font-semibold text-gray-800 leading-tight">
+         import React from 'react';
+// Make sure to add the 'Linkedin' icon to your import list!
+import { Instagram, Linkedin, Trophy, Target, Clock, /* ...all your other icons */ } from 'lucide-react';
+
+const Hero = () => {
+  // ... (all your existing code like features, domains, functions)
+
+  return (
+    <section className="pt-32 pb-20 px-6">
+      <div className="container mx-auto text-center">
+        
+        {/* NEW: Professional Creator Badge with BOTH Instagram and LinkedIn */}
+        <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
+          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full px-4 py-2.5 backdrop-blur-sm shadow-lg">
+            
+            {/* Creator Info (Not clickable) */}
+            <div className="flex items-center space-x-3">
+              <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
+              <p className="text-sm font-semibold text-gray-800">
                 Created by <span className="font-bold text-blue-600">csweterner</span>
               </p>
-              <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
+            </div>
+        
+            {/* Vertical Separator Line */}
+            <div className="w-[1px] h-6 bg-gray-300"></div>
+
+            {/* Social Media Icons (Clickable) */}
+            <div className="flex items-center space-x-3">
+              <a 
+                href="https://www.instagram.com/csweterner/"
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="Follow on Instagram"
+                className="text-gray-600 hover:text-pink-600 transition-colors duration-300"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/" // Cleaned URL
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="Connect on LinkedIn"
+                className="text-gray-600 hover:text-blue-700 transition-colors duration-300"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        {/* ... (The rest of your Hero component JSX remains the same) */}
+        
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
                 Follow on insta for more updates
               </p>
             </div>
