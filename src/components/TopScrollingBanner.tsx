@@ -63,7 +63,7 @@ const TopScrollingBanner = () => {
   }, []);
 
   const bannerItems = [
-     'veerababu jakkula'
+     'VEERABABU JAKKULA'
   ];
 
   // REMOVED: The "Live Views" item has been deleted from this array.
