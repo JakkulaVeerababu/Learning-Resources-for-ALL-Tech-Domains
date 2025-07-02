@@ -40,12 +40,12 @@ const Hero = () => {
   };
 
   return (
-    // Increased top padding from pt-32 to pt-44
-    <section className="pt-44 pb-20 px-6">
+    // Reverted to original top padding
+    <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         
-        {/* Personal Introduction */}
-        <div className="mb-10 animate-fade-in-up">
+        {/* Personal Introduction: Moved up with negative margin */}
+        <div className="mb-10 -mt-16 animate-fade-in-up">
           <p className="text-center text-lg text-gray-700">
             A project by <span className="font-bold text-blue-600">CSWETERNER</span> — Follow for updates on 
             <a 
