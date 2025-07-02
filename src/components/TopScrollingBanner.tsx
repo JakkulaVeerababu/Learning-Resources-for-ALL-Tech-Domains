@@ -29,7 +29,7 @@ const TopScrollingBanner = () => {
     const interval = setInterval(() => {
       setViewData(prev => {
         const updated = {
-          currentViews: prev.currentViews + Math.floor(Math.random() * 3999),
+          currentViews: prev.currentViews + Math.floor(Math.random() * 3),
           onlineUsers: Math.max(1, prev.onlineUsers + (Math.random() > 0.5 ? 1 : -1)),
           totalVisitors: prev.totalVisitors + Math.floor(Math.random() * 2)
         };
