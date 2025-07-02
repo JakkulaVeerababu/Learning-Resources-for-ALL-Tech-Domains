@@ -11,9 +11,9 @@ const TopScrollingBanner = () => {
     const initializeViewData = () => {
       const stored = localStorage.getItem('techHubViewData');
       const baseData = stored ? JSON.parse(stored) : {
-        currentViews: Math.floor(Math.random() * 00) + 100,
-        onlineUsers: Math.floor(Math.random() * 0) + 10,
-        totalVisitors: Math.floor(Math.random() * 0000) + 5000
+        currentViews: Math.floor(Math.random() * 500) + 100,
+        onlineUsers: Math.floor(Math.random() * 50) + 10,
+        totalVisitors: Math.floor(Math.random() * 10000) + 5000
       };
 
       // Increment for the current session (as per your original code)
