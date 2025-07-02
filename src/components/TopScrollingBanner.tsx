@@ -42,7 +42,7 @@ const TopScrollingBanner = () => {
   }, []);
 
     const bannerItems = [
-    "🎓 Veerababu Jakkula","💡 Innovation Hub", "🔬 Research Center"
+ 
   ];
 
   const dynamicStats = [
