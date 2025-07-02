@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 const TopScrollingBanner = () => {
+  // 1. Restore the full state to hold all view data
   const [viewData, setViewData] = useState({
     currentViews: 0,
     onlineUsers: 0,
     totalVisitors: 0
   });
 
+  // 2. Restore the full useEffect logic to manage all three stats
   useEffect(() => {
-    // This function initializes the data and keeps it updated
     const initializeViewData = () => {
       const stored = localStorage.getItem('techHubViewData');
       const baseData = stored ? JSON.parse(stored) : {
@@ -16,7 +17,9 @@ const TopScrollingBanner = () => {
         onlineUsers: Math.floor(Math.random() * 50) + 10,
         totalVisitors: Math.floor(Math.random() * 10000) + 5000
       };
-      
+
+      // Increment for the current session
+      baseData.currentViews += 1;
       baseData.totalVisitors += 1;
       
       setViewData(baseData);
@@ -25,83 +28,55 @@ const TopScrollingBanner = () => {
 
     initializeViewData();
 
-    // This interval simulates real-time updates
+    // Simulate real-time updates for all stats
     const interval = setInterval(() => {
       setViewData(prev => {
         const updated = {
           currentViews: prev.currentViews + Math.floor(Math.random() * 3),
-          onlineUsers: Math.max(1, prev.onlineUsers + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 3)),
+          onlineUsers: Math.max(1, prev.onlineUsers + (Math.random() > 0.5 ? 1 : -1)),
           totalVisitors: prev.totalVisitors + Math.floor(Math.random() * 2)
         };
         localStorage.setItem('techHubViewData', JSON.stringify(updated));
         return updated;
       });
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Items for the SLOWER, top banner
-  const slowBannerItems = [
-    "🎓 Veerababu Jakkula", "🏫 NEC Student ECE", "📱 Instagram: @csweterner", "💻 Fussionos",
-    "🚀 Tech Learning Hub", "🌟 Free Resources Forever"
+  // 3. Define the static items
+  const bannerItems = [
+    "🎓 Veerababu Jakkula", 
   ];
 
-  // Items for the FASTER, bottom banner with dynamic data
-  const fastBannerItems = [
-    `👁️ Live Views: ${viewData.currentViews.toLocaleString()}`,
-    `👥 Online Now: ${viewData.onlineUsers}`,
-    `📈 Total Visitors: ${viewData.totalVisitors.toLocaleString()}`,
-    "💡 Innovation Hub", "🔬 Research Center"
+  // 4. Create an array of the dynamic stat strings
+  const dynamicStats = [
+    👁 Live Views: ${viewData.currentViews.toLocaleString()},
+    👥 Online Now: ${viewData.onlineUsers},
+    📈 Total Visitors: ${viewData.totalVisitors.toLocaleString()}
   ];
-  
-  // A helper function to create a seamless loop of items
-  const duplicateItemsForLoop = (items) => [...items, ...items, ...items, ...items];
+
+  // 5. Combine the static and dynamic items into one final array
+  const allItems = [...bannerItems, ...dynamicStats];
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 shadow-lg overflow-hidden group">
-      {/* Container for both banners */}
-      <div className="relative">
-        
-        {/* Banner 1: Slower Speed */}
-        <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-2.5 overflow-hidden">
-          <div className="flex animate-scroll-slow group-hover:pause">
-            {duplicateItemsForLoop(slowBannerItems).map((text, index) => (
-              <span 
-                key={index}
-                className="inline-flex items-center mx-4 text-white font-semibold text-sm tracking-wide whitespace-nowrap"
-              >
-                {text}
-              </span>
-            ))}
-          </div>
+    <div className="fixed top-36 left-0 w-full z-50 shadow-lg overflow-hidden relative">
+      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-1 overflow-hidden">
+        {/* 6. Map over the final combined 'allItems' array */}
+        <div className="flex animate-scroll-left whitespace-nowrap">
+          {[...allItems, ...allItems, ...allItems].map((text, index) => (
+            <span 
+              key={index}
+              className="inline-flex items-center px-4 text-white font-semibold text-xs tracking-wide"
+            >
+              {text}
+            </span>
+          ))}
         </div>
-
-        {/* ============================================== */}
-        {/*           THE NEW VISIBLE SEPARATOR LINE       */}
-        {/* ============================================== */}
-        <div className="h-[1px] w-full bg-white/50"></div>
-
-
-        {/* Banner 2: Faster Speed */}
-        {/* NOTE: Removed the old invisible border from here */}
-        <div className="bg-gradient-to-r from-pink-500 via-rose-500 to-orange-500 py-1.5 overflow-hidden">
-           <div className="flex animate-scroll-fast group-hover:pause">
-            {duplicateItemsForLoop(fastBannerItems).map((text, index) => (
-              <span 
-                key={index}
-                className="inline-flex items-center mx-4 text-white font-semibold text-xs tracking-wide whitespace-nowrap"
-              >
-                {text}
-              </span>
-            ))}
-          </div>
-        </div>
-        
-        {/* Fades for a clean look */}
-        <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-gray-900 to-transparent pointer-events-none z-10 opacity-40"></div>
-        <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-gray-900 to-transparent pointer-events-none z-10 opacity-40"></div>
       </div>
+      
+      <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-blue-600 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-pink-600 to-transparent pointer-events-none z-10"></div>
     </div>
   );
 };
