@@ -45,11 +45,20 @@ const Hero = () => {
         {/* Personal Introduction */}
         <div className="mb-8 animate-fade-in-up">
           <div className="bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 rounded-2xl px-8 py-6 inline-block shadow-lg mb-6">
-            <p className="text-lg text-gray-800 font-medium">
-              👋 Hi! I'm <span className="font-bold text-blue-600"> (csweterner)</span> - ELECTRONICS STUDENT
+            <p className="text-xl text-gray-800 font-medium">
+              A Project by <span className="font-bold text-blue-600">CSWETERNER</span>
             </p>
-            <p className="text-gray-700 mt-2">
-              
+            <p className="text-base text-gray-600 mt-1">Electronics Student & Tech Enthusiast</p>
+            <p className="text-gray-700 mt-4">
+              Please follow for updates on  
+              <a 
+                href="https://www.instagram.com/csweterner/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-semibold text-blue-600 hover:text-blue-800 transition-colors ml-1"
+              >
+                Instagram (@csweterner)
+              </a>
             </p>
           </div>
         </div>
