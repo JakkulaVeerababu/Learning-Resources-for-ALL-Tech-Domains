@@ -79,4 +79,3 @@ const TopScrollingBanner = () => {
 };
 
 export default TopScrollingBanner;
-
