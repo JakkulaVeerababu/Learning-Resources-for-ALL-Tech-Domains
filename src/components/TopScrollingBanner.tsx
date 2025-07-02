@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 const TopScrollingBanner = () => {
   const [viewData, setViewData] = useState({
     currentViews: 10000,
-    onlineUsers: 0,
-    totalVisitors: 0
+    onlineUsers: 1000,
+    totalVisitors: 100000
   });
 
   useEffect(() => {
