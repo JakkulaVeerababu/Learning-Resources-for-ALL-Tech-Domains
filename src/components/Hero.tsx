@@ -44,21 +44,23 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         
-        {/* Personal Introduction: Moved up with negative margin */}
-        <div className="mb-10 -mt-16 animate-fade-in-up">
-          <p className="text-center text-lg text-gray-700">
-            A project by <span className="font-bold text-blue-600">CSWETERNER</span> — Follow for updates on 
-            <a 
-              href="https://www.instagram.com/csweterner/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="ml-2 font-semibold text-pink-600 hover:text-pink-800 transition-colors underline"
-            >
-              Instagram
-            </a>
-          </p>
-        </div>
+        {/* Professional Creator Badge */}
+<div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
+  <a
+    href="https://www.instagram.com/csweterner/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group inline-flex items-center space-x-3 bg-white/90 hover:bg-white border border-gray-300/70 rounded-full px-4 py-2 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm"
+  >
+    {/* A small, branded avatar-like circle */}
+    <span className="h-5 w-5 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
 
+    {/* The refined text */}
+    <p className="text-sm font-semibold text-gray-800">
+      Curated by <span className="font-bold text-blue-600">csweterner</span>
+    </p>
+  </a>
+</div>
         {/* Main Heading */}
         <div className="mb-12 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
