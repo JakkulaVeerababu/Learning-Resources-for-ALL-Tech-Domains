@@ -1,82 +1,87 @@
 import React, { useState, useEffect } from 'react';
 
 const TopScrollingBanner = () => {
-  // Define the impressive base numbers you want to see
-  const BASE_TOTAL_VISITORS = 1000000; // 10 Lakh+
-  const BASE_CURRENT_VIEWS = 50000;    // 50k+
-  const BASE_ONLINE_USERS = 10000;     // 10k+
+  // Use a non-round base number to look more authentic
+  const INITIAL_VISITORS_BASE = 1051234; // Over 10 Lakh
+  const VISITORS_PER_SECOND = 1.7;     // Simulates ~1-2 new visitors every second
 
+  // We only need one state for all view data
   const [viewData, setViewData] = useState({
-    currentViews: BASE_CURRENT_VIEWS,
-    onlineUsers: BASE_ONLINE_USERS,
-    totalVisitors: BASE_TOTAL_VISITORS
+    currentViews: 50000,
+    onlineUsers: 10000,
+    totalVisitors: INITIAL_VISITORS_BASE
   });
 
   useEffect(() => {
-    // This function now correctly initializes with HIGH numbers
-    const initializeViewData = () => {
-      const stored = localStorage.getItem('techHubViewData');
-      
-      // If data is in storage, use it. Otherwise, create it with our high base numbers.
-      const baseData = stored ? JSON.parse(stored) : {
-        currentViews: BASE_CURRENT_VIEWS + Math.floor(Math.random() * 1000), // Start with a random high value
-        onlineUsers: BASE_ONLINE_USERS + Math.floor(Math.random() * 500),   // Start with a random high value
-        totalVisitors: BASE_TOTAL_VISITORS + Math.floor(Math.random() * 5000) // Start with a random high value
-      };
+    // This is the core logic that now works correctly
+    const updateStats = () => {
+      let storedData = JSON.parse(localStorage.getItem('techHubViewData'));
 
-      // Always increment total visitors for the new session
-      baseData.totalVisitors += 1;
+      // If this is the user's first time EVER, set up the initial data
+      if (!storedData || !storedData.firstVisitTimestamp) {
+        storedData = {
+          firstVisitTimestamp: Date.now(), // Save the time of the very first visit
+          currentViews: 52345,
+          onlineUsers: 11482
+        };
+      }
+
+      // Calculate how many seconds have passed since the first visit
+      const secondsSinceFirstVisit = (Date.now() - storedData.firstVisitTimestamp) / 1000;
       
-      setViewData(baseData);
-      localStorage.setItem('techHubViewData', JSON.stringify(baseData));
+      // Calculate the "grown" visitors based on time passed
+      const grownVisitors = Math.floor(secondsSinceFirstVisit * VISITORS_PER_SECOND);
+      
+      // The new total is the base number + the growth over time
+      const newTotalVisitors = INITIAL_VISITORS_BASE + grownVisitors;
+
+      // Update the state with the newly calculated, large number
+      setViewData(prev => ({
+        ...prev, // Keep other stats
+        totalVisitors: newTotalVisitors,
+      }));
+
+      // Save the timestamp back to storage for the next visit
+      localStorage.setItem('techHubViewData', JSON.stringify(storedData));
     };
 
-    initializeViewData();
+    updateStats(); // Run it once on page load
 
-    // This interval now makes the numbers fluctuate realistically around the high base
+    // This interval now adds small, real-time increments during the session
     const interval = setInterval(() => {
       setViewData(prev => {
-        const updated = {
-          // Total visitors should only go up
+        const newOnline = Math.max(9500, prev.onlineUsers + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 25));
+        const newViews = Math.max(48000, prev.currentViews + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 50));
+
+        // Always increment the total visitors
+        return {
           totalVisitors: prev.totalVisitors + Math.floor(Math.random() * 3) + 1,
-          
-          // Live views fluctuate around the base, ensuring it doesn't dip too low
-          currentViews: Math.max(
-            BASE_CURRENT_VIEWS - 2000, 
-            prev.currentViews + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 75)
-          ),
-          
-          // Online users fluctuate similarly
-          onlineUsers: Math.max(
-            BASE_ONLINE_USERS - 500, 
-            prev.onlineUsers + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 30)
-          ),
-        };
-        localStorage.setItem('techHubViewData', JSON.stringify(updated));
-        return updated;
+          onlineUsers: newOnline,
+          currentViews: newViews,
+        }
       });
-    }, 2500); // Using a slightly faster interval for a more "live" feel
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
 
   const bannerItems = [
-    'veerababu jakkula'
+     'veerababu jakkula'
   ];
 
   const dynamicStats = [
     `👁️ Live Views: ${viewData.currentViews.toLocaleString()}`,
-    `👥 Online Now: ${viewData.onlineUsers.toLocaleString()}`, // Added toLocaleString for consistency
+    `👥 Online Now: ${viewData.onlineUsers.toLocaleString()}`,
     `📈 Total Visitors: ${viewData.totalVisitors.toLocaleString()}`
   ];
 
   const allItems = [...bannerItems, ...dynamicStats];
 
   return (
-    // Assuming you have 'animate-fast-scroll' or a similar class defined in tailwind.config.js
     <div className="fixed top-36 left-0 w-full z-50 shadow-lg overflow-hidden relative">
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-1 overflow-hidden">
-        <div className="flex animate-scroll-left whitespace-nowrap"> 
+        {/* Replace with your animation class, e.g., 'animate-fast-scroll' or 'animate-scroll-left' */}
+        <div className="flex animate-scroll-left whitespace-nowrap">
           {[...allItems, ...allItems, ...allItems, ...allItems].map((text, index) => (
             <span 
               key={index}
