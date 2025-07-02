@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const TopScrollingBanner = () => {
   const [viewData, setViewData] = useState({
-    currentViews: 0,
+    currentViews: 10000,
     onlineUsers: 0,
     totalVisitors: 0
   });
@@ -11,9 +11,9 @@ const TopScrollingBanner = () => {
     const initializeViewData = () => {
       const stored = localStorage.getItem('techHubViewData');
       const baseData = stored ? JSON.parse(stored) : {
-        currentViews: Math.floor(Math.random() * 50) + 10,
-        onlineUsers: Math.floor(Math.random() * 5) + 1,
-        totalVisitors: Math.floor(Math.random() * 1000) + 500
+        currentViews: Math.floor(Math.random() * 500) + 100,
+        onlineUsers: Math.floor(Math.random() * 50) + 10,
+        totalVisitors: Math.floor(Math.random() * 10000) + 5000
       };
 
       // Increment for the current session (as per your original code)
