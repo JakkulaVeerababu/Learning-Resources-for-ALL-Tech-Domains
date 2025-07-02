@@ -61,7 +61,7 @@ const Hero = () => {
                 Created by <span className="font-bold text-blue-600">csweterner</span>
               </p>
               <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
-                Follow for more updates
+                Follow on insta for more updates
               </p>
             </div>
           </a>
