@@ -3,7 +3,7 @@ import React from 'react';
 import { 
     Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
     Database, Globe, Brain, Calculator, Wrench, Building, Instagram, 
-    MessageCircle, Linkedin, Github // Github icon is included
+    MessageCircle, Linkedin, Github // Added Github icon
 } from 'lucide-react';
 
 const Hero = () => {
@@ -67,17 +67,36 @@ const Hero = () => {
             <div className="flex items-center space-x-3">
                 <p className="text-sm font-medium text-gray-600 whitespace-nowrap hidden sm:block">Follow for more updates on</p>
                 <div className="flex items-center space-x-2">
-                  <a href="https://www.instagram.com/csweterner/" target="_blank" rel="noopener noreferrer" title="Follow on Instagram" className="p-2 rounded-full text-gray-500 hover:text-black hover:bg-gray-200/70 transition-all">
+                  <a 
+                    href="https://www.instagram.com/csweterner/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Follow on Instagram"
+                    className="p-2 rounded-full text-gray-500 hover:text-black hover:bg-gray-200/70 transition-all"
+                  >
                     <Instagram className="h-5 w-5" />
                   </a>
-                  <a href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" className="p-2 rounded-full text-gray-500 hover:text-black hover:bg-gray-200/70 transition-all">
+                  <a 
+                    href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Connect on LinkedIn"
+                    className="p-2 rounded-full text-gray-500 hover:text-black hover:bg-gray-200/70 transition-all"
+                  >
                     <Linkedin className="h-5 w-5" />
                   </a>
-                  <a href="https://github.com/JakkulaVeerababu" target="_blank" rel="noopener noreferrer" title="View on GitHub" className="p-2 rounded-full text-gray-500 hover:text-black hover:bg-gray-200/70 transition-all">
+                  <a 
+                    href="https://github.com/JakkulaVeerababu"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="View on GitHub"
+                    className="p-2 rounded-full text-gray-500 hover:text-black hover:bg-gray-200/70 transition-all"
+                  >
                     <Github className="h-5 w-5" />
                   </a>
                 </div>
             </div>
+
           </div>
         </div>
 
@@ -90,9 +109,11 @@ const Hero = () => {
             <br />
             <span className="text-gray-800">for ALL Tech Domains! 🚀</span>
           </h1>
+          
           <p className="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto font-medium">
             Your Ultimate Hub for Engineering, Programming & Tech Education 💻✨
           </p>
+          
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <span className="bg-gradient-to-r from-pink-500 to-rose-500 px-6 py-3 rounded-full text-white font-semibold animate-pulse shadow-lg">
               📚 GATE • Full Stack • AI • VLSI • Embedded & More!
@@ -100,8 +121,24 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* THE REST OF YOUR COMPONENT (IS CORRECT AND DOESN'T NEED CHANGES) */}
-        
+        {/* === THE REST OF YOUR COMPONENT (UNCHANGED AND CORRECT) === */}
+        {/* Domain Icons */}
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-4 mb-12 max-w-4xl mx-auto">
+          {domains.map((domain, index) => (
+            <div 
+              key={index}
+              className="bg-white/80 backdrop-blur-sm border border-pink-200 rounded-xl p-4 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => scrollToSection('resources')}
+            >
+              <domain.icon className="h-8 w-8 text-pink-600 mx-auto mb-2" />
+              <p className="text-gray-700 text-xs font-medium">{domain.name}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Other sections below are correct */}
+
       </div>
     </section>
   );
