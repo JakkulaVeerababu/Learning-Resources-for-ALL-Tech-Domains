@@ -20,6 +20,13 @@ const ResourcesSection = () => {
       link: "https://drive.google.com/drive/folders/1DbhnyMZoNOX9Z64uRuKjB3OAWr3ppip7"
     },
     {
+      title: "GATE EEE",
+      description: "Electrical & Electronics Engineering - Complete EEE study materials, circuits, power systems, and more",
+      icon: Zap,
+      color: "from-yellow-500 to-red-500",
+      link: "https://drive.google.com/drive/folders/1YXh0hFQrKBAGSXbP2NQUgu4ElVYDIzW0"
+    },
+    {
       title: "GATE MECH",
       description: "Mechanical Engineering - All mechanical engineering concepts and materials",
       icon: Wrench,
