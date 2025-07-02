@@ -131,7 +131,7 @@ const Hero = () => {
 
         {/* Personal Guidance Section */}
         <div className="bg-gradient-to-r from-green-100 to-teal-100 border border-green-300 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-lg">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">🤝 Need Personal Guidance?</h3>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">🤝 Need Personal Guidance?</h2>
           <p className="text-gray-700 text-lg mb-6">
             I personally help students with GATE preparation, career guidance, doubt clearing, and study planning. 
             Feel free to reach out for one-on-one support!
