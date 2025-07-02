@@ -232,7 +232,7 @@ const ContactSection = () => {
                         className={`w-full px-4 py-3 bg-white border rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 ${
                           errors.email ? 'border-red-500' : 'border-pink-200 focus:border-pink-500'
                         }`}
-                        placeholder="your.email@example.com"
+                        placeholder="jakkulaveerababu429@gmail.com"
                       />
                       {errors.email && (
                         <div className="flex items-center mt-2 text-red-600 text-sm">
