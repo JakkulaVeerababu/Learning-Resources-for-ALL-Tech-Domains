@@ -48,45 +48,44 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         
-        {/* === NEW WIDE & SEPARATED PROFESSIONAL INTRODUCTION === */}
+        {/* === THE NEW HIGH-LEVEL & SLEEK INTRODUCTION === */}
         <div className="flex justify-center mb-10 -mt-20 animate-fade-in-up">
-          <div className="w-full max-w-4xl bg-white/80 border border-gray-200 rounded-full shadow-xl backdrop-blur-sm p-3 flex items-center justify-between">
+          <div className="flex items-center space-x-4">
             
-            {/* Section 1: Creator Identity */}
+            {/* Part 1: Creator Identity */}
             <div className="flex items-center space-x-3">
-              <span className="h-10 w-10 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
+              <span className="h-8 w-8 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
               <p className="text-base font-semibold text-gray-800">
                 Created by <span className="font-bold text-blue-600">csweterner</span>
               </p>
             </div>
-            
-            {/* Section 2: Call to Action (Centered) */}
-            <div className="hidden md:block px-6 border-l border-r border-gray-300">
-                <p className="text-sm font-medium text-gray-600">Follow for more updates</p>
-            </div>
+        
+            {/* Elegant Separator */}
+            <span className="text-gray-300 font-light text-xl">|</span>
 
-            {/* Section 3: Social Media Links */}
-            <div className="flex items-center space-x-2">
-              <a 
-                href="https://www.instagram.com/csweterner/"
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="Follow on Instagram"
-                className="flex items-center space-x-2 px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors"
-              >
-                <Instagram className="h-5 w-5 text-pink-600" />
-                <span className="hidden sm:inline text-sm font-semibold">Instagram</span>
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/"
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="Connect on LinkedIn"
-                className="flex items-center space-x-2 px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors"
-              >
-                <Linkedin className="h-5 w-5 text-blue-700" />
-                <span className="hidden sm:inline text-sm font-semibold">LinkedIn</span>
-              </a>
+            {/* Part 2: Call to Action and Social Links */}
+            <div className="flex items-center space-x-4">
+                <p className="text-sm font-medium text-gray-600">Follow for more updates on</p>
+                <div className="flex items-center space-x-1">
+                  <a 
+                    href="https://www.instagram.com/csweterner/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Follow on Instagram"
+                    className="p-2 rounded-full text-gray-500 hover:text-black hover:bg-gray-200/70 transition-all duration-300"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Connect on LinkedIn"
+                    className="p-2 rounded-full text-gray-500 hover:text-black hover:bg-gray-200/70 transition-all duration-300"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </div>
             </div>
 
           </div>
@@ -112,22 +111,25 @@ const Hero = () => {
             </span>
           </div>
         </div>
-
-        {/* --- The rest of your component remains the same --- */}
-        {/* Domain Icons, Features, CTA Buttons, etc. go here */}
         
+        {/* --- The rest of your page component remains the same --- */}
+        {/* The other sections like Domain Icons, Feature Cards, CTA buttons, etc., are correct and don't need changes. */}
+
         <div className="grid grid-cols-4 md:grid-cols-8 gap-4 mb-12 max-w-4xl mx-auto">
-            {domains.map((domain, index) => (
-                <div key={index} className="... rest of your styles ..." onClick={() => scrollToSection('resources')}>
-                    <domain.icon className="h-8 w-8 text-pink-600 mx-auto mb-2" />
-                    <p className="text-gray-700 text-xs font-medium">{domain.name}</p>
-                </div>
-            ))}
+          {domains.map((domain, index) => (
+            <div 
+              key={index}
+              className="bg-white/80 backdrop-blur-sm border border-pink-200 rounded-xl p-4 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => scrollToSection('resources')}
+            >
+              <domain.icon className="h-8 w-8 text-pink-600 mx-auto mb-2" />
+              <p className="text-gray-700 text-xs font-medium">{domain.name}</p>
+            </div>
+          ))}
         </div>
-
-        {/* Feature Cards, CTA Buttons, Guidance Section, Stats, Thank You Message */}
-        {/* All the rest of your original component code is correct */}
-
+        {/* ... paste the rest of your unchanged component sections here ... */}
+        
       </div>
     </section>
   );
