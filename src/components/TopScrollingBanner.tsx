@@ -7,8 +7,7 @@ const TopScrollingBanner = () => {
 
   // We only need one state for all view data
   const [viewData, setViewData] = useState({
-    currentViews: 50000,
-    onlineUsers: 10000,
+    currentViews: 50000,,
     totalVisitors: INITIAL_VISITORS_BASE
   });
 
