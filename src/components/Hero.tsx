@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, Database, Globe, Brain, Calculator, Wrench, Building } from 'lucide-react';
+import { Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, Database, Globe, Brain, Calculator, Wrench, Building, Instagram, MessageCircle } from 'lucide-react';
 
 const Hero = () => {
   const features = [
@@ -30,23 +30,28 @@ const Hero = () => {
     }
   };
 
+  const openInstagram = () => {
+    window.open('https://www.instagram.com/csweterner/', '_blank');
+  };
+
+  const openWhatsApp = () => {
+    const message = encodeURIComponent("Hi! I saw your Tech Learning Hub and need guidance for my studies. Can you help me?");
+    window.open(`https://wa.me/918008651769?text=${message}`, '_blank');
+  };
+
   return (
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
-        {/* Thank you note to csweterner */}
+        {/* Personal Introduction */}
         <div className="mb-8 animate-fade-in-up">
-          <p className="text-sm text-gray-600 bg-gradient-to-r from-pink-100 to-rose-100 border border-pink-200 rounded-full px-6 py-2 inline-block shadow-sm">
-            💝 Special thanks to{' '}
-            <a 
-              href="https://www.instagram.com/csweterner/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-pink-600 hover:text-pink-700 font-semibold transition-colors duration-300"
-            >
-              @csweterner
-            </a>
-            {' '}for making this possible! 🙏
-          </p>
+          <div className="bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 rounded-2xl px-8 py-6 inline-block shadow-lg mb-6">
+            <p className="text-lg text-gray-800 font-medium">
+              👋 Hi! I'm <span className="font-bold text-blue-600">Veerababu Jakkula (csweterner)</span> - NEC ECE Student
+            </p>
+            <p className="text-gray-700 mt-2">
+              I've created this platform to help students like you succeed in your tech journey! 🚀
+            </p>
+          </div>
         </div>
 
         {/* Main Heading */}
@@ -110,15 +115,38 @@ const Hero = () => {
             <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
           
-          <a 
-            href="https://www.instagram.com/csweterner/" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <button 
+            onClick={openInstagram}
             className="group bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-xl hover:shadow-2xl"
           >
+            <Instagram className="h-5 w-5" />
             <span>Follow @csweterner</span>
-            <Star className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
-          </a>
+          </button>
+        </div>
+
+        {/* Personal Guidance Section */}
+        <div className="bg-gradient-to-r from-green-100 to-teal-100 border border-green-300 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-lg">
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">🤝 Need Personal Guidance?</h3>
+          <p className="text-gray-700 text-lg mb-6">
+            I personally help students with GATE preparation, career guidance, doubt clearing, and study planning. 
+            Feel free to reach out for one-on-one support!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={openWhatsApp}
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
+            >
+              <MessageCircle className="h-5 w-5" />
+              <span>WhatsApp Me</span>
+            </button>
+            <button 
+              onClick={openInstagram}
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
+            >
+              <Instagram className="h-5 w-5" />
+              <span>DM on Instagram</span>
+            </button>
+          </div>
         </div>
 
         {/* Stats */}
@@ -137,10 +165,11 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Development Notice */}
+        {/* Thank You Message */}
         <div className="bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-300 rounded-2xl p-6 max-w-3xl mx-auto shadow-lg">
-          <p className="text-yellow-800 font-medium">
-            🚧 This website is actively under development. New features and resources are being added regularly!
+          <p className="text-yellow-800 font-medium text-lg">
+            🙏 Thank you for visiting! I hope these resources help you achieve your dreams. 
+            Don't forget to follow me on Instagram for updates and tips! 💫
           </p>
         </div>
       </div>
