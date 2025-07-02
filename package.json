@@ -34,3 +34,11 @@
     "vite": "^5.4.2"
   }
 }
+
+"scripts": {
+  "start": "npm run copy-pyodide-files && react-scripts start",
+  "build": "npm run copy-pyodide-files && react-scripts build",
+  "copy-pyodide-files": "cpy node_modules/pyodide/build/* public/pyodide",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
