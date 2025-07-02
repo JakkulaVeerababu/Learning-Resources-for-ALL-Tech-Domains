@@ -1,5 +1,5 @@
 import React from 'react';
-// CORRECTED: Added Linkedin and consolidated all icons into one import line
+// Consolidated and added Linkedin icon
 import { 
     Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
     Database, Globe, Brain, Calculator, Wrench, Building, Instagram, 
@@ -48,42 +48,45 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         
-        {/* CORRECTED: Replaced the broken section with the professional badge */}
+        {/* === NEW AND IMPROVED PROFESSIONAL BADGE === */}
         <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
-          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full px-4 py-2.5 backdrop-blur-sm shadow-lg">
+          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full p-2 backdrop-blur-sm shadow-xl">
             
-            {/* Creator Info (Not clickable) */}
-            <div className="flex items-center space-x-3">
+            {/* Creator Info (Unclickable) */}
+            <div className="flex items-center space-x-3 pl-2">
               <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
               <p className="text-sm font-semibold text-gray-800">
                 Created by <span className="font-bold text-blue-600">csweterner</span>
               </p>
             </div>
         
-            {/* Vertical Separator Line */}
+            {/* Vertical Separator */}
             <div className="w-[1px] h-6 bg-gray-300"></div>
 
-            {/* Social Media Icons (Clickable) */}
-            <div className="flex items-center space-x-3">
+            {/* Social Link "Buttons" with Text and Icons */}
+            <div className="flex items-center space-x-2">
               <a 
                 href="https://www.instagram.com/csweterner/"
                 target="_blank" 
                 rel="noopener noreferrer"
-                title="Follow on Instagram"
-                className="text-gray-600 hover:text-pink-600 transition-colors duration-300"
+                title="Follow on Instagram for updates"
+                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-4 w-4 text-pink-600" />
+                <span className="text-xs font-semibold">Instagram</span>
               </a>
               <a 
                 href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/" // Cleaned URL
                 target="_blank" 
                 rel="noopener noreferrer"
                 title="Connect on LinkedIn"
-                className="text-gray-600 hover:text-blue-700 transition-colors duration-300"
+                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-4 w-4 text-blue-700" />
+                <span className="text-xs font-semibold">LinkedIn</span>
               </a>
             </div>
+
           </div>
         </div>
 
@@ -202,7 +205,7 @@ const Hero = () => {
         <div className="bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-300 rounded-2xl p-6 max-w-3xl mx-auto shadow-lg">
           <p className="text-yellow-800 font-medium text-lg">
             🙏 Thank you for visiting! I hope these resources help you achieve your dreams. 
-            Don't forget to follow me on Instagram for updates and tips! 💫
+            Don't forget to follow me for updates and tips! 💫
           </p>
         </div>
       </div>
