@@ -1,7 +1,20 @@
 import React from 'react';
 // Consolidated and added Linkedin icon
 import { 
-    Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
+    Trophy, Target8651769?text=${message}`, '_blank');
+  };
+
+  return (
+    <section className="pt-32 pb-20 px-6">
+      <div className="container mx-auto text-center">
+        
+        {/* === FINAL Professional Badge with Requested Text === */}
+        <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
+          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full p-2 pr-3 backdrop-blur-sm shadow-xl">
+            
+            {/* Creator Info (Unclickable) */}
+            <div className="flex items-center space-x-3 pl-2">
+              <span className="h-6 w-6 flex-shrink-0 rounded-full bg-, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
     Database, Globe, Brain, Calculator, Wrench, Building, Instagram, 
     MessageCircle, Linkedin 
 } from 'lucide-react';
@@ -47,14 +60,7 @@ const Hero = () => {
   return (
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
-        
-        {/* === NEW AND IMPROVED PROFESSIONAL BADGE === */}
-        <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
-          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full p-2 backdrop-blur-sm shadow-xl">
-            
-            {/* Creator Info (Unclickable) */}
-            <div className="flex items-center space-x-3 pl-2">
-              <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
+        gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
               <p className="text-sm font-semibold text-gray-800">
                 Created by <span className="font-bold text-blue-600">csweterner</span>
               </p>
@@ -63,28 +69,42 @@ const Hero = () => {
             {/* Vertical Separator */}
             <div className="w-[1px] h-6 bg-gray-300"></div>
 
-            {/* Social Link "Buttons" with Text and Icons */}
-            <div className="flex items-center space-x-2">
-              <a 
-                href="https://www.instagram.com/csweterner/"
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="Follow on Instagram for updates"
-                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
-              >
-                <Instagram className="h-4 w-4 text-pink-600" />
-                <span className="text-xs font-semibold">Instagram</span>
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/" // Cleaned URL
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="Connect on LinkedIn"
-                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
-              >
-                <Linkedin className="h-4 w-4 text-blue-700" />
-                <span className="text-xs font-semibold">LinkedIn</span>
-              </a>
+            {/* Social Links Section */}
+            <div className="flex items-center space-x-3">
+              {/* THIS IS THE NEW TEXT YOU REQUESTED */}
+              <p className="text-xs font-medium text-gray-600">
+                Follow for more updates on
+              </p>
+
+              {/* Social Icons remain as button-like links */}
+              <div className="flex items-center space-x-1">
+                <a 
+                  href="https://www.instagram.com/csweterner/"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="Follow on Instagram for updates"
+                  className="p-1.5 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
+                >
+                  <Instagram className="h-4 w-4 text-pink-600" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/"
+                  target="_
+        {/* === The Corrected Professional Badge === */}
+        <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
+          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full p-2 pr-3 backdrop-blur-sm shadow-xl">
+            
+            {/* Creator Info (Unchanged) */}
+            <div className="flex items-center space-x-3 pl-2">
+              <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
+blank" 
+                  rel="noopener noreferrer"
+                  title="Connect on LinkedIn"
+                  className="p-1.5 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
+                >
+                  <Linkedin className="h-4 w-4 text-blue-700" />
+                </a>
+              </div>
             </div>
 
           </div>
@@ -93,7 +113,18 @@ const Hero = () => {
         {/* Main Heading */}
         <div className="mb-12 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 bg-clip-text text-transparent animate-gradient-x">
+            <span className="bg-gradient-to-r from-pink-600 via-rose-5              <p className="text-sm font-semibold text-gray-800">
+                Created by <span className="font-bold text-blue-600">csweterner</span>
+              </p>
+            </div>
+        
+            {/* Vertical Separator (Unchanged) */}
+            <div className="w-[1px] h-6 bg-gray-300"></div>
+
+            {/* Social Section with Added Text */}
+            <div className="flex items-center space-x-3">
+              {/* The text you wanted to add */}
+              00 to-purple-600 bg-clip-text text-transparent animate-gradient-x">
               🎓 FREE Learning Resources
             </span>
             <br />
@@ -106,33 +137,78 @@ const Hero = () => {
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <span className="bg-gradient-to-r from-pink-500 to-rose-500 px-6 py-3 rounded-full text-white font-semibold animate-pulse shadow-lg">
-              📚 GATE • Full Stack • AI • VLSI • Embedded & More!
+              📚 GATE •<p className="text-sm text-gray-600 font-medium">Follow for more updates on</p>
+              
+              {/* The links (unchanged structure) */}
+              <div className="flex items-center space-x-2">
+                <a 
+                  href="https://www.instagram.com/csweterner Full Stack • AI • VLSI • Embedded & More!
             </span>
           </div>
         </div>
 
         {/* Domain Icons */}
         <div className="grid grid-cols-4 md:grid-cols-8 gap-4 mb-12 max-w-4xl mx-auto">
-          {domains.map((domain, index) => (
+          {domains.map((domain/"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="Follow on Instagram"
+, index) => (
             <div 
               key={index}
-              className="bg-white/80 backdrop-blur-sm border border-pink-200 rounded-xl p-4 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
+              className="bg-white/                  className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray80 backdrop-blur-sm border border-pink-200 rounded-xl p-4 hover:border-700 hover:bg-gray-200/70 transition-colors duration-300"
+                >
+                  <Instagram className="h-4 w-4 text-pink-600" />
+                  <span className="text-xs font-semibold">Instagram</span>
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => scrollToSection('resources')}
-            >
-              <domain.icon className="h-8 w-8 text-pink-600 mx-auto mb-2" />
-              <p className="text-gray-700 text-xs font-medium">{domain.name}</p>
+            >574234a/"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  
+              <domain.icon className="h-8 w-8 text-pink-600 mx-autotitle="Connect on LinkedIn"
+                  className="flex items-center space-x-2 px-3 py- mb-2" />
+              <p className="text-gray-700 text-xs font-medium1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
+                >
+                  <Linkedin className="h-4 w-4 text-blue-700" />
+                  <span className="text-xs font-semibold">LinkedIn</span>
+                </a>
+">{domain.name}</p>
             </div>
           ))}
         </div>
 
         {/* Feature Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
-          {features.map((feature, index) => (
+          {features.map((feature, index) => (              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* --- The rest of your component is unchanged --- */}
+
             <div 
               key={index}
-              className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-2xl p-6 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
-              style={{ animationDelay: `${index * 0.1 + 0.8}s` }}
+              className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-2xl p-6 hover:border-pink-4        {/* Main Heading */}
+        <div className="mb-12 animate-fade-in-up">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            <span className="bg-gradient-to-r from-pink-600 via-00 transition-all duration-300 transform hover:scale-105 animate-fade-in-rose-500 to-purple-600 bg-clip-text text-transparent animate-gradient-x">
+              🎓 FREE Learning Resources
+            </span>
+            <br />
+            <span className="text-gray-800">for ALL Tech Domains! 🚀</span>
+          </h1>
+          
+          <p className="text-up shadow-lg hover:shadow-xl cursor-pointer"
+              style={{ animationDelay: `${index * xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto font-medium">
+            Your Ultimate Hub for Engineering, Programming & Tech Education 💻✨
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-8">0.1 + 0.8}s` }}
               onClick={() => scrollToSection('resources')}
             >
               <feature.icon className={`h-10 w-10 ${feature.color} mx-auto mb-3`} />
@@ -142,67 +218,140 @@ const Hero = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+        <
+            <span className="bg-gradient-to-r from-pink-500 to-rose-500 px-6 py-3 rounded-full text-white font-semibold animate-pulse shadow-lg">
+              📚 GATE • Full Stack • AI • VLSI • Embedded & More!
+            </span>
+          </div>
+        </div>
+
+        {div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
           <button 
             onClick={() => scrollToSection('resources')}
             className="group bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-xl hover:shadow-2xl"
           >
-            <span>Explore All Resources</span>
+            <span>Explore All/* Domain Icons */}
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-4 mb-12 max-w-4xl mx-auto">
+          {domains.map((domain, index) => (
+            <div 
+              key={index}
+              className="bg-white/ Resources</span>
             <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
           
           <button 
             onClick={openInstagram}
-            className="group bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-xl hover:shadow-2xl"
+            className="group bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-6080 backdrop-blur-sm border border-pink-200 rounded-xl p-4 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => scrollToSection('resources')}
+            >0 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration
+              <domain.icon className="h-8 w-8 text-pink-600 mx-auto-300 transform hover:scale-105 flex items-center space-x-3 shadow-xl mb-2" />
+              <p className="text-gray-700 text-xs font-medium hover:shadow-2xl"
           >
-            <Instagram className="h-5 w-5" />
+            <Instagram className="h-5 w-5" />">{domain.name}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Feature Cards */}
+
             <span>Follow @csweterner</span>
           </button>
         </div>
 
         {/* Personal Guidance Section */}
-        <div className="bg-gradient-to-r from-green-100 to-teal-100 border border-green-300 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-lg">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">🤝 Need Personal Guidance?</h3>
+        <div className="bg-gradient-to-r from-green-100 to-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-1teal-100 border border-green-300 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-lg">
+          <h3 className="text-2xl font-2 max-w-4xl mx-auto">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-2xl p-6 hover:border-pink-4bold text-gray-800 mb-4">🤝 Need Personal Guidance?</h3>
           <p className="text-gray-700 text-lg mb-6">
             I personally help students with GATE preparation, career guidance, doubt clearing, and study planning. 
-            Feel free to reach out for one-on-one support!
+            Feel free to reach out for one-on-one support00 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
+              style={{ animationDelay: `${index * 0.1 + 0.8}s` }}
+              onClick={() => scrollToSection('resources')}
+            >
+              <feature.icon className={`h-10 w-10 ${feature.color} mx-!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={openWhatsApp}
-              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-6auto mb-3`} />
+              <p className="text-gray-800 font-semibold">{feature.text}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Buttons */}
+        <00 hover:to-green-700 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
             >
               <MessageCircle className="h-5 w-5" />
               <span>WhatsApp Me</span>
             </button>
             <button 
               onClick={openInstagram}
-              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
+              className="bg-gradient-to-r from-pink-500 to-purplediv className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+          <button 
+            onClick={() => scrollToSection('resources')}
+            className="group bg--600 hover:from-pink-600 hover:to-purple-700 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scalegradient-to-r from-pink-500 to-rose-500 hover:from-pink-60-105 flex items-center justify-center space-x-2 shadow-lg"
             >
               <Instagram className="h-5 w-5" />
               <span>DM on Instagram</span>
-            </button>
+            </button0 hover:to-rose-600 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-xl hover:shadow-2xl"
+          >
+            <span>Explore All Resources</span>
+            <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration->
           </div>
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
-          <div className="text-center animate-fade-in-up bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300" style={{ animationDelay: '1.2s' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12300" />
+          </button>
+          
+          <button 
+            onClick={openInstagram}
+            className="group bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform">
+          <div className="text-center animate-fade-in-up bg-white/70 backdrop hover:scale-105 flex items-center space-x-3 shadow-xl hover:shadow-2xl"
+          >
+            <Instagram className="h-5 w-5" />
+            <span>Follow @csweter-blur-sm rounded-2xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300" style={{ animationDelay: '1.2s' }}>
             <div className="text-4xl font-bold text-pink-600 mb-2">50+</div>
-            <div className="text-gray-700 font-medium">Tech Domains</div>
+ner</span>
+          </button>
+        </div>
+
+        {/* Personal Guidance Section */}
+        <div className="bg-gradient-to-r from-green-100 to-teal-100 border border-            <div className="text-gray-700 font-medium">Tech Domains</div>
           </div>
-          <div className="text-center animate-fade-in-up bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300" style={{ animationDelay: '1.3s' }}>
-            <div className="text-4xl font-bold text-rose-600 mb-2">2000+</div>
+          <div className="text-center animate-fade-in-up bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-green-300 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-lg">
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">🤝 Need Personal Guidance?</h3>
+          <p className="text-gray-70300" style={{ animationDelay: '1.3s' }}>
+            <div className="text-0 text-lg mb-6">
+            I personally help students with GATE preparation, career guidance, doubt clearing, and study planning. 
+            Feel free to reach out for one-on-one support!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+4xl font-bold text-rose-600 mb-2">2000+</div>
             <div className="text-gray-700 font-medium">Study Materials</div>
           </div>
-          <div className="text-center animate-fade-in-up bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300" style={{ animationDelay: '1.4s' }}>
-            <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
+          <            <button 
+              onClick={openWhatsApp}
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-div className="text-center animate-fade-in-up bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300" style={{ animationDelay: '1.4s' }}>
+            <div className="text-4700 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
+            >
+              <MessageCircle className="h-5 w-5" />
+              <span>WhatsApp Me</span>
+xl font-bold text-purple-600 mb-2">100%</div>
             <div className="text-gray-700 font-medium">Free Forever</div>
           </div>
         </div>
 
-        {/* Thank You Message */}
-        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-300 rounded-2xl p-6 max-w-3xl mx-auto shadow-lg">
+                    </button>
+            <button 
+              onClick={openInstagram}
+              className="bg-gradient-{/* Thank You Message */}
+        <div className="bg-gradient-to-r from-yellow-1to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 px-8 py-3 rounded-full text-white font00 to-orange-100 border border-yellow-300 rounded-2xl p-6-bold transition-all duration-300 transform hover:scale-105 flex items-center justify- max-w-3xl mx-auto shadow-lg">
           <p className="text-yellow-800 font-medium text-lg">
             🙏 Thank you for visiting! I hope these resources help you achieve your dreams. 
             Don't forget to follow me for updates and tips! 💫
