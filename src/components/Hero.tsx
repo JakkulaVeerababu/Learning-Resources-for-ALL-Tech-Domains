@@ -1,5 +1,10 @@
 import React from 'react';
-import { Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, Database, Globe, Brain, Calculator, Wrench, Building, Instagram, MessageCircle } from 'lucide-react';
+// CORRECTED: Added Linkedin and consolidated all icons into one import line
+import { 
+    Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
+    Database, Globe, Brain, Calculator, Wrench, Building, Instagram, 
+    MessageCircle, Linkedin 
+} from 'lucide-react';
 
 const Hero = () => {
   const features = [
@@ -36,7 +41,6 @@ const Hero = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("Hi! I saw your Tech Learning Hub and need guidance for my studies. Can you help me?");
-    // Corrected the URL string with backticks
     window.open(`https://wa.me/918008651769?text=${message}`, '_blank');
   };
 
@@ -44,29 +48,7 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         
-        {/* Professional Creator Badge with Call-to-Action (REPLACED) */}
-        <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
-          <a
-            href="https://www.instagram.com/csweterner/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center space-x-3 bg-white/90 hover:bg-white border border-gray-300/70 rounded-full px-4 py-2.5 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm"
-          >
-            {/* A slightly larger avatar circle */}
-            <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
-        
-         import React from 'react';
-// Make sure to add the 'Linkedin' icon to your import list!
-import { Instagram, Linkedin, Trophy, Target, Clock, /* ...all your other icons */ } from 'lucide-react';
-
-const Hero = () => {
-  // ... (all your existing code like features, domains, functions)
-
-  return (
-    <section className="pt-32 pb-20 px-6">
-      <div className="container mx-auto text-center">
-        
-        {/* NEW: Professional Creator Badge with BOTH Instagram and LinkedIn */}
+        {/* CORRECTED: Replaced the broken section with the professional badge */}
         <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
           <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full px-4 py-2.5 backdrop-blur-sm shadow-lg">
             
@@ -102,22 +84,7 @@ const Hero = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
-
           </div>
-        </div>
-
-        {/* ... (The rest of your Hero component JSX remains the same) */}
-        
-      </div>
-    </section>
-  );
-};
-
-export default Hero;
-                Follow on insta for more updates
-              </p>
-            </div>
-          </a>
         </div>
 
         {/* Main Heading */}
@@ -147,7 +114,6 @@ export default Hero;
             <div 
               key={index}
               className="bg-white/80 backdrop-blur-sm border border-pink-200 rounded-xl p-4 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
-              // Corrected the style attribute syntax
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => scrollToSection('resources')}
             >
@@ -163,11 +129,9 @@ export default Hero;
             <div 
               key={index}
               className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-2xl p-6 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
-              // Corrected the style attribute syntax
               style={{ animationDelay: `${index * 0.1 + 0.8}s` }}
               onClick={() => scrollToSection('resources')}
             >
-              {/* Corrected the className attribute syntax */}
               <feature.icon className={`h-10 w-10 ${feature.color} mx-auto mb-3`} />
               <p className="text-gray-800 font-semibold">{feature.text}</p>
             </div>
