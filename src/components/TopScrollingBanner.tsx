@@ -77,8 +77,15 @@ const TopScrollingBanner = () => {
           </div>
         </div>
 
+        {/* ============================================== */}
+        {/*           THE NEW VISIBLE SEPARATOR LINE       */}
+        {/* ============================================== */}
+        <div className="h-[1px] w-full bg-white/50"></div>
+
+
         {/* Banner 2: Faster Speed */}
-        <div className="bg-gradient-to-r from-pink-500 via-rose-500 to-orange-500 py-1.5 border-t-2 border-white/30 overflow-hidden">
+        {/* NOTE: Removed the old invisible border from here */}
+        <div className="bg-gradient-to-r from-pink-500 via-rose-500 to-orange-500 py-1.5 overflow-hidden">
            <div className="flex animate-scroll-fast group-hover:pause">
             {duplicateItemsForLoop(fastBannerItems).map((text, index) => (
               <span 
