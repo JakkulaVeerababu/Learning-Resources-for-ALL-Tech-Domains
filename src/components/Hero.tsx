@@ -33,6 +33,22 @@ const Hero = () => {
   return (
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
+        {/* Thank you note to csweterner */}
+        <div className="mb-8 animate-fade-in-up">
+          <p className="text-sm text-gray-600 bg-gradient-to-r from-pink-100 to-rose-100 border border-pink-200 rounded-full px-6 py-2 inline-block shadow-sm">
+            💝 Special thanks to{' '}
+            <a 
+              href="https://www.instagram.com/csweterner/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-pink-600 hover:text-pink-700 font-semibold transition-colors duration-300"
+            >
+              @csweterner
+            </a>
+            {' '}for making this possible! 🙏
+          </p>
+        </div>
+
         {/* Main Heading */}
         <div className="mb-12 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
