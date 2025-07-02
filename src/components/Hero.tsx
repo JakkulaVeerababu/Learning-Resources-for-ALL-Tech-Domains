@@ -46,10 +46,10 @@ const Hero = () => {
         <div className="mb-8 animate-fade-in-up">
           <div className="bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 rounded-2xl px-8 py-6 inline-block shadow-lg mb-6">
             <p className="text-lg text-gray-800 font-medium">
-              👋 Hi! I'm <span className="font-bold text-blue-600">Veerababu Jakkula (csweterner)</span> - NEC ECE Student
+              👋 Hi! I'm <span className="font-bold text-blue-600"> (csweterner)</span> - ELECTRONICS STUDENT
             </p>
             <p className="text-gray-700 mt-2">
-              I've created this platform to help students like you succeed in your tech journey! 🚀
+              
             </p>
           </div>
         </div>
