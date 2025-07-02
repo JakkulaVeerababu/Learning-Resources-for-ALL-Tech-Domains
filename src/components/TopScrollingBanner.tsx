@@ -42,7 +42,7 @@ const TopScrollingBanner = () => {
   }, []);
 
     const bannerItems = [
- 
+     'veerababu jakkula'
   ];
 
   const dynamicStats = [
