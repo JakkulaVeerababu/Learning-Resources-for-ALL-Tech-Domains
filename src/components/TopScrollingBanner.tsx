@@ -51,7 +51,7 @@ const TopScrollingBanner = () => {
   }, []);
 
   const bannerItems = [
-    "🎓 Veerababu Jakkula", "📱 @csweterner", "💡 Innovation Hub", "🔬 Research Center"
+    "🎓 Veerababu Jakkula",  "💡 Innovation Hub", "🔬 Research Center"
   ];
 
   // The toLocaleString() method will automatically format the large numbers with commas.
