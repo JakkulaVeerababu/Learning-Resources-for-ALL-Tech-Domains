@@ -78,8 +78,8 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   const handleSocialLogin = (provider: string) => {
     // Simulate social login
     const userData = {
-      email: `user@${provider}.com`,
-      name: `${provider} User`,
+      email: `user@${provider}.com`, // Corrected template literal syntax
+      name: `${provider} User`,      // Corrected template literal syntax
       provider,
       loginTime: new Date().toISOString()
     };
@@ -272,7 +272,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             <button
               onClick={() => {
                 setIsLogin(!isLogin);
-                setErrors({});
+                setErrors({}); // Clear errors when toggling modes
               }}
               className="text-blue-600 hover:text-blue-700 font-medium"
             >

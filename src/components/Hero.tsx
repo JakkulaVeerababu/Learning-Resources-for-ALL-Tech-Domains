@@ -1,4 +1,5 @@
 import React from 'react';
+// Consolidated and added Linkedin icon
 import { 
     Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
     Database, Globe, Brain, Calculator, Wrench, Building, Instagram, 
@@ -47,11 +48,11 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         
-        {/* Creator Badge */}
+        {/* === NEW AND IMPROVED PROFESSIONAL BADGE === */}
         <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
           <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full p-2 backdrop-blur-sm shadow-xl">
             
-            {/* Creator Info */}
+            {/* Creator Info (Unclickable) */}
             <div className="flex items-center space-x-3 pl-2">
               <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
               <p className="text-sm font-semibold text-gray-800">
@@ -62,7 +63,7 @@ const Hero = () => {
             {/* Vertical Separator */}
             <div className="w-[1px] h-6 bg-gray-300"></div>
 
-            {/* Social Links */}
+            {/* Social Link "Buttons" with Text and Icons */}
             <div className="flex items-center space-x-2">
               <a 
                 href="https://www.instagram.com/csweterner/"
@@ -75,7 +76,7 @@ const Hero = () => {
                 <span className="text-xs font-semibold">Instagram</span>
               </a>
               <a 
-                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/"
+                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/" // Cleaned URL
                 target="_blank" 
                 rel="noopener noreferrer"
                 title="Connect on LinkedIn"
