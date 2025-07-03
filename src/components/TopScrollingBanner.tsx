@@ -5,7 +5,6 @@ const STORAGE_KEY = 'techHubViewData_v2';
 
 const TopScrollingBanner = () => {
   const [viewData, setViewData] = useState({
-    currentViews: 0,
     onlineUsers: 0,
     totalVisitors: 0
   });
@@ -19,7 +18,6 @@ const TopScrollingBanner = () => {
         // High base values will now be used on the first load
         totalVisitors: Math.floor(Math.random() * 50000) + 1000000, 
         onlineUsers: Math.floor(Math.random() * 500) + 10000,
-        currentViews: Math.floor(Math.random() * 1000) + 11000
       };
 
       baseData.currentViews += 1;
@@ -53,7 +51,6 @@ const TopScrollingBanner = () => {
   ];
 
   const dynamicStats = [
-    `👁️ Live Views: ${viewData.currentViews.toLocaleString()}`,
     `👥 Online Now: ${viewData.onlineUsers.toLocaleString()}`,
     `📈 Total Visitors: ${viewData.totalVisitors.toLocaleString()}`
   ];
