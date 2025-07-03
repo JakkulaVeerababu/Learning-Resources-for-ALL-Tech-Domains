@@ -1,84 +1,65 @@
 import React, { useState, useEffect } from 'react';
 
 const TopScrollingBanner = () => {
-  // Use a non-round base number to look more authentic
-  const INITIAL_VISITORS_BASE = 1051234; // Over 10 Lakh
-  const VISITORS_PER_SECOND = 1.7;     // Simulates ~1-2 new visitors every second
-
-  // "currentViews" has been removed from the state
   const [viewData, setViewData] = useState({
-    onlineUsers: 8500,
-    totalVisitors: INITIAL_VISITORS_BASE
+    currentViews: 0,
+    onlineUsers: 0,
+    totalVisitors: 0
   });
 
   useEffect(() => {
-    // This is the core logic that now works correctly
-    const updateStats = () => {
-      let storedData = JSON.parse(localStorage.getItem('techHubViewData'));
+    const initializeViewData = () => {
+      const stored = localStorage.getItem('techHubViewData');
+      const baseData = stored ? JSON.parse(stored) : {
+        currentViews: Math.floor(Math.random() * 500) + 100,
+        onlineUsers: Math.floor(Math.random() * 50) + 10,
+        totalVisitors: Math.floor(Math.random() * 10000) + 5000
+      };
 
-      // If this is the user's first time EVER, set up the initial data
-      if (!storedData || !storedData.firstVisitTimestamp) {
-        storedData = {
-          firstVisitTimestamp: Date.now(), // Save the time of the very first visit
-          onlineUsers: 11482
-          // "currentViews" logic removed from here
-        };
-      }
-
-      // Calculate how many seconds have passed since the first visit
-      const secondsSinceFirstVisit = (Date.now() - storedData.firstVisitTimestamp) / 1000;
+      // Increment for the current session (as per your original code)
+      baseData.currentViews += 1;
+      baseData.totalVisitors += 1;
       
-      // Calculate the "grown" visitors based on time passed
-      const grownVisitors = Math.floor(secondsSinceFirstVisit * VISITORS_PER_SECOND);
-      
-      // The new total is the base number + the growth over time
-      const newTotalVisitors = INITIAL_VISITORS_BASE + grownVisitors;
-
-      // Update the state with the newly calculated, large number
-      setViewData(prev => ({
-        ...prev, // Keep other stats
-        totalVisitors: newTotalVisitors,
-      }));
-
-      // Save the timestamp back to storage for the next visit
-      localStorage.setItem('techHubViewData', JSON.stringify(storedData));
+      setViewData(baseData);
+      localStorage.setItem('techHubViewData', JSON.stringify(baseData));
     };
 
-    updateStats(); // Run it once on page load
+    initializeViewData();
 
-    // This interval now adds small, real-time increments during the session
     const interval = setInterval(() => {
       setViewData(prev => {
-        const newOnline = Math.max(9500, prev.onlineUsers + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 25));
-
-        // "currentViews" has been removed from the return object
-        return {
-          totalVisitors: prev.totalVisitors + Math.floor(Math.random() * 3) + 1,
-          onlineUsers: newOnline,
-        }
+        const updated = {
+          currentViews: prev.currentViews + Math.floor(Math.random() * 3),
+          onlineUsers: Math.max(1, prev.onlineUsers + (Math.random() > 0.5 ? 1 : -1)),
+          totalVisitors: prev.totalVisitors + Math.floor(Math.random() * 2)
+        };
+        localStorage.setItem('techHubViewData', JSON.stringify(updated));
+        return updated;
       });
-    }, 2500);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   const bannerItems = [
-     'VEERABABU JAKKULA'
+    "🎓 Veerababu Jakkula", "📱 @csweterner", "💡 Innovation Hub", "🔬 Research Center"
   ];
 
-  // REMOVED: The "Live Views" item has been deleted from this array.
   const dynamicStats = [
-    `👥 Online Now: ${viewData.onlineUsers.toLocaleString()}`,
+    `👁️ Live Views: ${viewData.currentViews.toLocaleString()}`,
+    `👥 Online Now: ${viewData.onlineUsers}`,
     `📈 Total Visitors: ${viewData.totalVisitors.toLocaleString()}`
   ];
 
   const allItems = [...bannerItems, ...dynamicStats];
 
   return (
+    // Restored to your original `top-36` position
     <div className="fixed top-36 left-0 w-full z-50 shadow-lg overflow-hidden relative">
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-1 overflow-hidden">
+        {/* Using your original 'animate-scroll-left' class */}
         <div className="flex animate-scroll-left whitespace-nowrap">
-          {[...allItems, ...allItems, ...allItems, ...allItems].map((text, index) => (
+          {[...allItems, ...allItems, ...allItems].map((text, index) => (
             <span 
               key={index}
               className="inline-flex items-center px-4 text-white font-semibold text-xs tracking-wide"
@@ -89,6 +70,7 @@ const TopScrollingBanner = () => {
         </div>
       </div>
       
+      {/* Restored your original fade effects */}
       <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-blue-600 to-transparent pointer-events-none z-10"></div>
       <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-pink-600 to-transparent pointer-events-none z-10"></div>
     </div>
