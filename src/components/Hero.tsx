@@ -1,5 +1,10 @@
 import React from 'react';
-import { Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, Database, Globe, Brain, Calculator, Wrench, Building, Instagram, MessageCircle } from 'lucide-react';
+// Consolidated and added Linkedin icon
+import { 
+    Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
+    Database, Globe, Brain, Calculator, Wrench, Building, Instagram, 
+    MessageCircle, Linkedin 
+} from 'lucide-react';
 
 const Hero = () => {
   const features = [
@@ -36,7 +41,6 @@ const Hero = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("Hi! I saw your Tech Learning Hub and need guidance for my studies. Can you help me?");
-    // Corrected the URL string with backticks
     window.open(`https://wa.me/918008651769?text=${message}`, '_blank');
   };
 
@@ -44,27 +48,46 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6">
       <div className="container mx-auto text-center">
         
-        {/* Professional Creator Badge with Call-to-Action (REPLACED) */}
+        {/* === NEW AND IMPROVED PROFESSIONAL BADGE === */}
         <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
-          <a
-            href="https://www.instagram.com/csweterner/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center space-x-3 bg-white/90 hover:bg-white border border-gray-300/70 rounded-full px-4 py-2.5 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm"
-          >
-            {/* A slightly larger avatar circle */}
-            <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
-        
-            {/* Two-line text block */}
-            <div className="flex flex-col items-start">
-              <p className="text-sm font-semibold text-gray-800 leading-tight">
+          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full p-2 backdrop-blur-sm shadow-xl">
+            
+            {/* Creator Info (Unclickable) */}
+            <div className="flex items-center space-x-3 pl-2">
+              <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
+              <p className="text-sm font-semibold text-gray-800">
                 Created by <span className="font-bold text-blue-600">csweterner</span>
               </p>
-              <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
-                Follow on insta for more updates
-              </p>
             </div>
-          </a>
+        
+            {/* Vertical Separator */}
+            <div className="w-[1px] h-6 bg-gray-300"></div>
+
+            {/* Social Link "Buttons" with Text and Icons */}
+            <div className="flex items-center space-x-2">
+              <a 
+                href="https://www.instagram.com/csweterner/"
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="Follow on Instagram for updates"
+                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
+              >
+                <Instagram className="h-4 w-4 text-pink-600" />
+                <span className="text-xs font-semibold">Instagram</span>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/" // Cleaned URL
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="Connect on LinkedIn"
+                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
+              >
+                <Linkedin className="h-4 w-4 text-blue-700" />
+                <span className="text-xs font-semibold">LinkedIn</span>
+              </a>
+            </div>
+
+          </div>
         </div>
 
         {/* Main Heading */}
@@ -94,7 +117,6 @@ const Hero = () => {
             <div 
               key={index}
               className="bg-white/80 backdrop-blur-sm border border-pink-200 rounded-xl p-4 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
-              // Corrected the style attribute syntax
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => scrollToSection('resources')}
             >
@@ -110,11 +132,9 @@ const Hero = () => {
             <div 
               key={index}
               className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-2xl p-6 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
-              // Corrected the style attribute syntax
               style={{ animationDelay: `${index * 0.1 + 0.8}s` }}
               onClick={() => scrollToSection('resources')}
             >
-              {/* Corrected the className attribute syntax */}
               <feature.icon className={`h-10 w-10 ${feature.color} mx-auto mb-3`} />
               <p className="text-gray-800 font-semibold">{feature.text}</p>
             </div>
@@ -185,7 +205,7 @@ const Hero = () => {
         <div className="bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-300 rounded-2xl p-6 max-w-3xl mx-auto shadow-lg">
           <p className="text-yellow-800 font-medium text-lg">
             🙏 Thank you for visiting! I hope these resources help you achieve your dreams. 
-            Don't forget to follow me on Instagram for updates and tips! 💫
+            Don't forget to follow me for updates and tips! 💫
           </p>
         </div>
       </div>
