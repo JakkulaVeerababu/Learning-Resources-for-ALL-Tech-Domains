@@ -19,17 +19,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-gray-900 to-gray-800 py-16">
+    <footer className="bg-gradient-to-r from-black via-red-950 to-black py-16 border-t border-red-500/30">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center">
                 <GraduationCap className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
+                <h3 className="text-xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
                   Tech Learning Hub
                 </h3>
                 <p className="text-xs text-gray-400">Free Resources Forever</p>
@@ -43,7 +43,7 @@ const Footer = () => {
                 href="https://www.instagram.com/csweterner/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
+                className="text-gray-400 hover:text-red-400 transition-colors duration-300"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -68,7 +68,7 @@ const Footer = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm flex items-center space-x-1"
+                    className="text-gray-300 hover:text-red-400 transition-colors duration-300 text-sm flex items-center space-x-1"
                   >
                     <span>{link.name}</span>
                     <ExternalLink className="h-3 w-3" />
@@ -88,7 +88,7 @@ const Footer = () => {
                     href={subject.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm flex items-center space-x-1"
+                    className="text-gray-300 hover:text-red-400 transition-colors duration-300 text-sm flex items-center space-x-1"
                   >
                     <span>{subject.name}</span>
                     <ExternalLink className="h-3 w-3" />
@@ -115,14 +115,14 @@ const Footer = () => {
                 href="https://www.instagram.com/csweterner/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm"
+                className="flex items-center space-x-2 text-gray-300 hover:text-red-400 transition-colors duration-300 text-sm"
               >
                 <Instagram className="h-4 w-4" />
                 <span>@csweterner</span>
               </a>
             </div>
-            <div className="mt-4 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
-              <p className="text-yellow-300 text-xs">
+            <div className="mt-4 p-3 bg-red-950/30 border border-red-500/30 rounded-lg">
+              <p className="text-red-300 text-xs">
                 💡 Need personal guidance? Contact us for syllabus help, doubt clearing, and career advice!
               </p>
             </div>
@@ -130,7 +130,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8">
+        <div className="border-t border-red-500/30 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-300 text-sm">
               <span>Made with</span>

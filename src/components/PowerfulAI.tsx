@@ -64,41 +64,6 @@ const PowerfulAI = () => {
       return "🧮 **Advanced Mathematics & Science Assistant**\n\nI can solve and explain:\n\n📐 **Mathematics**:\n- Calculus, Linear Algebra, Statistics\n- Differential Equations, Number Theory\n- Discrete Math, Probability\n\n🔬 **Sciences**:\n- Physics: Mechanics, Thermodynamics, Quantum\n- Chemistry: Organic, Inorganic, Physical\n- Biology: Molecular, Genetics, Ecology\n\n🎯 **Applications**:\n- Research methodology\n- Data analysis and modeling\n- Scientific paper writing\n- Experimental design\n\n**Share your specific problem and I'll provide step-by-step solutions!**";
     }
 
-    // Business and Finance
-    if (lowerMessage.includes('business') || lowerMessage.includes('finance') || lowerMessage.includes('marketing') || lowerMessage.includes('startup')) {
-      return "💼 **Business & Finance Consultant**\n\nI provide expert guidance on:\n\n📈 **Business Strategy**:\n- Market analysis and competitive research\n- Business model development\n- Growth strategies and scaling\n\n💰 **Finance & Investment**:\n- Financial planning and budgeting\n- Investment strategies and portfolio management\n- Risk assessment and mitigation\n\n📢 **Marketing & Sales**:\n- Digital marketing strategies\n- Brand development and positioning\n- Customer acquisition and retention\n\n🚀 **Entrepreneurship**:\n- Startup guidance and mentoring\n- Pitch deck creation\n- Funding and investor relations\n\n**What business challenge can I help you tackle?**";
-    }
-
-    // Health and Medicine
-    if (lowerMessage.includes('health') || lowerMessage.includes('medical') || lowerMessage.includes('fitness') || lowerMessage.includes('nutrition')) {
-      return "🏥 **Health & Wellness Advisor**\n\n⚠️ *Disclaimer: For informational purposes only. Consult healthcare professionals for medical advice.*\n\n💪 **Fitness & Exercise**:\n- Workout plans and routines\n- Exercise form and techniques\n- Sports performance optimization\n\n🥗 **Nutrition & Diet**:\n- Meal planning and recipes\n- Nutritional analysis\n- Dietary recommendations\n\n🧠 **Mental Health**:\n- Stress management techniques\n- Mindfulness and meditation\n- Work-life balance strategies\n\n📚 **Medical Knowledge**:\n- Anatomy and physiology\n- Disease prevention\n- Health research and studies\n\n**How can I support your health and wellness journey?**";
-    }
-
-    // Creative and Arts
-    if (lowerMessage.includes('creative') || lowerMessage.includes('art') || lowerMessage.includes('writing') || lowerMessage.includes('music') || lowerMessage.includes('design')) {
-      return "🎨 **Creative Arts & Design Mentor**\n\nUnlock your creative potential:\n\n✍️ **Writing & Literature**:\n- Creative writing techniques\n- Content creation and copywriting\n- Poetry, storytelling, and screenwriting\n- Grammar, style, and editing\n\n🎵 **Music & Audio**:\n- Music theory and composition\n- Instrument learning guidance\n- Audio production and mixing\n- Music history and analysis\n\n🎨 **Visual Arts & Design**:\n- Digital art and illustration\n- UI/UX design principles\n- Photography techniques\n- Graphic design and branding\n\n🎭 **Performance Arts**:\n- Acting and theater\n- Public speaking and presentation\n- Dance and choreography\n\n**What creative project can I help bring to life?**";
-    }
-
-    // History and Social Sciences
-    if (lowerMessage.includes('history') || lowerMessage.includes('geography') || lowerMessage.includes('politics') || lowerMessage.includes('culture')) {
-      return "🌍 **History & Social Sciences Expert**\n\nExplore human knowledge and culture:\n\n📜 **World History**:\n- Ancient civilizations and empires\n- Modern history and world wars\n- Cultural movements and revolutions\n- Historical analysis and interpretation\n\n🗺️ **Geography & Environment**:\n- Physical and human geography\n- Climate change and sustainability\n- Urban planning and development\n- Natural disasters and geology\n\n🏛️ **Politics & Society**:\n- Government systems and policies\n- International relations\n- Social movements and change\n- Economics and trade\n\n🎭 **Culture & Anthropology**:\n- World cultures and traditions\n- Language evolution and linguistics\n- Religion and philosophy\n- Archaeology and artifacts\n\n**What aspect of human civilization interests you?**";
-    }
-
-    // Technology and Innovation
-    if (lowerMessage.includes('ai') || lowerMessage.includes('technology') || lowerMessage.includes('innovation') || lowerMessage.includes('future')) {
-      return "🤖 **Technology & Innovation Futurist**\n\nExploring the cutting edge:\n\n🧠 **Artificial Intelligence**:\n- Machine Learning algorithms\n- Deep Learning and Neural Networks\n- Natural Language Processing\n- Computer Vision and Robotics\n\n🔬 **Emerging Technologies**:\n- Quantum Computing\n- Blockchain and Cryptocurrency\n- IoT and Smart Systems\n- Biotechnology and Genetics\n\n🚀 **Future Trends**:\n- Technology predictions\n- Industry disruption analysis\n- Innovation strategies\n- Ethical implications of tech\n\n💡 **Research & Development**:\n- Patent analysis\n- Technology transfer\n- R&D methodologies\n- Innovation management\n\n**What technological frontier shall we explore together?**";
-    }
-
-    // Education and Learning
-    if (lowerMessage.includes('learn') || lowerMessage.includes('study') || lowerMessage.includes('education') || lowerMessage.includes('teach')) {
-      return "🎓 **Advanced Learning & Education Specialist**\n\nPersonalized learning solutions:\n\n📚 **Study Strategies**:\n- Effective learning techniques\n- Memory improvement methods\n- Time management and productivity\n- Exam preparation strategies\n\n🏫 **Academic Support**:\n- Subject-specific tutoring\n- Research methodology\n- Academic writing and citations\n- Thesis and dissertation guidance\n\n👨‍🏫 **Teaching & Training**:\n- Curriculum development\n- Instructional design\n- Educational technology\n- Assessment and evaluation\n\n🌟 **Personal Development**:\n- Skill acquisition frameworks\n- Career planning and guidance\n- Leadership development\n- Communication skills\n\n**What learning goal can I help you achieve?**";
-    }
-
-    // Legal and Compliance
-    if (lowerMessage.includes('legal') || lowerMessage.includes('law') || lowerMessage.includes('rights') || lowerMessage.includes('compliance')) {
-      return "⚖️ **Legal & Compliance Advisor**\n\n⚠️ *Disclaimer: For informational purposes only. Consult qualified legal professionals for legal advice.*\n\n📋 **Legal Information**:\n- Contract law and agreements\n- Intellectual property rights\n- Business law and regulations\n- Employment law basics\n\n🏛️ **Compliance & Governance**:\n- Regulatory compliance\n- Data protection and privacy\n- Corporate governance\n- Risk management\n\n🌐 **International Law**:\n- Trade law and regulations\n- Human rights frameworks\n- International agreements\n- Cross-border legal issues\n\n📖 **Legal Research**:\n- Case law analysis\n- Statute interpretation\n- Legal writing and documentation\n- Court procedures\n\n**What legal topic can I help clarify?**";
-    }
-
     // Default comprehensive response
     const comprehensiveResponses = [
       "🌟 **I'm here to help with absolutely anything!** My knowledge spans:\n\n🎯 **Academic**: All subjects from elementary to PhD level\n💼 **Professional**: Business, finance, marketing, management\n🔬 **Scientific**: Research, analysis, experimentation\n🎨 **Creative**: Art, writing, music, design\n🌍 **Global**: Current events, history, cultures\n💡 **Personal**: Life advice, decision-making, problem-solving\n\n**Please share your specific question or challenge, and I'll provide detailed, expert-level assistance!**",
@@ -175,9 +140,9 @@ const PowerfulAI = () => {
         <div className="fixed bottom-6 right-6 z-[9999]">
           <button
             onClick={() => setIsOpen(true)}
-            className="group relative bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110"
+            className="group relative bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white p-5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 border border-red-500/50"
             style={{ 
-              boxShadow: '0 20px 40px rgba(168, 85, 247, 0.6), 0 0 0 4px rgba(168, 85, 247, 0.2)'
+              boxShadow: '0 20px 40px rgba(220, 38, 38, 0.6), 0 0 0 4px rgba(220, 38, 38, 0.2)'
             }}
           >
             <div className="relative flex items-center justify-center">
@@ -186,9 +151,9 @@ const PowerfulAI = () => {
               <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-yellow-300 animate-spin" />
             </div>
             
-            <div className="absolute bottom-full right-0 mb-3 px-4 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-xl">
+            <div className="absolute bottom-full right-0 mb-3 px-4 py-2 bg-black text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-xl border border-red-500/30">
               🧠 Advanced AI Assistant
-              <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+              <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
             </div>
           </button>
         </div>
@@ -197,11 +162,11 @@ const PowerfulAI = () => {
       {/* Chat Window */}
       {isOpen && (
         <div className="fixed bottom-6 right-6 z-[9999]">
-          <div className={`bg-white border-2 border-purple-300 rounded-2xl shadow-2xl transition-all duration-300 ${
+          <div className={`bg-black/90 border-2 border-red-500/30 rounded-2xl shadow-2xl transition-all duration-300 backdrop-blur-sm ${
             isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'
           }`}>
             {/* Chat Header */}
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
+            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white p-4 rounded-t-2xl flex items-center justify-between border-b border-red-500/30">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center relative">
                   <Brain className="h-6 w-6" />
@@ -232,17 +197,17 @@ const PowerfulAI = () => {
               <>
                 {/* Quick Questions */}
                 {messages.length <= 1 && (
-                  <div className="p-4 border-b border-purple-100">
-                    <p className="text-sm text-gray-600 mb-3 font-semibold">Quick start:</p>
+                  <div className="p-4 border-b border-red-500/30">
+                    <p className="text-sm text-gray-400 mb-3 font-semibold">Quick start:</p>
                     <div className="grid grid-cols-2 gap-2">
                       {quickQuestions.map((question, index) => (
                         <button
                           key={index}
                           onClick={() => handleSendMessage(question.query)}
-                          className="flex items-center space-x-2 p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors duration-200 text-left border border-purple-200"
+                          className="flex items-center space-x-2 p-3 bg-red-950/30 hover:bg-red-950/50 rounded-lg transition-colors duration-200 text-left border border-red-500/30"
                         >
-                          <question.icon className="h-4 w-4 text-purple-600" />
-                          <span className="text-xs text-gray-700 font-medium">{question.text}</span>
+                          <question.icon className="h-4 w-4 text-red-400" />
+                          <span className="text-xs text-gray-300 font-medium">{question.text}</span>
                         </button>
                       ))}
                     </div>
@@ -261,8 +226,8 @@ const PowerfulAI = () => {
                       }`}>
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
                           message.sender === 'user' 
-                            ? 'bg-gradient-to-r from-pink-500 to-rose-500' 
-                            : 'bg-gradient-to-r from-purple-500 to-pink-500'
+                            ? 'bg-gradient-to-r from-red-600 to-red-700' 
+                            : 'bg-gradient-to-r from-red-700 to-red-800'
                         }`}>
                           {message.sender === 'user' ? (
                             <User className="h-4 w-4 text-white" />
@@ -272,12 +237,12 @@ const PowerfulAI = () => {
                         </div>
                         <div className={`p-3 rounded-2xl ${
                           message.sender === 'user'
-                            ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white'
-                            : 'bg-gray-100 text-gray-800 border border-gray-200'
+                            ? 'bg-gradient-to-r from-red-600 to-red-700 text-white'
+                            : 'bg-red-950/30 text-gray-200 border border-red-500/30'
                         }`}>
                           <p className="text-sm whitespace-pre-line">{message.text}</p>
                           <p className={`text-xs mt-1 ${
-                            message.sender === 'user' ? 'text-pink-100' : 'text-gray-500'
+                            message.sender === 'user' ? 'text-red-100' : 'text-gray-400'
                           }`}>
                             {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                           </p>
@@ -289,14 +254,14 @@ const PowerfulAI = () => {
                   {isTyping && (
                     <div className="flex justify-start">
                       <div className="flex items-start space-x-2">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-red-700 to-red-800 flex items-center justify-center">
                           <Brain className="h-4 w-4 text-white" />
                         </div>
-                        <div className="bg-gray-100 p-3 rounded-2xl border border-gray-200">
+                        <div className="bg-red-950/30 p-3 rounded-2xl border border-red-500/30">
                           <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-2 h-2 bg-red-400 rounded-full animate-bounce"></div>
+                            <div className="w-2 h-2 bg-red-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                            <div className="w-2 h-2 bg-red-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                           </div>
                         </div>
                       </div>
@@ -306,7 +271,7 @@ const PowerfulAI = () => {
                 </div>
 
                 {/* Input Area */}
-                <div className="p-4 border-t border-purple-100">
+                <div className="p-4 border-t border-red-500/30">
                   <div className="flex items-center space-x-2">
                     <input
                       ref={inputRef}
@@ -315,13 +280,13 @@ const PowerfulAI = () => {
                       onChange={(e) => setInputText(e.target.value)}
                       onKeyPress={handleKeyPress}
                       placeholder="Ask me anything - I have global knowledge!"
-                      className="flex-1 px-4 py-3 border-2 border-purple-200 rounded-full focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-sm"
+                      className="flex-1 px-4 py-3 bg-red-950/30 border border-red-500/50 rounded-full focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 text-sm text-white placeholder-gray-400"
                       disabled={isTyping}
                     />
                     <button
                       onClick={() => handleSendMessage()}
                       disabled={!inputText.trim() || isTyping}
-                      className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 disabled:from-gray-400 disabled:to-gray-500 text-white p-3 rounded-full transition-all duration-300 transform hover:scale-105 disabled:scale-100"
+                      className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 disabled:from-gray-600 disabled:to-gray-700 text-white p-3 rounded-full transition-all duration-300 transform hover:scale-105 disabled:scale-100 border border-red-500/50"
                     >
                       <Send className="h-4 w-4" />
                     </button>
@@ -331,7 +296,7 @@ const PowerfulAI = () => {
                     <div className="flex justify-center mt-3">
                       <button
                         onClick={clearChat}
-                        className="text-xs text-gray-500 hover:text-purple-600 transition-colors duration-200 font-medium"
+                        className="text-xs text-gray-400 hover:text-red-400 transition-colors duration-200 font-medium"
                       >
                         Clear chat
                       </button>

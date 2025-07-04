@@ -91,15 +91,15 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-white/70">
+    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-black via-red-950 to-black">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
               Need Personal Help? 🤝
             </span>
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-medium">
             If you want personal care, syllabus guidance, doubt clearing, or any confusion about GATE preparation 
             and tech learning, we're here to help you succeed!
           </p>
@@ -108,25 +108,25 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Methods */}
           <div className="space-y-8">
-            <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center lg:text-left">
+            <h3 className="text-3xl font-bold text-white mb-8 text-center lg:text-left">
               📞 Get In Touch
             </h3>
 
             {/* WhatsApp */}
             <button 
               onClick={openWhatsApp}
-              className="group w-full bg-white/90 backdrop-blur-sm border border-pink-200 hover:border-green-400 rounded-xl p-6 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="group w-full bg-black/60 backdrop-blur-sm border border-red-500/30 hover:border-green-400 rounded-xl p-6 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Phone className="h-8 w-8 text-white" />
                 </div>
                 <div className="text-left">
-                  <h4 className="text-xl font-bold text-gray-800 group-hover:text-green-600 transition-colors duration-300">
+                  <h4 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
                     WhatsApp Support
                   </h4>
-                  <p className="text-gray-600 mb-2">Direct personal assistance</p>
-                  <p className="text-green-600 font-semibold text-lg">+91 8008651769</p>
+                  <p className="text-gray-400 mb-2">Direct personal assistance</p>
+                  <p className="text-green-400 font-semibold text-lg">+91 8008651769</p>
                 </div>
               </div>
             </button>
@@ -134,70 +134,70 @@ const ContactSection = () => {
             {/* Instagram */}
             <button 
               onClick={openInstagram}
-              className="group w-full bg-white/90 backdrop-blur-sm border border-pink-200 hover:border-pink-400 rounded-xl p-6 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="group w-full bg-black/60 backdrop-blur-sm border border-red-500/30 hover:border-red-400 rounded-xl p-6 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Instagram className="h-8 w-8 text-white" />
                 </div>
                 <div className="text-left">
-                  <h4 className="text-xl font-bold text-gray-800 group-hover:text-pink-600 transition-colors duration-300">
+                  <h4 className="text-xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">
                     Follow on Instagram
                   </h4>
-                  <p className="text-gray-600 mb-2">Updates, tips & community</p>
-                  <p className="text-pink-600 font-semibold text-lg">@csweterner</p>
+                  <p className="text-gray-400 mb-2">Updates, tips & community</p>
+                  <p className="text-red-400 font-semibold text-lg">@csweterner</p>
                 </div>
               </div>
             </button>
 
             {/* Services */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-              <div className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-xl p-6 text-center hover:border-cyan-400 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <GraduationCap className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
-                <h4 className="text-lg font-bold text-gray-800 mb-2">GATE Syllabus</h4>
-                <p className="text-gray-600 text-sm">Complete syllabus breakdown and study plans</p>
+              <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 text-center hover:border-red-400 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <GraduationCap className="h-12 w-12 text-red-400 mx-auto mb-4" />
+                <h4 className="text-lg font-bold text-white mb-2">GATE Syllabus</h4>
+                <p className="text-gray-400 text-sm">Complete syllabus breakdown and study plans</p>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-xl p-6 text-center hover:border-purple-400 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <HelpCircle className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h4 className="text-lg font-bold text-gray-800 mb-2">Doubt Clearing</h4>
-                <p className="text-gray-600 text-sm">Get your technical doubts resolved quickly</p>
+              <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 text-center hover:border-red-400 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <HelpCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
+                <h4 className="text-lg font-bold text-white mb-2">Doubt Clearing</h4>
+                <p className="text-gray-400 text-sm">Get your technical doubts resolved quickly</p>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-xl p-6 text-center hover:border-green-400 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <BookOpen className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <h4 className="text-lg font-bold text-gray-800 mb-2">Study Guidance</h4>
-                <p className="text-gray-600 text-sm">Personalized study plans and strategies</p>
+              <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 text-center hover:border-red-400 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <BookOpen className="h-12 w-12 text-red-600 mx-auto mb-4" />
+                <h4 className="text-lg font-bold text-white mb-2">Study Guidance</h4>
+                <p className="text-gray-400 text-sm">Personalized study plans and strategies</p>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-xl p-6 text-center hover:border-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <Users className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
-                <h4 className="text-lg font-bold text-gray-800 mb-2">Career Advice</h4>
-                <p className="text-gray-600 text-sm">Career guidance and placement preparation</p>
+              <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 text-center hover:border-red-400 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <Users className="h-12 w-12 text-red-700 mx-auto mb-4" />
+                <h4 className="text-lg font-bold text-white mb-2">Career Advice</h4>
+                <p className="text-gray-400 text-sm">Career guidance and placement preparation</p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="space-y-8">
-            <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center lg:text-left">
+            <h3 className="text-3xl font-bold text-white mb-8 text-center lg:text-left">
               📧 Send us a Message
             </h3>
 
-            <div className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-2xl p-8 shadow-xl">
+            <div className="bg-black/80 backdrop-blur-sm border border-red-500/30 rounded-2xl p-8 shadow-xl">
               {submitted ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Message Sent! 🎉</h3>
-                  <p className="text-gray-600">We'll get back to you within 24 hours!</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent! 🎉</h3>
+                  <p className="text-gray-300">We'll get back to you within 24 hours!</p>
                 </div>
               ) : (
                 <form onSubmit={handleContactSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="contact-name" className="block text-gray-800 font-semibold mb-3">
+                      <label htmlFor="contact-name" className="block text-white font-semibold mb-3">
                         Your Name *
                       </label>
                       <input
@@ -206,13 +206,13 @@ const ContactSection = () => {
                         name="name"
                         value={contactForm.name}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-white border rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 ${
-                          errors.name ? 'border-red-500' : 'border-pink-200 focus:border-pink-500'
+                        className={`w-full px-4 py-3 bg-red-950/30 border rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 ${
+                          errors.name ? 'border-red-500' : 'border-red-500/50 focus:border-red-500'
                         }`}
                         placeholder="Enter your full name"
                       />
                       {errors.name && (
-                        <div className="flex items-center mt-2 text-red-600 text-sm">
+                        <div className="flex items-center mt-2 text-red-400 text-sm">
                           <AlertCircle className="h-4 w-4 mr-1" />
                           {errors.name}
                         </div>
@@ -220,7 +220,7 @@ const ContactSection = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="contact-email" className="block text-gray-800 font-semibold mb-3">
+                      <label htmlFor="contact-email" className="block text-white font-semibold mb-3">
                         Email Address *
                       </label>
                       <input
@@ -229,13 +229,13 @@ const ContactSection = () => {
                         name="email"
                         value={contactForm.email}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-white border rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 ${
-                          errors.email ? 'border-red-500' : 'border-pink-200 focus:border-pink-500'
+                        className={`w-full px-4 py-3 bg-red-950/30 border rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 ${
+                          errors.email ? 'border-red-500' : 'border-red-500/50 focus:border-red-500'
                         }`}
                         placeholder="jakkulaveerababu429@gmail.com"
                       />
                       {errors.email && (
-                        <div className="flex items-center mt-2 text-red-600 text-sm">
+                        <div className="flex items-center mt-2 text-red-400 text-sm">
                           <AlertCircle className="h-4 w-4 mr-1" />
                           {errors.email}
                         </div>
@@ -244,7 +244,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="contact-subject" className="block text-gray-800 font-semibold mb-3">
+                    <label htmlFor="contact-subject" className="block text-white font-semibold mb-3">
                       Subject *
                     </label>
                     <select
@@ -252,8 +252,8 @@ const ContactSection = () => {
                       name="subject"
                       value={contactForm.subject}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-white border rounded-lg text-gray-800 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 ${
-                        errors.subject ? 'border-red-500' : 'border-pink-200 focus:border-pink-500'
+                      className={`w-full px-4 py-3 bg-red-950/30 border rounded-lg text-white focus:ring-2 focus:ring-red-500/20 transition-all duration-300 ${
+                        errors.subject ? 'border-red-500' : 'border-red-500/50 focus:border-red-500'
                       }`}
                     >
                       <option value="">Select a subject</option>
@@ -266,7 +266,7 @@ const ContactSection = () => {
                       <option value="other">Other</option>
                     </select>
                     {errors.subject && (
-                      <div className="flex items-center mt-2 text-red-600 text-sm">
+                      <div className="flex items-center mt-2 text-red-400 text-sm">
                         <AlertCircle className="h-4 w-4 mr-1" />
                         {errors.subject}
                       </div>
@@ -274,7 +274,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="contact-message" className="block text-gray-800 font-semibold mb-3">
+                    <label htmlFor="contact-message" className="block text-white font-semibold mb-3">
                       Your Message *
                     </label>
                     <textarea
@@ -283,13 +283,13 @@ const ContactSection = () => {
                       value={contactForm.message}
                       onChange={handleInputChange}
                       rows={5}
-                      className={`w-full px-4 py-3 bg-white border rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 resize-none ${
-                        errors.message ? 'border-red-500' : 'border-pink-200 focus:border-pink-500'
+                      className={`w-full px-4 py-3 bg-red-950/30 border rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 resize-none ${
+                        errors.message ? 'border-red-500' : 'border-red-500/50 focus:border-red-500'
                       }`}
                       placeholder="Describe your query or how we can help you..."
                     />
                     {errors.message && (
-                      <div className="flex items-center mt-2 text-red-600 text-sm">
+                      <div className="flex items-center mt-2 text-red-400 text-sm">
                         <AlertCircle className="h-4 w-4 mr-1" />
                         {errors.message}
                       </div>
@@ -299,7 +299,7 @@ const ContactSection = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 disabled:from-gray-400 disabled:to-gray-500 px-8 py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed flex items-center justify-center space-x-2 shadow-lg"
+                    className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 disabled:from-gray-600 disabled:to-gray-700 px-8 py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed flex items-center justify-center space-x-2 shadow-lg border border-red-500/50"
                   >
                     {isSubmitting ? (
                       <>
@@ -321,22 +321,22 @@ const ContactSection = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-pink-100 to-rose-100 border border-pink-300 rounded-2xl p-8 max-w-4xl mx-auto shadow-lg">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">🚀 Ready to Excel in Your Studies?</h3>
-            <p className="text-xl text-gray-700 mb-8">
+          <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto shadow-xl backdrop-blur-sm">
+            <h3 className="text-3xl font-bold text-white mb-4">🚀 Ready to Excel in Your Studies?</h3>
+            <p className="text-xl text-gray-300 mb-8">
               Don't let doubts and confusion hold you back. Get personalized guidance from someone who understands your journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={openWhatsApp}
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
+                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-green-500/50"
               >
                 <MessageCircle className="h-5 w-5" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button 
                 onClick={openInstagram}
-                className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-red-500/50"
               >
                 <Instagram className="h-5 w-5" />
                 <span>Follow on Instagram</span>
