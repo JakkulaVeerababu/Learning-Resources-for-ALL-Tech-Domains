@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen relative overflow-x-hidden transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-white via-pink-50 to-rose-100 relative overflow-x-hidden transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       {/* Top Credits Banner */}
       <TopScrollingBanner />
       
@@ -30,14 +30,11 @@ function App() {
       {/* Live View Counter */}
       <ViewCounter />
       
-      {/* Hero Section - Now with dark background */}
-      <Hero />
-      
       {/* Main Scrolling Banner */}
       <ScrollingBanner />
       
-      {/* Main content with light background */}
-      <main className="relative z-10 bg-gradient-to-br from-white via-pink-50 to-rose-100">
+      <main className="relative z-10">
+        <Hero />
         <ResourcesSection />
         <CompilerSection />
         <RoadmapsSection />

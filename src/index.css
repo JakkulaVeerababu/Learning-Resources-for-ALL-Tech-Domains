@@ -4,7 +4,7 @@
 
 @layer utilities {
   .animate-gradient-x {
-    animation: gradient-x 4s ease infinite;
+    animation: gradient-x 3s ease infinite;
     background-size: 200% 200%;
   }
 
@@ -23,14 +23,6 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
   }
 }
 
@@ -59,25 +51,7 @@
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-  }
-  to {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 40px rgba(147, 51, 234, 0.3);
-  }
-}
-
-/* Enhanced scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -87,12 +61,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  background: linear-gradient(to bottom, #06b6d4, #8b5cf6);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+  background: linear-gradient(to bottom, #0891b2, #7c3aed);
 }
 
 /* Smooth scrolling */
@@ -100,20 +74,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Enhanced focus styles */
+/* Focus styles */
 button:focus,
 a:focus,
 input:focus,
 textarea:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #06b6d4;
   outline-offset: 2px;
-}
-
-/* Glass morphism effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Reduced motion for accessibility */
@@ -124,18 +91,5 @@ textarea:focus {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-}
-
-/* Custom selection */
-::selection {
-  background: rgba(59, 130, 246, 0.3);
-  color: white;
-}
-
-/* Backdrop blur support */
-@supports (backdrop-filter: blur(10px)) {
-  .backdrop-blur-xl {
-    backdrop-filter: blur(24px);
   }
 }
