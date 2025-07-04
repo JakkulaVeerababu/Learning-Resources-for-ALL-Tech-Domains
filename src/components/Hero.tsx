@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { 
     Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
     Database, Globe, Brain, Calculator, Wrench, Building, Instagram, 
-    MessageCircle, Linkedin, Play, ArrowDown, Sparkles
+    MessageCircle, Linkedin, Play, ArrowDown, Sparkles, BookOpen
 } from 'lucide-react';
 
 const Hero = () => {
