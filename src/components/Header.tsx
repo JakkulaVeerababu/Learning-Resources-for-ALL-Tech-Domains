@@ -47,7 +47,7 @@ const Header = () => {
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-lg border-b border-pink-200 shadow-lg' : 'bg-white/80 backdrop-blur-sm'
+        isScrolled ? 'bg-black/95 backdrop-blur-lg border-b border-red-500/30 shadow-lg' : 'bg-black/80 backdrop-blur-sm'
       }`}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -56,58 +56,58 @@ const Header = () => {
               onClick={handleLogoClick}
             >
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <GraduationCap className="h-7 w-7 text-white" />
                 </div>
-                <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-yellow-500 animate-pulse" />
+                <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-red-400 animate-pulse" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
                   Tech Learning Hub
                 </h1>
-                <p className="text-xs text-gray-600 font-medium">Free Resources Forever</p>
+                <p className="text-xs text-gray-400 font-medium">Free Resources Forever</p>
               </div>
             </div>
 
             <nav className="hidden md:flex items-center space-x-8">
               <button 
                 onClick={() => scrollToSection('resources')}
-                className="text-gray-700 hover:text-pink-600 transition-colors duration-300 relative group font-medium"
+                className="text-gray-300 hover:text-red-400 transition-colors duration-300 relative group font-medium"
               >
                 Resources
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('compilers')}
-                className="text-gray-700 hover:text-pink-600 transition-colors duration-300 relative group font-medium"
+                className="text-gray-300 hover:text-red-400 transition-colors duration-300 relative group font-medium"
               >
                 Compilers
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('roadmaps')}
-                className="text-gray-700 hover:text-pink-600 transition-colors duration-300 relative group font-medium"
+                className="text-gray-300 hover:text-red-400 transition-colors duration-300 relative group font-medium"
               >
                 Roadmaps
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-gray-700 hover:text-pink-600 transition-colors duration-300 relative group font-medium"
+                className="text-gray-300 hover:text-red-400 transition-colors duration-300 relative group font-medium"
               >
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
               
               {user ? (
                 <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-2 bg-green-100 px-4 py-2 rounded-full">
-                    <User className="h-4 w-4 text-green-600" />
-                    <span className="text-green-800 font-medium text-sm">{user.name}</span>
+                  <div className="flex items-center space-x-2 bg-red-900/30 border border-red-500/50 px-4 py-2 rounded-full">
+                    <User className="h-4 w-4 text-red-400" />
+                    <span className="text-red-200 font-medium text-sm">{user.name}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="flex items-center space-x-2 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-full text-white font-medium transition-all duration-300"
+                    className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full text-white font-medium transition-all duration-300"
                   >
                     <LogOut className="h-4 w-4" />
                     <span>Logout</span>
@@ -116,7 +116,7 @@ const Header = () => {
               ) : (
                 <button
                   onClick={() => setIsAuthModalOpen(true)}
-                  className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 px-6 py-3 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-6 py-3 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg border border-red-500/50"
                 >
                   <LogIn className="h-4 w-4" />
                   <span>Login</span>
@@ -127,7 +127,7 @@ const Header = () => {
                 href="https://www.instagram.com/csweterner/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-rose-500 px-6 py-3 rounded-full hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform hover:scale-105 shadow-lg text-white font-medium"
+                className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg text-white font-medium border border-red-500/50"
               >
                 <Instagram className="h-4 w-4" />
                 <span>Follow</span>
@@ -135,7 +135,7 @@ const Header = () => {
             </nav>
 
             <button 
-              className="md:hidden text-gray-700 hover:text-pink-600 transition-colors duration-300 p-2"
+              className="md:hidden text-gray-300 hover:text-red-400 transition-colors duration-300 p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -144,42 +144,42 @@ const Header = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden mt-6 pb-6 border-t border-pink-200">
+            <div className="md:hidden mt-6 pb-6 border-t border-red-500/30">
               <nav className="flex flex-col space-y-4 mt-6">
                 <button 
                   onClick={() => scrollToSection('resources')}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium text-left"
+                  className="text-gray-300 hover:text-red-400 transition-colors duration-300 font-medium text-left"
                 >
                   Resources
                 </button>
                 <button 
                   onClick={() => scrollToSection('compilers')}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium text-left"
+                  className="text-gray-300 hover:text-red-400 transition-colors duration-300 font-medium text-left"
                 >
                   Compilers
                 </button>
                 <button 
                   onClick={() => scrollToSection('roadmaps')}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium text-left"
+                  className="text-gray-300 hover:text-red-400 transition-colors duration-300 font-medium text-left"
                 >
                   Roadmaps
                 </button>
                 <button 
                   onClick={() => scrollToSection('contact')}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium text-left"
+                  className="text-gray-300 hover:text-red-400 transition-colors duration-300 font-medium text-left"
                 >
                   Contact
                 </button>
                 
                 {user ? (
                   <div className="space-y-3">
-                    <div className="flex items-center space-x-2 bg-green-100 px-4 py-2 rounded-full w-fit">
-                      <User className="h-4 w-4 text-green-600" />
-                      <span className="text-green-800 font-medium text-sm">{user.name}</span>
+                    <div className="flex items-center space-x-2 bg-red-900/30 border border-red-500/50 px-4 py-2 rounded-full w-fit">
+                      <User className="h-4 w-4 text-red-400" />
+                      <span className="text-red-200 font-medium text-sm">{user.name}</span>
                     </div>
                     <button
                       onClick={handleLogout}
-                      className="flex items-center space-x-2 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-full text-white font-medium transition-all duration-300 w-fit"
+                      className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full text-white font-medium transition-all duration-300 w-fit"
                     >
                       <LogOut className="h-4 w-4" />
                       <span>Logout</span>
@@ -188,7 +188,7 @@ const Header = () => {
                 ) : (
                   <button
                     onClick={() => setIsAuthModalOpen(true)}
-                    className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full text-white font-medium w-fit"
+                    className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full text-white font-medium w-fit border border-red-500/50"
                   >
                     <LogIn className="h-4 w-4" />
                     <span>Login</span>
@@ -199,7 +199,7 @@ const Header = () => {
                   href="https://www.instagram.com/csweterner/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-rose-500 px-6 py-3 rounded-full text-white font-medium w-fit"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full text-white font-medium w-fit border border-red-500/50"
                 >
                   <Instagram className="h-4 w-4" />
                   <span>Follow Us</span>

@@ -59,7 +59,7 @@ const TopScrollingBanner = () => {
 
   return (
     <div className="fixed top-36 left-0 w-full z-50 shadow-lg overflow-hidden relative">
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-1 overflow-hidden">
+      <div className="bg-gradient-to-r from-red-800 via-red-900 to-black py-1 overflow-hidden">
         <div className="flex animate-scroll-left whitespace-nowrap">
           {[...allItems, ...allItems, ...allItems].map((text, index) => (
             <span 
@@ -72,8 +72,8 @@ const TopScrollingBanner = () => {
         </div>
       </div>
       
-      <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-blue-600 to-transparent pointer-events-none z-10"></div>
-      <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-pink-600 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-red-800 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div>
     </div>
   );
 };

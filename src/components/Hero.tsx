@@ -8,10 +8,10 @@ import {
 
 const Hero = () => {
   const features = [
-    { icon: Gift, text: "100% FREE Forever", color: "text-green-600" },
-    { icon: Target, text: "All Tech Domains", color: "text-blue-600" },
-    { icon: Clock, text: "Always Updated", color: "text-purple-600" },
-    { icon: Zap, text: "No Login Required", color: "text-orange-600" }
+    { icon: Gift, text: "100% FREE Forever", color: "text-red-400" },
+    { icon: Target, text: "All Tech Domains", color: "text-red-500" },
+    { icon: Clock, text: "Always Updated", color: "text-red-600" },
+    { icon: Zap, text: "No Login Required", color: "text-red-700" }
   ];
 
   const domains = [
@@ -45,69 +45,77 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-32 pb-20 px-6">
-      <div className="container mx-auto text-center">
+    <section className="pt-32 pb-20 px-6 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-red-950 to-black"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,38,38,0.1),transparent_70%)]"></div>
+      
+      <div className="container mx-auto text-center relative z-10">
         
-        {/* === NEW AND IMPROVED PROFESSIONAL BADGE === */}
+        {/* Professional Badge */}
         <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
-          <div className="inline-flex items-center space-x-4 bg-white/90 border border-gray-300/70 rounded-full p-2 backdrop-blur-sm shadow-xl">
+          <div className="inline-flex items-center space-x-4 bg-black/80 border border-red-500/50 rounded-full p-2 backdrop-blur-sm shadow-2xl">
             
-            {/* Creator Info (Unclickable) */}
+            {/* Creator Info */}
             <div className="flex items-center space-x-3 pl-2">
-              <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-rose-500"></span>
-              <p className="text-sm font-semibold text-gray-800">
-                Created by <span className="font-bold text-blue-600">csweterner</span>
+              <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-red-500 via-red-600 to-red-700"></span>
+              <p className="text-sm font-semibold text-white">
+                Created by <span className="font-bold text-red-400">csweterner</span>
               </p>
             </div>
         
             {/* Vertical Separator */}
-            <div className="w-[1px] h-6 bg-gray-300"></div>
+            <div className="w-[1px] h-6 bg-red-500/50"></div>
 
-            {/* Social Link "Buttons" with Text and Icons */}
+            {/* Social Links */}
             <div className="flex items-center space-x-2">
               <a 
                 href="https://www.instagram.com/csweterner/"
                 target="_blank" 
                 rel="noopener noreferrer"
                 title="Follow on Instagram for updates"
-                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
+                className="flex items-center space-x-2 px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
               >
-                <Instagram className="h-4 w-4 text-pink-600" />
+                <Instagram className="h-4 w-4 text-red-400" />
                 <span className="text-xs font-semibold">Instagram</span>
               </a>
               <a 
-                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/" // Cleaned URL
+                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/"
                 target="_blank" 
                 rel="noopener noreferrer"
                 title="Connect on LinkedIn"
-                className="flex items-center space-x-2 px-3 py-1 rounded-full text-gray-700 hover:bg-gray-200/70 transition-colors duration-300"
+                className="flex items-center space-x-2 px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
               >
-                <Linkedin className="h-4 w-4 text-blue-700" />
+                <Linkedin className="h-4 w-4 text-red-400" />
                 <span className="text-xs font-semibold">LinkedIn</span>
               </a>
             </div>
-
           </div>
         </div>
 
-        {/* Main Heading */}
+        {/* Professional Main Heading */}
         <div className="mb-12 animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 bg-clip-text text-transparent animate-gradient-x">
-              🎓 FREE Learning Resources
-            </span>
-            <br />
-            <span className="text-gray-800">for ALL Tech Domains! 🚀</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto font-medium">
-            Your Ultimate Hub for Engineering, Programming & Tech Education 💻✨
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <span className="bg-gradient-to-r from-pink-500 to-rose-500 px-6 py-3 rounded-full text-white font-semibold animate-pulse shadow-lg">
-              📚 GATE • Full Stack • AI • VLSI • Embedded & More!
-            </span>
+          <div className="mb-8">
+            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight tracking-tight">
+              <span className="block bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent">
+                TECH MASTERY
+              </span>
+              <span className="block text-white font-light text-4xl md:text-5xl mt-4">
+                UNLIMITED RESOURCES
+              </span>
+            </h1>
+            
+            <div className="w-32 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-4xl mx-auto font-light leading-relaxed">
+              Elite Engineering & Programming Education Platform
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <span className="bg-gradient-to-r from-red-600 to-red-700 px-8 py-4 rounded-full text-white font-bold text-lg shadow-2xl border border-red-500/50">
+                GATE • FULL STACK • AI • VLSI • EMBEDDED
+              </span>
+            </div>
           </div>
         </div>
 
@@ -116,12 +124,12 @@ const Hero = () => {
           {domains.map((domain, index) => (
             <div 
               key={index}
-              className="bg-white/80 backdrop-blur-sm border border-pink-200 rounded-xl p-4 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
+              className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-4 hover:border-red-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-xl hover:shadow-2xl cursor-pointer hover:bg-red-950/30"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => scrollToSection('resources')}
             >
-              <domain.icon className="h-8 w-8 text-pink-600 mx-auto mb-2" />
-              <p className="text-gray-700 text-xs font-medium">{domain.name}</p>
+              <domain.icon className="h-8 w-8 text-red-400 mx-auto mb-2" />
+              <p className="text-white text-xs font-medium">{domain.name}</p>
             </div>
           ))}
         </div>
@@ -131,12 +139,12 @@ const Hero = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-white/90 backdrop-blur-sm border border-pink-200 rounded-2xl p-6 hover:border-pink-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-lg hover:shadow-xl cursor-pointer"
+              className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-xl hover:shadow-2xl cursor-pointer hover:bg-red-950/30"
               style={{ animationDelay: `${index * 0.1 + 0.8}s` }}
               onClick={() => scrollToSection('resources')}
             >
               <feature.icon className={`h-10 w-10 ${feature.color} mx-auto mb-3`} />
-              <p className="text-gray-800 font-semibold">{feature.text}</p>
+              <p className="text-white font-semibold">{feature.text}</p>
             </div>
           ))}
         </div>
@@ -145,67 +153,66 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
           <button 
             onClick={() => scrollToSection('resources')}
-            className="group bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-xl hover:shadow-2xl"
+            className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-12 py-5 rounded-full text-white font-bold text-xl transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-2xl hover:shadow-red-500/25 border border-red-500/50"
           >
-            <span>Explore All Resources</span>
-            <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+            <span>EXPLORE RESOURCES</span>
+            <ChevronRight className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
           
           <button 
             onClick={openInstagram}
-            className="group bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-xl hover:shadow-2xl"
+            className="group bg-black/80 hover:bg-red-950/80 border border-red-500/50 hover:border-red-400 px-12 py-5 rounded-full text-white font-bold text-xl transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-2xl"
           >
-            <Instagram className="h-5 w-5" />
-            <span>Follow @csweterner</span>
+            <Instagram className="h-6 w-6" />
+            <span>FOLLOW @csweterner</span>
           </button>
         </div>
 
         {/* Personal Guidance Section */}
-        <div className="bg-gradient-to-r from-green-100 to-teal-100 border border-green-300 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-lg">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">🤝 Need Personal Guidance?</h3>
-          <p className="text-gray-700 text-lg mb-6">
-            I personally help students with GATE preparation, career guidance, doubt clearing, and study planning. 
-            Feel free to reach out for one-on-one support!
+        <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-2xl backdrop-blur-sm">
+          <h3 className="text-3xl font-bold text-white mb-4">🤝 PERSONAL MENTORSHIP</h3>
+          <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            Get exclusive one-on-one guidance for GATE preparation, career strategy, and technical excellence. 
+            Direct access to expert mentorship for your success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={openWhatsApp}
-              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
+              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-8 py-4 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-green-500/50"
             >
               <MessageCircle className="h-5 w-5" />
-              <span>WhatsApp Me</span>
+              <span>WHATSAPP DIRECT</span>
             </button>
             <button 
               onClick={openInstagram}
-              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
+              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-4 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-red-500/50"
             >
               <Instagram className="h-5 w-5" />
-              <span>DM on Instagram</span>
+              <span>INSTAGRAM DM</span>
             </button>
           </div>
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
-          <div className="text-center animate-fade-in-up bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300" style={{ animationDelay: '1.2s' }}>
-            <div className="text-4xl font-bold text-pink-600 mb-2">50+</div>
-            <div className="text-gray-700 font-medium">Tech Domains</div>
+          <div className="text-center animate-fade-in-up bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer hover:shadow-2xl transition-all duration-300 border border-red-500/30" style={{ animationDelay: '1.2s' }}>
+            <div className="text-5xl font-bold text-red-400 mb-2">50+</div>
+            <div className="text-gray-300 font-medium">Tech Domains</div>
           </div>
-          <div className="text-center animate-fade-in-up bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300" style={{ animationDelay: '1.3s' }}>
-            <div className="text-4xl font-bold text-rose-600 mb-2">2000+</div>
-            <div className="text-gray-700 font-medium">Study Materials</div>
+          <div className="text-center animate-fade-in-up bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer hover:shadow-2xl transition-all duration-300 border border-red-500/30" style={{ animationDelay: '1.3s' }}>
+            <div className="text-5xl font-bold text-red-500 mb-2">2000+</div>
+            <div className="text-gray-300 font-medium">Study Materials</div>
           </div>
-          <div className="text-center animate-fade-in-up bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300" style={{ animationDelay: '1.4s' }}>
-            <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
-            <div className="text-gray-700 font-medium">Free Forever</div>
+          <div className="text-center animate-fade-in-up bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer hover:shadow-2xl transition-all duration-300 border border-red-500/30" style={{ animationDelay: '1.4s' }}>
+            <div className="text-5xl font-bold text-red-600 mb-2">100%</div>
+            <div className="text-gray-300 font-medium">Free Forever</div>
           </div>
         </div>
 
         {/* Thank You Message */}
-        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-300 rounded-2xl p-6 max-w-3xl mx-auto shadow-lg">
-          <p className="text-yellow-800 font-medium text-lg">
-            🙏 Thank you for visiting! I hope these resources help you achieve your dreams. 
-            Don't forget to follow me for updates and tips! 💫
+        <div className="bg-gradient-to-r from-red-950/30 to-black/30 border border-red-500/30 rounded-2xl p-6 max-w-3xl mx-auto shadow-xl backdrop-blur-sm">
+          <p className="text-red-200 font-medium text-lg">
+            🙏 Excellence in education, delivered free. Follow for cutting-edge updates and industry insights. 💫
           </p>
         </div>
       </div>

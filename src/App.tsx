@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-white via-pink-50 to-rose-100 relative overflow-x-hidden transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-black via-red-950 to-black relative overflow-x-hidden transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       {/* Top Credits Banner */}
       <TopScrollingBanner />
       

@@ -12,9 +12,7 @@ const ScrollingBanner = () => {
   ];
 
   return (
-    // --- CHANGE IS HERE ---
-    // Changed mt-10 to mt-20 to move the banner further down.
-    <div className="mt-20 bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 py-1.5 overflow-hidden relative shadow-lg border-y-2 border-pink-300">
+    <div className="mt-20 bg-gradient-to-r from-red-600 via-red-700 to-red-800 py-1.5 overflow-hidden relative shadow-lg border-y-2 border-red-500/50">
       {/* Main scrolling content */}
       <div className="flex animate-scroll-left whitespace-nowrap">
         {[...resources, ...resources, ...resources].map((resource, index) => (
@@ -29,8 +27,8 @@ const ScrollingBanner = () => {
       </div>
       
       {/* Gradient overlays for smooth edges */}
-      <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-pink-500 to-transparent pointer-events-none z-10"></div>
-      <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-purple-500 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-red-600 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-red-800 to-transparent pointer-events-none z-10"></div>
     </div>
   );
 };
