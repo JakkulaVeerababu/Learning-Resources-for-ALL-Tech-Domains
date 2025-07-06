@@ -12,7 +12,7 @@ const ScrollingBanner = () => {
   ];
 
   return (
-    <div className="mt-20 bg-gradient-to-r from-red-600 via-red-700 to-red-800 py-1.5 overflow-hidden relative shadow-lg border-y-2 border-red-500/50">
+    <div className="mt-16 bg-gradient-to-r from-red-600 via-red-700 to-red-800 py-1.5 overflow-hidden relative shadow-lg border-y-2 border-red-500/50">
       {/* Main scrolling content */}
       <div className="flex animate-scroll-left whitespace-nowrap">
         {[...resources, ...resources, ...resources].map((resource, index) => (

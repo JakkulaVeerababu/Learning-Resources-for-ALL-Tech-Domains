@@ -11,6 +11,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ViewCounter from './components/ViewCounter';
 import PowerfulAI from './components/PowerfulAI';
+import VolcanoEffect from './components/VolcanoEffect';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,6 +22,9 @@ function App() {
 
   return (
     <div className={`min-h-screen bg-gradient-to-br from-black via-red-950 to-black relative overflow-x-hidden transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      {/* Volcano Effect */}
+      <VolcanoEffect />
+      
       {/* Top Credits Banner */}
       <TopScrollingBanner />
       
