@@ -103,7 +103,7 @@ const MeteorShower = () => {
         }
       `}</style>
 
-      <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         {meteors.map(meteor => (
           <div
             key={meteor.id}
