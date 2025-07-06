@@ -135,25 +135,25 @@ const PowerfulAI = () => {
 
   return (
     <>
-      {/* AI Chat Toggle Button */}
+      {/* AI Chat Toggle Button - Made Smaller */}
       {!isOpen && (
         <div className="fixed bottom-6 right-6 z-[9999]">
           <button
             onClick={() => setIsOpen(true)}
-            className="group relative bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white p-5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 border border-red-500/50"
+            className="group relative bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white p-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 border border-red-500/50"
             style={{ 
-              boxShadow: '0 20px 40px rgba(220, 38, 38, 0.6), 0 0 0 4px rgba(220, 38, 38, 0.2)'
+              boxShadow: '0 15px 30px rgba(220, 38, 38, 0.5), 0 0 0 3px rgba(220, 38, 38, 0.2)'
             }}
           >
             <div className="relative flex items-center justify-center">
-              <Brain className="h-8 w-8" />
-              <div className="absolute -top-2 -right-2 w-5 h-5 bg-green-400 rounded-full animate-pulse border-2 border-white"></div>
-              <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-yellow-300 animate-spin" />
+              <Brain className="h-6 w-6" />
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse border border-white"></div>
+              <Sparkles className="absolute -top-0.5 -right-0.5 h-3 w-3 text-yellow-300 animate-spin" />
             </div>
             
-            <div className="absolute bottom-full right-0 mb-3 px-4 py-2 bg-black text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-xl border border-red-500/30">
-              🧠 Advanced AI Assistant
-              <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+            <div className="absolute bottom-full right-0 mb-3 px-3 py-2 bg-black text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-xl border border-red-500/30">
+              🧠 AI Assistant
+              <div className="absolute top-full right-3 w-0 h-0 border-l-3 border-r-3 border-t-3 border-transparent border-t-black"></div>
             </div>
           </button>
         </div>
