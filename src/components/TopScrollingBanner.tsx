@@ -47,7 +47,11 @@ const TopScrollingBanner = () => {
   }, []);
 
   const bannerItems = [
-    "🎓 Veerababu Jakkula", "💡 Innovation Hub", "🔬 Research Center"
+    "🎓 Veerababu Jakkula", 
+    "💡 Innovation Hub", 
+    "🔬 Research Center",
+    "⚠️ Material Access Issues? DM on WhatsApp - Get materials within 1 minute! 📱",
+    "🚀 24/7 Support Available"
   ];
 
   const dynamicStats = [
