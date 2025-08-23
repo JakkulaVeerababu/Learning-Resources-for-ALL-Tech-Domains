@@ -194,22 +194,60 @@ const Hero = () => {
         </div>
 
         {/* GATE ECE Syllabus Section */}
+        {/* Latest Updates Section */}
         <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-2xl backdrop-blur-sm">
-          <h3 className="text-3xl font-bold text-white mb-4">📋 GATE ECE SYLLABUS</h3>
-          <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-            Complete GATE Electronics & Communication Engineering syllabus with detailed topics and weightage. 
-            Essential for structured preparation and exam strategy.
-          </p>
-          <div className="flex justify-center">
-            <a 
-              href="https://drive.google.com/file/d/1pTI8oMHIbnTerPlxJshkiYJ6QJUG6s1s/view?usp=drivesdk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-4 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-red-500/50"
-            >
-              <BookOpen className="h-5 w-5" />
-              <span>VIEW GATE ECE SYLLABUS</span>
-            </a>
+          <h3 className="text-3xl font-bold text-white mb-6 text-center">🚨 LATEST UPDATES</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* GATE ECE Syllabus */}
+            <div className="bg-black/60 border border-red-500/30 rounded-xl p-6 hover:bg-red-950/30 transition-all duration-300">
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center">
+                  <BookOpen className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white">GATE ECE Syllabus</h4>
+                  <p className="text-red-400 text-sm font-semibold">📋 Official PDF</p>
+                </div>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                Complete GATE Electronics & Communication Engineering syllabus with detailed topics and weightage.
+              </p>
+              <a 
+                href="https://drive.google.com/file/d/1pTI8oMHIbnTerPlxJshkiYJ6QJUG6s1s/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-4 py-3 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-red-500/50"
+              >
+                <BookOpen className="h-4 w-4" />
+                <span>View Syllabus PDF</span>
+              </a>
+            </div>
+
+            {/* GATE 2026 Official Website */}
+            <div className="bg-black/60 border border-red-500/30 rounded-xl p-6 hover:bg-red-950/30 transition-all duration-300">
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-700 to-red-800 rounded-lg flex items-center justify-center">
+                  <Globe className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white">GATE 2026 Official</h4>
+                  <p className="text-red-400 text-sm font-semibold">🌐 Official Website</p>
+                </div>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                Official GATE 2026 website for registration, notifications, admit cards, and results.
+              </p>
+              <a 
+                href="https://gate2026.iitr.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-gradient-to-r from-red-700 to-red-800 hover:from-red-800 hover:to-red-900 px-4 py-3 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-red-500/50"
+              >
+                <Globe className="h-4 w-4" />
+                <span>Visit Official Site</span>
+              </a>
+            </div>
           </div>
         </div>
         {/* Stats */}
