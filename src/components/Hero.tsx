@@ -193,6 +193,25 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* GATE ECE Syllabus Section */}
+        <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-2xl backdrop-blur-sm">
+          <h3 className="text-3xl font-bold text-white mb-4">📋 GATE ECE SYLLABUS</h3>
+          <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            Complete GATE Electronics & Communication Engineering syllabus with detailed topics and weightage. 
+            Essential for structured preparation and exam strategy.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="https://drive.google.com/file/d/1pTI8oMHIbnTerPlxJshkiYJ6QJUG6s1s/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-4 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-red-500/50"
+            >
+              <BookOpen className="h-5 w-5" />
+              <span>VIEW GATE ECE SYLLABUS</span>
+            </a>
+          </div>
+        </div>
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
           <div className="text-center animate-fade-in-up bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer hover:shadow-2xl transition-all duration-300 border border-red-500/30" style={{ animationDelay: '1.2s' }}>
