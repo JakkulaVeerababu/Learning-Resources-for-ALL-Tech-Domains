@@ -36,7 +36,7 @@ const Hero = () => {
   };
 
   const openInstagram = () => {
-    window.open('https://www.instagram.com/csweterner/', '_blank');
+    window.open('https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw', '_blank');
   };
 
   const openWhatsApp = () => {
@@ -70,7 +70,7 @@ const Hero = () => {
             {/* Social Links */}
             <div className="flex items-center space-x-2">
               <a 
-                href="https://www.instagram.com/csweterner/"
+                href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw"
                 target="_blank" 
                 rel="noopener noreferrer"
                 title="Follow on Instagram for updates"
@@ -80,7 +80,7 @@ const Hero = () => {
                 <span className="text-xs font-semibold">Instagram</span>
               </a>
               <a 
-                href="https://www.linkedin.com/in/venkata-sai-kumar-jakkula-32574234a/"
+                href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank" 
                 rel="noopener noreferrer"
                 title="Connect on LinkedIn"

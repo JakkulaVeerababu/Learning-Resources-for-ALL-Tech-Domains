@@ -124,7 +124,7 @@ const Header = () => {
               )}
               
               <a 
-                href="https://www.instagram.com/csweterner/" 
+                href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg text-white font-medium border border-red-500/50"
@@ -196,7 +196,7 @@ const Header = () => {
                 )}
                 
                 <a 
-                  href="https://www.instagram.com/csweterner/" 
+                  href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full text-white font-medium w-fit border border-red-500/50"
