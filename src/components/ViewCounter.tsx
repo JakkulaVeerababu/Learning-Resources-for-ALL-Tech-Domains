@@ -48,7 +48,7 @@ const ViewCounter = () => {
 
   // --- THIS IS THE ONLY CHANGE YOU NEED ---
   // By returning null, the component renders absolutely nothing.
-  return null; 
+  return null;
   
   // You can safely delete the old return block below this line.
   /*

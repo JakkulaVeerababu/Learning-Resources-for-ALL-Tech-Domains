@@ -245,8 +245,8 @@ const ResourcesSection = () => {
             >
               <div className={`
                 relative bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 h-full
-                transition-all duration-300 transform hover:scale-105 hover:border-red-400
-                ${hoveredCard === index ? 'shadow-2xl shadow-red-500/20' : 'hover:shadow-xl hover:shadow-red-500/10'}
+                transition-colors duration-300 hover:border-red-400
+                ${hoveredCard === index ? 'shadow-lg shadow-red-500/20' : 'hover:shadow-lg hover:shadow-red-500/10'}
               `}>
                 {/* Gradient Border on Hover */}
                 <div className={`
@@ -257,7 +257,7 @@ const ResourcesSection = () => {
                 <div className="relative z-10">
                   <div className={`
                     w-14 h-14 rounded-xl bg-gradient-to-r ${resource.color} 
-                    flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg
+                    flex items-center justify-center mb-4 transition-colors duration-300 shadow-lg
                   `}>
                     <resource.icon className="h-7 w-7 text-white" />
                   </div>
@@ -272,7 +272,7 @@ const ResourcesSection = () => {
                   
                   <div className="flex items-center text-red-400 group-hover:text-red-300 transition-colors duration-300">
                     <span className="text-sm font-semibold">Access Materials</span>
-                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ExternalLink className="h-4 w-4 ml-2 transition-colors duration-300" />
                   </div>
                 </div>
               </div>

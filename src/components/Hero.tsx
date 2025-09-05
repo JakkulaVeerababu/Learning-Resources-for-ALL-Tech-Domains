@@ -53,7 +53,7 @@ const Hero = () => {
       <div className="container mx-auto text-center relative z-10">
         
         {/* Professional Badge */}
-        <div className="flex justify-center mb-10 -mt-16 animate-fade-in-up">
+        <div className="flex justify-center mb-10 -mt-16">
           <div className="inline-flex items-center space-x-4 bg-black/80 border border-red-500/50 rounded-full p-2 backdrop-blur-sm shadow-2xl">
             
             {/* Creator Info */}
@@ -94,7 +94,7 @@ const Hero = () => {
         </div>
 
         {/* Professional Main Heading */}
-        <div className="mb-12 animate-fade-in-up">
+        <div className="mb-12">
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight tracking-tight">
               <span className="block bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent">
@@ -124,8 +124,7 @@ const Hero = () => {
           {domains.map((domain, index) => (
             <div 
               key={index}
-              className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-4 hover:border-red-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-xl hover:shadow-2xl cursor-pointer hover:bg-red-950/30"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-4 hover:border-red-400 transition-colors duration-300 shadow-xl cursor-pointer hover:bg-red-950/30"
               onClick={() => scrollToSection('resources')}
             >
               <domain.icon className="h-8 w-8 text-red-400 mx-auto mb-2" />
@@ -139,8 +138,7 @@ const Hero = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-all duration-300 transform hover:scale-105 animate-fade-in-up shadow-xl hover:shadow-2xl cursor-pointer hover:bg-red-950/30"
-              style={{ animationDelay: `${index * 0.1 + 0.8}s` }}
+              className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-colors duration-300 shadow-xl cursor-pointer hover:bg-red-950/30"
               onClick={() => scrollToSection('resources')}
             >
               <feature.icon className={`h-10 w-10 ${feature.color} mx-auto mb-3`} />
@@ -252,15 +250,15 @@ const Hero = () => {
         </div>
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
-          <div className="text-center animate-fade-in-up bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer hover:shadow-2xl transition-all duration-300 border border-red-500/30" style={{ animationDelay: '1.2s' }}>
+          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer transition-colors duration-300 border border-red-500/30">
             <div className="text-5xl font-bold text-red-400 mb-2">50+</div>
             <div className="text-gray-300 font-medium">Tech Domains</div>
           </div>
-          <div className="text-center animate-fade-in-up bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer hover:shadow-2xl transition-all duration-300 border border-red-500/30" style={{ animationDelay: '1.3s' }}>
+          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer transition-colors duration-300 border border-red-500/30">
             <div className="text-5xl font-bold text-red-500 mb-2">2000+</div>
             <div className="text-gray-300 font-medium">Study Materials</div>
           </div>
-          <div className="text-center animate-fade-in-up bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer hover:shadow-2xl transition-all duration-300 border border-red-500/30" style={{ animationDelay: '1.4s' }}>
+          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer transition-colors duration-300 border border-red-500/30">
             <div className="text-5xl font-bold text-red-600 mb-2">100%</div>
             <div className="text-gray-300 font-medium">Free Forever</div>
           </div>
