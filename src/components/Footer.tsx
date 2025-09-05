@@ -40,7 +40,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://www.instagram.com/csweterner/" 
+                href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-red-400 transition-colors duration-300"
@@ -112,13 +112,13 @@ const Footer = () => {
                 <span>+91 8008651769</span>
               </a>
               <a 
-                href="https://www.instagram.com/csweterner/" 
+                href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-300 hover:text-red-400 transition-colors duration-300 text-sm"
               >
                 <Instagram className="h-4 w-4" />
-                <span>@csweterner</span>
+                <span>@theflash9z</span>
               </a>
             </div>
             <div className="mt-4 p-3 bg-red-950/30 border border-red-500/30 rounded-lg">

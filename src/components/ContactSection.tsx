@@ -87,7 +87,7 @@ const ContactSection = () => {
   };
 
   const openInstagram = () => {
-    window.open('https://www.instagram.com/csweterner/', '_blank');
+    window.open('https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw', '_blank');
   };
 
   return (
