@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Star, Zap, Gift, ExternalLink } from 'lucide-react';
+import { Download, Star, Zap, Gift, ExternalLink, Sparkles, Brain, Rocket } from 'lucide-react';
 
 const PerplexityBanner = () => {
   const handleDownloadClick = () => {
@@ -7,131 +7,199 @@ const PerplexityBanner = () => {
   };
 
   return (
-    <section className="py-16 px-6 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 border-y-4 border-amber-400">
-      <div className="container mx-auto max-w-7xl">
-        <div className="bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 rounded-3xl p-1 shadow-2xl">
-          <div className="bg-white rounded-3xl p-8 md:p-12">
-            
-            {/* Header with Icons */}
-            <div className="text-center mb-8">
-              <div className="flex justify-center items-center space-x-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center animate-pulse">
-                  <Gift className="h-8 w-8 text-white" />
-                </div>
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center animate-pulse" style={{ animationDelay: '0.5s' }}>
-                  <Star className="h-8 w-8 text-white" />
-                </div>
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center animate-pulse" style={{ animationDelay: '1s' }}>
-                  <Zap className="h-8 w-8 text-white" />
+    <section className="py-20 px-6 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+      
+      <div className="container mx-auto max-w-7xl relative z-10">
+        
+        {/* Main Header */}
+        <div className="text-center mb-16">
+          <div className="flex justify-center items-center space-x-4 mb-8">
+            <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center animate-pulse shadow-2xl">
+              <Sparkles className="h-10 w-10 text-white" />
+            </div>
+            <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center animate-pulse shadow-2xl" style={{ animationDelay: '0.5s' }}>
+              <Brain className="h-10 w-10 text-white" />
+            </div>
+            <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center animate-pulse shadow-2xl" style={{ animationDelay: '1s' }}>
+              <Rocket className="h-10 w-10 text-white" />
+            </div>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight">
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Golden Opportunity
+            </span>
+            <br />
+            <span className="text-white text-3xl md:text-5xl lg:text-6xl font-bold">
+              for Students
+            </span>
+          </h1>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          
+          {/* Left Image Card - Comet Header */}
+          <div className="lg:col-span-1">
+            <div className="bg-gradient-to-br from-slate-800 to-blue-900 rounded-3xl p-2 shadow-2xl border border-blue-500/30">
+              <div className="bg-gradient-to-br from-slate-900 to-blue-800 rounded-2xl overflow-hidden">
+                <img 
+                  src="/comet-header (1).png" 
+                  alt="Comet AI Browser" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Comet AI Browser</h3>
+                  <p className="text-blue-200">Revolutionary AI-powered browsing experience</p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Center Content */}
+          <div className="lg:col-span-1 flex flex-col justify-center space-y-8">
+            <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 backdrop-blur-sm rounded-3xl p-8 border border-blue-500/30 shadow-2xl">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-relaxed text-center">
+                Download Perplexity and search anything. Open the first link to get 
+                <span className="text-blue-400 font-black"> FREE access worth $200k</span> to 
+                <span className="text-purple-400 font-black"> Perplexity Comet Browser</span>
+              </h2>
               
-              {/* Main Headline */}
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
-                  Golden Opportunity
-                </span>
-                <br />
-                <span className="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold">
-                  for Students
-                </span>
-              </h1>
-            </div>
-
-            {/* Content Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              
-              {/* Left Content */}
-              <div className="space-y-8">
-                {/* Main Message */}
-                <div className="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-2xl p-6 border-2 border-amber-300">
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 leading-relaxed">
-                    Download Perplexity and search anything. Open the first link to get 
-                    <span className="text-amber-600 font-black"> FREE access worth $200k</span> to 
-                    <span className="text-orange-600 font-black"> Perplexity Comet Browser</span>
-                  </h2>
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="flex items-center space-x-3 bg-blue-900/30 p-4 rounded-xl border border-blue-400/30">
+                  <Star className="h-6 w-6 text-blue-400" />
+                  <span className="font-semibold text-white text-sm">Premium AI</span>
                 </div>
-
-                {/* Features */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3 bg-amber-50 p-4 rounded-xl border border-amber-200">
-                    <Star className="h-6 w-6 text-amber-600" />
-                    <span className="font-semibold text-gray-800">Premium AI Browser</span>
-                  </div>
-                  <div className="flex items-center space-x-3 bg-yellow-50 p-4 rounded-xl border border-yellow-200">
-                    <Zap className="h-6 w-6 text-yellow-600" />
-                    <span className="font-semibold text-gray-800">$200k Value FREE</span>
-                  </div>
-                  <div className="flex items-center space-x-3 bg-orange-50 p-4 rounded-xl border border-orange-200">
-                    <Gift className="h-6 w-6 text-orange-600" />
-                    <span className="font-semibold text-gray-800">Student Exclusive</span>
-                  </div>
-                  <div className="flex items-center space-x-3 bg-amber-50 p-4 rounded-xl border border-amber-200">
-                    <Download className="h-6 w-6 text-amber-600" />
-                    <span className="font-semibold text-gray-800">Instant Access</span>
-                  </div>
+                <div className="flex items-center space-x-3 bg-purple-900/30 p-4 rounded-xl border border-purple-400/30">
+                  <Zap className="h-6 w-6 text-purple-400" />
+                  <span className="font-semibold text-white text-sm">$200k Value</span>
                 </div>
-
-                {/* CTA Button */}
-                <div className="text-center lg:text-left">
-                  <button
-                    onClick={handleDownloadClick}
-                    className="group bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 hover:from-amber-600 hover:via-yellow-600 hover:to-orange-600 px-12 py-6 rounded-full text-white font-black text-xl md:text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-amber-500/50 border-4 border-white"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <Download className="h-8 w-8 group-hover:animate-bounce" />
-                      <span>Download Comet AI Browser</span>
-                      <ExternalLink className="h-6 w-6" />
-                    </div>
-                  </button>
-                  
-                  <p className="text-gray-600 text-sm mt-4 font-medium">
-                    🎯 Click above to access your exclusive $200k worth premium browser!
-                  </p>
+                <div className="flex items-center space-x-3 bg-pink-900/30 p-4 rounded-xl border border-pink-400/30">
+                  <Gift className="h-6 w-6 text-pink-400" />
+                  <span className="font-semibold text-white text-sm">Student Only</span>
+                </div>
+                <div className="flex items-center space-x-3 bg-blue-900/30 p-4 rounded-xl border border-blue-400/30">
+                  <Download className="h-6 w-6 text-blue-400" />
+                  <span className="font-semibold text-white text-sm">Instant Access</span>
                 </div>
               </div>
 
-              {/* Right Content - Image Placeholder */}
-              <div className="space-y-6">
-                {/* Main Image Placeholder */}
-                <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl p-8 border-4 border-amber-300 text-center">
-                  <div className="w-full h-64 bg-gradient-to-r from-amber-200 to-yellow-200 rounded-xl flex items-center justify-center border-2 border-amber-400">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Zap className="h-10 w-10 text-white" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">Perplexity Comet Browser</h3>
-                      <p className="text-gray-600 font-medium">Premium AI-Powered Browsing Experience</p>
-                    </div>
+              <button
+                onClick={handleDownloadClick}
+                className="group w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 px-8 py-6 rounded-full text-white font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl border-2 border-white/20"
+              >
+                <div className="flex items-center justify-center space-x-4">
+                  <Download className="h-8 w-8 group-hover:animate-bounce" />
+                  <span>Download Comet AI Browser</span>
+                  <ExternalLink className="h-6 w-6" />
+                </div>
+              </button>
+            </div>
+          </div>
+
+          {/* Right Image Card - Speed of Thought */}
+          <div className="lg:col-span-1">
+            <div className="bg-gradient-to-br from-slate-800 to-purple-900 rounded-3xl p-2 shadow-2xl border border-purple-500/30">
+              <div className="bg-gradient-to-br from-slate-900 to-purple-800 rounded-2xl overflow-hidden">
+                <img 
+                  src="/A3Poster_17.png" 
+                  alt="Browse at the Speed of Thought" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Speed of Thought</h3>
+                  <p className="text-purple-200">Experience lightning-fast AI browsing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Image Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          
+          {/* Comet is Here Image */}
+          <div className="bg-gradient-to-br from-slate-800 to-blue-900 rounded-3xl p-2 shadow-2xl border border-blue-500/30">
+            <div className="bg-gradient-to-br from-slate-900 to-blue-800 rounded-2xl overflow-hidden">
+              <img 
+                src="/A3Poster_12.png" 
+                alt="Comet is here - Download with student email" 
+                className="w-full h-80 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-3xl font-bold text-white mb-3">Comet is Here</h3>
+                <p className="text-blue-200 text-lg mb-4">Download Comet with your student email for exclusive access</p>
+                <div className="flex items-center space-x-2 text-blue-400">
+                  <Sparkles className="h-5 w-5" />
+                  <span className="font-semibold">Student Exclusive Offer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Features & Benefits */}
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 shadow-xl">
+              <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
+                <Zap className="h-8 w-8 text-blue-400 mr-3" />
+                Why Comet Browser?
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-bold text-white">AI-Powered Search</h4>
+                    <p className="text-gray-300 text-sm">Revolutionary search capabilities with advanced AI</p>
                   </div>
                 </div>
-
-                {/* Secondary Image Placeholder */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-gradient-to-br from-yellow-100 to-amber-100 rounded-xl p-4 border-2 border-yellow-300">
-                    <div className="w-full h-24 bg-gradient-to-r from-yellow-200 to-amber-200 rounded-lg flex items-center justify-center border border-yellow-400">
-                      <Star className="h-8 w-8 text-yellow-600" />
-                    </div>
-                    <p className="text-center text-sm font-semibold text-gray-700 mt-2">AI Features</p>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-bold text-white">Student Benefits</h4>
+                    <p className="text-gray-300 text-sm">Exclusive features designed for academic success</p>
                   </div>
-                  <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-xl p-4 border-2 border-orange-300">
-                    <div className="w-full h-24 bg-gradient-to-r from-orange-200 to-red-200 rounded-lg flex items-center justify-center border border-orange-400">
-                      <Gift className="h-8 w-8 text-orange-600" />
-                    </div>
-                    <p className="text-center text-sm font-semibold text-gray-700 mt-2">Free Access</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-pink-400 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-bold text-white">Premium Access</h4>
+                    <p className="text-gray-300 text-sm">$200k worth of premium features absolutely free</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Bottom Notice */}
-            <div className="mt-12 text-center">
-              <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-full inline-block shadow-lg">
-                <p className="font-bold text-lg">
-                  ⚡ Limited Time Offer - Grab Your FREE $200k Access Now! ⚡
-                </p>
+            <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 shadow-xl">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <Gift className="h-6 w-6 text-purple-400 mr-3" />
+                How to Get Started
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                  <span className="text-gray-300">Download Perplexity app</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                  <span className="text-gray-300">Search anything in Perplexity</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                  <span className="text-gray-300">Click the first link to get Comet access</span>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Final CTA */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-12 py-6 rounded-full inline-block shadow-2xl border-2 border-white/20">
+            <p className="font-black text-2xl">
+              ⚡ Limited Time - Get Your FREE $200k Comet Browser Access! ⚡
+            </p>
           </div>
         </div>
       </div>
