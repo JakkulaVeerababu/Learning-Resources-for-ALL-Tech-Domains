@@ -56,16 +56,16 @@ const Header = () => {
               onClick={handleLogoClick}
             >
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <GraduationCap className="h-7 w-7 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <GraduationCap className="h-5 w-5 text-white" />
                 </div>
-                <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-red-400 animate-pulse" />
+                <Sparkles className="absolute -top-1 -right-1 h-3 w-3 text-red-400 animate-pulse" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                <h1 className="text-lg font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
                   Tech Learning Hub
                 </h1>
-                <p className="text-xs text-gray-400 font-medium">Free Resources Forever</p>
+                <p className="text-[10px] text-gray-400 font-medium">Free Resources Forever</p>
               </div>
             </div>
 

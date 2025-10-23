@@ -12,23 +12,23 @@ const ScrollingBanner = () => {
   ];
 
   return (
-    <div className="mt-16 bg-gradient-to-r from-red-600 via-red-700 to-red-800 py-1.5 overflow-hidden relative shadow-lg border-y-2 border-red-500/50">
+    <div className="mt-6 bg-gradient-to-r from-red-600 via-red-700 to-red-800 py-1 overflow-hidden relative shadow-lg border-y border-red-500/50">
       {/* Main scrolling content */}
       <div className="flex animate-scroll-left whitespace-nowrap">
         {[...resources, ...resources, ...resources].map((resource, index) => (
-          <span 
+          <span
             key={index}
-            className="inline-flex items-center px-6 text-white font-semibold text-sm tracking-wide"
+            className="inline-flex items-center px-4 text-white font-semibold text-xs tracking-wide"
             style={{ minWidth: 'max-content' }}
           >
             {resource}
           </span>
         ))}
       </div>
-      
+
       {/* Gradient overlays for smooth edges */}
-      <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-red-600 to-transparent pointer-events-none z-10"></div>
-      <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-red-800 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-red-600 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-red-800 to-transparent pointer-events-none z-10"></div>
     </div>
   );
 };
