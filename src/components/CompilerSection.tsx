@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Play, Download, Copy, RotateCcw, Settings, Terminal, FileText, Zap, Globe, CheckCircle, AlertCircle } from 'lucide-react';
+import { Code, Play, Download, Copy, RotateCcw, Settings, Terminal, FileText, Zap, Globe } from 'lucide-react';
 
 interface Language {
   id: string;
@@ -166,7 +166,7 @@ console.log("Fibonacci(10):", fibonacci(10));`
   React.useEffect(() => {
     setCode(currentLanguage.defaultCode);
     setOutput('');
-  }, [selectedLanguage]);
+  }, [selectedLanguage, currentLanguage.defaultCode]);
 
   const runCode = async () => {
     setIsRunning(true);

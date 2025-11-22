@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Github, Mail, Linkedin, Apple, Facebook, Eye, EyeOff, CheckCircle, AlertCircle } from 'lucide-react';
+import { X, Github, Mail, Linkedin, Apple, Facebook, Eye, EyeOff, AlertCircle } from 'lucide-react';
 
 interface AuthModalProps {
   isOpen: boolean;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Heart, Instagram, Phone, Mail, ExternalLink, GraduationCap } from 'lucide-react';
+import { Heart, Instagram, Phone, ExternalLink, GraduationCap } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

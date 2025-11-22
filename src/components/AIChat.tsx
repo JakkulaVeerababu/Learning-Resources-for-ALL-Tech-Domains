@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, Send, X, Bot, User, Sparkles, Zap, Brain, Code, BookOpen, HelpCircle, Minimize2, Maximize2 } from 'lucide-react';
+import { Send, X, User, Brain, Code, Minimize2, Maximize2, Bot } from 'lucide-react';
 
 interface Message {
   id: string;
@@ -73,7 +73,7 @@ const AIChat = () => {
       const aiResponse = await getAIResponse(textToSend);
       const aiMessage: Message = { id: (Date.now() + 1).toString(), text: aiResponse, sender: 'ai', timestamp: new Date() };
       setMessages(prev => [...prev, aiMessage]);
-    } catch (error) {
+    } catch {
       const errorMessage: Message = { id: (Date.now() + 1).toString(), text: "I apologize, but I'm having trouble processing your request right now.", sender: 'ai', timestamp: new Date() };
       setMessages(prev => [...prev, errorMessage]);
     } finally {

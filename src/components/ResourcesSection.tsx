@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, BookOpen, Code, Cpu, Database, Globe, Brain, Calculator, Wrench, Building, Zap, Smartphone, Monitor, Palette } from 'lucide-react';
+import { ExternalLink, BookOpen, Code, Cpu, Database, Globe, Brain, Calculator, Wrench, Building, Zap, Monitor, Palette } from 'lucide-react';
 
 const ResourcesSection = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);

@@ -1,7 +1,7 @@
 import React from 'react';
 // Consolidated and added Linkedin icon
 import { 
-    Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
+    Target, Clock, Gift, Zap, ChevronRight, Code, Cpu, 
     Database, Globe, Brain, Calculator, Wrench, Building, Instagram, 
     MessageCircle, Linkedin, BookOpen 
 } from 'lucide-react';

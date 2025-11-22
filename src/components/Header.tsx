@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Menu, X, Instagram, Sparkles, GraduationCap, LogIn, User, LogOut } from 'lucide-react';
+import { Menu, X, Instagram, Sparkles, GraduationCap, LogIn, User, LogOut } from 'lucide-react';
 import AuthModal from './AuthModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<{ name: string } | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {

@@ -1,17 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Eye, Users, TrendingUp } from 'lucide-react';
+import { useEffect } from 'react';
 
 const ViewCounter = () => {
-  const [viewData, setViewData] = useState({
-    currentViews: 0,
-    onlineUsers: 0,
-    totalVisitors: 0
-  });
-
-  // This useEffect logic will still run in the background, but it won't
-  // affect your page visually in any way.
   useEffect(() => {
-    // Initialize or get existing data
     const initializeViewData = () => {
       const stored = localStorage.getItem('techHubViewData');
       const baseData = stored ? JSON.parse(stored) : {
@@ -20,42 +10,29 @@ const ViewCounter = () => {
         totalVisitors: Math.floor(Math.random() * 10000) + 5000
       };
 
-      // Increment current session
       baseData.currentViews += 1;
       baseData.totalVisitors += 1;
-      
-      setViewData(baseData);
+
       localStorage.setItem('techHubViewData', JSON.stringify(baseData));
     };
 
     initializeViewData();
 
-    // Simulate real-time updates
     const interval = setInterval(() => {
-      setViewData(prev => {
-        const updated = {
-          currentViews: prev.currentViews + Math.floor(Math.random() * 3),
-          onlineUsers: Math.max(1, prev.onlineUsers + (Math.random() > 0.5 ? 1 : -1)),
-          totalVisitors: prev.totalVisitors + Math.floor(Math.random() * 2)
-        };
-        localStorage.setItem('techHubViewData', JSON.stringify(updated));
-        return updated;
-      });
+      const stored = localStorage.getItem('techHubViewData');
+      const updated = stored ? JSON.parse(stored) : { currentViews: 0, onlineUsers: 0, totalVisitors: 0 };
+
+      updated.currentViews += Math.floor(Math.random() * 3);
+      updated.onlineUsers = Math.max(1, updated.onlineUsers + (Math.random() > 0.5 ? 1 : -1));
+      updated.totalVisitors += Math.floor(Math.random() * 2);
+
+      localStorage.setItem('techHubViewData', JSON.stringify(updated));
     }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // --- THIS IS THE ONLY CHANGE YOU NEED ---
-  // By returning null, the component renders absolutely nothing.
   return null;
-  
-  // You can safely delete the old return block below this line.
-  /*
-    <div className="fixed top-20 right-4 z-40 ...">
-      ...
-    </div>
-  */
 };
 
 export default ViewCounter;
