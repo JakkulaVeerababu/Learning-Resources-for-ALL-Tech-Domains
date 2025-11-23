@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, X, User, Brain, Code, Minimize2, Maximize2, Globe, Calculator, Lightbulb, Search } from 'lucide-react';
+import { MessageCircle, Send, X, Bot, User, Sparkles, Zap, Brain, Code, BookOpen, HelpCircle, Minimize2, Maximize2, Globe, Calculator, Lightbulb, Search } from 'lucide-react';
 
 interface Message {
   id: string;
@@ -102,7 +102,7 @@ const PowerfulAI = () => {
       };
 
       setMessages(prev => [...prev, aiMessage]);
-    } catch {
+    } catch (error) {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: "I apologize, but I'm experiencing technical difficulties. Please try again or rephrase your question. I'm here to help with any topic you'd like to discuss!",

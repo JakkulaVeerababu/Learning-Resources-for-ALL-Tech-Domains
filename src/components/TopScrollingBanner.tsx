@@ -64,38 +64,38 @@ const TopScrollingBanner = () => {
   return (
     <>
       {/* WhatsApp Help Notice */}
-      <div className="fixed top-16 left-0 w-full z-50 bg-gradient-to-r from-green-600 via-green-700 to-green-800 py-1 shadow-lg border-b border-green-500/50">
+      <div className="fixed top-20 left-0 w-full z-50 bg-gradient-to-r from-green-600 via-green-700 to-green-800 py-2 shadow-lg border-b-2 border-green-500/50">
         <div className="flex animate-scroll-left whitespace-nowrap">
           {[...Array(5)].map((_, index) => (
-            <span
+            <span 
               key={index}
-              className="inline-flex items-center px-6 text-white font-bold text-xs tracking-wide"
+              className="inline-flex items-center px-8 text-white font-bold text-sm tracking-wide"
             >
-              MATERIAL ACCESS ISSUES? WHATSAPP +91 8008651769
+              🚨 FACING MATERIAL ACCESS ISSUES? DM ME ON WHATSAPP - I'LL SEND WITHIN 1 MINUTE! 📱 +91 8008651769 🚨
             </span>
           ))}
         </div>
-        <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-green-600 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-green-800 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-green-600 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-green-800 to-transparent pointer-events-none z-10"></div>
       </div>
 
       {/* Original Banner */}
-      <div className="fixed top-20 left-0 w-full z-50 shadow-lg overflow-hidden relative">
-        <div className="bg-gradient-to-r from-red-800 via-red-900 to-black py-0.5 overflow-hidden">
+      <div className="fixed top-28 left-0 w-full z-50 shadow-lg overflow-hidden relative">
+        <div className="bg-gradient-to-r from-red-800 via-red-900 to-black py-1 overflow-hidden">
           <div className="flex animate-scroll-left whitespace-nowrap">
             {[...allItems, ...allItems, ...allItems].map((text, index) => (
-              <span
+              <span 
                 key={index}
-                className="inline-flex items-center px-3 text-white font-semibold text-[10px] tracking-wide"
+                className="inline-flex items-center px-4 text-white font-semibold text-xs tracking-wide"
               >
                 {text}
               </span>
             ))}
           </div>
         </div>
-
-        <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-red-800 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div>
+        
+        <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-red-800 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div>
       </div>
     </>
   );

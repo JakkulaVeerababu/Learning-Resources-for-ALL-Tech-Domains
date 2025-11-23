@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, CheckCircle, ArrowRight, Target, BookOpen, Code, Cpu, Globe, Brain, Trophy, Star, Play, Download, FileText } from 'lucide-react';
+import { Calendar, Clock, CheckCircle, ArrowRight, Target, BookOpen, Code, Cpu, Database, Globe, Brain, Calculator, Wrench, Building, Zap, Smartphone, Monitor, Palette, Trophy, Star, Play, Download, FileText } from 'lucide-react';
 
 const RoadmapsSection = () => {
   const [activeRoadmap, setActiveRoadmap] = useState('gate-cse');

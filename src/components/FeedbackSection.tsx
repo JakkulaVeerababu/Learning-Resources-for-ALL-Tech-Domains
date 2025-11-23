@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Star } from 'lucide-react';
+import { Send, Star, MessageCircle, ThumbsUp, Heart, CheckCircle, AlertCircle } from 'lucide-react';
 
 const FeedbackSection = () => {
   const [feedback, setFeedback] = useState('');

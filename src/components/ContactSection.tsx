@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Instagram, Users, BookOpen, GraduationCap, Send } from 'lucide-react';
+import { Phone, MessageCircle, Instagram, Mail, Users, BookOpen, GraduationCap, HelpCircle, CheckCircle, AlertCircle, Send } from 'lucide-react';
 
 const ContactSection = () => {
   const [contactForm, setContactForm] = useState({
