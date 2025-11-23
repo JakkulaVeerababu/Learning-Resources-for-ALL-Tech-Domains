@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Sparkles, GraduationCap, LogIn, User, LogOut } from 'lucide-react';
+import { Menu, X, Sparkles, GraduationCap, LogIn, User, LogOut } from 'lucide-react';
 import AuthModal from './AuthModal';
 
 const Header = () => {
@@ -17,23 +17,11 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    // Check for logged in user
     const userData = localStorage.getItem('techHubUser');
     if (userData) {
       setUser(JSON.parse(userData));
     }
   }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-    setIsMenuOpen(false);
-  };
 
   const handleLogoClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -46,174 +34,122 @@ const Header = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/95 backdrop-blur-lg border-b border-red-500/30 shadow-lg' : 'bg-black/80 backdrop-blur-sm'
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
+        isScrolled ? 'bg-white shadow-lg border-b border-slate-200' : 'bg-white shadow-md'
       }`}>
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex items-center justify-between">
-            <div 
-              className="flex items-center space-x-4 group cursor-pointer"
+            {/* Logo */}
+            <div
+              className="flex items-center space-x-2 sm:space-x-3 cursor-pointer group"
               onClick={handleLogoClick}
             >
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <GraduationCap className="h-5 w-5 text-white" />
+                <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <GraduationCap className="h-4 sm:h-5 w-4 sm:w-5 text-white" />
                 </div>
-                <Sparkles className="absolute -top-1 -right-1 h-3 w-3 text-red-400 animate-pulse" />
+                <Sparkles className="absolute -top-1 -right-1 h-2 sm:h-3 w-2 sm:w-3 text-blue-400 animate-pulse" />
               </div>
               <div>
-                <h1 className="text-lg font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                <h1 className="text-sm sm:text-lg font-bold text-slate-900">
                   Tech Learning Hub
                 </h1>
-                <p className="text-[10px] text-gray-400 font-medium">Free Resources Forever</p>
+                <p className="text-[10px] sm:text-xs text-slate-500 font-medium">Free Resources</p>
               </div>
             </div>
 
-            <nav className="hidden md:flex items-center space-x-8">
-              <button 
-                onClick={() => scrollToSection('resources')}
-                className="text-gray-300 hover:text-red-400 transition-colors duration-300 relative group font-medium"
-              >
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-6">
+              <button className="text-slate-700 hover:text-blue-600 font-medium text-sm transition-colors">
                 Resources
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
-              <button 
-                onClick={() => scrollToSection('compilers')}
-                className="text-gray-300 hover:text-red-400 transition-colors duration-300 relative group font-medium"
-              >
-                Compilers
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+              <button className="text-slate-700 hover:text-blue-600 font-medium text-sm transition-colors">
+                Compiler
               </button>
-              <button 
-                onClick={() => scrollToSection('roadmaps')}
-                className="text-gray-300 hover:text-red-400 transition-colors duration-300 relative group font-medium"
-              >
+              <button className="text-slate-700 hover:text-blue-600 font-medium text-sm transition-colors">
                 Roadmaps
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="text-gray-300 hover:text-red-400 transition-colors duration-300 relative group font-medium"
-              >
+              <button className="text-slate-700 hover:text-blue-600 font-medium text-sm transition-colors">
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
-              
+            </nav>
+
+            {/* Auth & Mobile Menu */}
+            <div className="flex items-center space-x-3 sm:space-x-4">
               {user ? (
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-2 bg-red-900/30 border border-red-500/50 px-4 py-2 rounded-full">
-                    <User className="h-4 w-4 text-red-400" />
-                    <span className="text-red-200 font-medium text-sm">{user.name}</span>
+                <div className="flex items-center space-x-3">
+                  <div className="hidden sm:flex items-center space-x-2 bg-blue-50 px-3 py-2 rounded-lg">
+                    <User className="h-4 w-4 text-blue-600" />
+                    <span className="text-xs sm:text-sm text-slate-700">{user.name}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full text-white font-medium transition-all duration-300"
+                    className="hidden sm:flex items-center space-x-1 text-slate-600 hover:text-red-600 transition-colors"
                   >
                     <LogOut className="h-4 w-4" />
-                    <span>Logout</span>
+                    <span className="text-xs sm:text-sm">Logout</span>
                   </button>
                 </div>
               ) : (
                 <button
                   onClick={() => setIsAuthModalOpen(true)}
-                  className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-6 py-3 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg border border-red-500/50"
+                  className="hidden sm:flex items-center space-x-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm"
                 >
                   <LogIn className="h-4 w-4" />
                   <span>Login</span>
                 </button>
               )}
-              
-              <a 
-                href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg text-white font-medium border border-red-500/50"
-              >
-                <Instagram className="h-4 w-4" />
-                <span>Follow</span>
-              </a>
-            </nav>
 
-            <button 
-              className="md:hidden text-gray-300 hover:text-red-400 transition-colors duration-300 p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden p-2 hover:bg-slate-100 rounded-lg transition-colors"
+              >
+                {isMenuOpen ? (
+                  <X className="h-5 w-5 text-slate-700" />
+                ) : (
+                  <Menu className="h-5 w-5 text-slate-700" />
+                )}
+              </button>
+            </div>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden mt-6 pb-6 border-t border-red-500/30">
-              <nav className="flex flex-col space-y-4 mt-6">
-                <button 
-                  onClick={() => scrollToSection('resources')}
-                  className="text-gray-300 hover:text-red-400 transition-colors duration-300 font-medium text-left"
+            <nav className="md:hidden mt-4 space-y-2 border-t border-slate-200 pt-4">
+              <button className="block w-full text-left px-3 py-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+                Resources
+              </button>
+              <button className="block w-full text-left px-3 py-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+                Compiler
+              </button>
+              <button className="block w-full text-left px-3 py-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+                Roadmaps
+              </button>
+              <button className="block w-full text-left px-3 py-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+                Contact
+              </button>
+              {!user && (
+                <button
+                  onClick={() => {
+                    setIsAuthModalOpen(true);
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full mt-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
                 >
-                  Resources
+                  Login
                 </button>
-                <button 
-                  onClick={() => scrollToSection('compilers')}
-                  className="text-gray-300 hover:text-red-400 transition-colors duration-300 font-medium text-left"
-                >
-                  Compilers
-                </button>
-                <button 
-                  onClick={() => scrollToSection('roadmaps')}
-                  className="text-gray-300 hover:text-red-400 transition-colors duration-300 font-medium text-left"
-                >
-                  Roadmaps
-                </button>
-                <button 
-                  onClick={() => scrollToSection('contact')}
-                  className="text-gray-300 hover:text-red-400 transition-colors duration-300 font-medium text-left"
-                >
-                  Contact
-                </button>
-                
-                {user ? (
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-2 bg-red-900/30 border border-red-500/50 px-4 py-2 rounded-full w-fit">
-                      <User className="h-4 w-4 text-red-400" />
-                      <span className="text-red-200 font-medium text-sm">{user.name}</span>
-                    </div>
-                    <button
-                      onClick={handleLogout}
-                      className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full text-white font-medium transition-all duration-300 w-fit"
-                    >
-                      <LogOut className="h-4 w-4" />
-                      <span>Logout</span>
-                    </button>
-                  </div>
-                ) : (
-                  <button
-                    onClick={() => setIsAuthModalOpen(true)}
-                    className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full text-white font-medium w-fit border border-red-500/50"
-                  >
-                    <LogIn className="h-4 w-4" />
-                    <span>Login</span>
-                  </button>
-                )}
-                
-                <a 
-                  href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full text-white font-medium w-fit border border-red-500/50"
-                >
-                  <Instagram className="h-4 w-4" />
-                  <span>Follow Us</span>
-                </a>
-              </nav>
-            </div>
+              )}
+            </nav>
           )}
         </div>
       </header>
 
-      <AuthModal 
-        isOpen={isAuthModalOpen} 
-        onClose={() => setIsAuthModalOpen(false)} 
-      />
+      {/* Auth Modal */}
+      <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} />
+
+      {/* Spacer for fixed header */}
+      <div className="h-16 sm:h-20"></div>
     </>
   );
 };
