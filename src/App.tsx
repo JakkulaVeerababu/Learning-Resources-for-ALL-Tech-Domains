@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import TopScrollingBanner from './components/TopScrollingBanner';
-import PerplexityBanner from './components/PerplexityBanner';
 import Hero from './components/Hero';
 import ScrollingBanner from './components/ScrollingBanner';
 import ResourcesSection from './components/ResourcesSection';
@@ -31,10 +30,7 @@ function App() {
       
       {/* Header */}
       <Header />
-      
-      {/* Perplexity Banner */}
-      <PerplexityBanner />
-      
+
       {/* Live View Counter */}
       <ViewCounter />
       
