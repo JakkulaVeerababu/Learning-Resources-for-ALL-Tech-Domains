@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MessageCircle, Instagram, Mail, Users, BookOpen, GraduationCap, HelpCircle, CheckCircle, AlertCircle, Send } from 'lucide-react';
+import { Phone, MessageCircle, Instagram, Mail, Users, BookOpen, GraduationCap, HelpCircle, CheckCircle, AlertCircle, Send, Linkedin } from 'lucide-react';
 
 const ContactSection = () => {
   const [contactForm, setContactForm] = useState({
@@ -87,7 +87,11 @@ const ContactSection = () => {
   };
 
   const openInstagram = () => {
-    window.open('https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw', '_blank');
+    window.open('https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw==', '_blank');
+  };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank');
   };
 
   return (
@@ -132,7 +136,7 @@ const ContactSection = () => {
             </button>
 
             {/* Instagram */}
-            <button 
+            <button
               onClick={openInstagram}
               className="group w-full bg-black/60 backdrop-blur-sm border border-red-500/30 hover:border-red-400 rounded-xl p-6 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
@@ -145,7 +149,26 @@ const ContactSection = () => {
                     Follow on Instagram
                   </h4>
                   <p className="text-gray-400 mb-2">Updates, tips & community</p>
-                  <p className="text-red-400 font-semibold text-lg">@csweterner</p>
+                  <p className="text-red-400 font-semibold text-lg">@thflashz</p>
+                </div>
+              </div>
+            </button>
+
+            {/* LinkedIn */}
+            <button
+              onClick={openLinkedIn}
+              className="group w-full bg-black/60 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400 rounded-xl p-6 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Linkedin className="h-8 w-8 text-white" />
+                </div>
+                <div className="text-left">
+                  <h4 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                    Connect on LinkedIn
+                  </h4>
+                  <p className="text-gray-400 mb-2">Professional network</p>
+                  <p className="text-blue-400 font-semibold text-lg">Veerababu</p>
                 </div>
               </div>
             </button>
@@ -326,20 +349,27 @@ const ContactSection = () => {
             <p className="text-xl text-gray-300 mb-8">
               Don't let doubts and confusion hold you back. Get personalized guidance from someone who understands your journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+              <button
                 onClick={openWhatsApp}
                 className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-green-500/50"
               >
                 <MessageCircle className="h-5 w-5" />
                 <span>Chat on WhatsApp</span>
               </button>
-              <button 
+              <button
                 onClick={openInstagram}
                 className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-red-500/50"
               >
                 <Instagram className="h-5 w-5" />
                 <span>Follow on Instagram</span>
+              </button>
+              <button
+                onClick={openLinkedIn}
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-blue-500/50"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span>Connect on LinkedIn</span>
               </button>
             </div>
           </div>

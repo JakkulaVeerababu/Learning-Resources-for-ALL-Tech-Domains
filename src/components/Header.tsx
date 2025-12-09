@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Menu, X, Instagram, Sparkles, GraduationCap, LogIn, User, LogOut } from 'lucide-react';
+import { BookOpen, Menu, X, Instagram, Sparkles, GraduationCap, LogIn, User, LogOut, Linkedin } from 'lucide-react';
 import AuthModal from './AuthModal';
 
 const Header = () => {
@@ -123,14 +123,23 @@ const Header = () => {
                 </button>
               )}
               
-              <a 
-                href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw" 
-                target="_blank" 
+              <a
+                href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw=="
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg text-white font-medium border border-red-500/50"
               >
                 <Instagram className="h-4 w-4" />
                 <span>Follow</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg text-white font-medium border border-blue-500/50"
+              >
+                <Linkedin className="h-4 w-4" />
+                <span>LinkedIn</span>
               </a>
             </nav>
 
@@ -195,14 +204,23 @@ const Header = () => {
                   </button>
                 )}
                 
-                <a 
-                  href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw" 
-                  target="_blank" 
+                <a
+                  href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw=="
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full text-white font-medium w-fit border border-red-500/50"
                 >
                   <Instagram className="h-4 w-4" />
                   <span>Follow Us</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-3 rounded-full text-white font-medium w-fit border border-blue-500/50"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  <span>LinkedIn</span>
                 </a>
               </nav>
             </div>
