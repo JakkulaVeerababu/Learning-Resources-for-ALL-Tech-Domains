@@ -1,9 +1,9 @@
 import React from 'react';
 // Consolidated and added Linkedin icon
-import { 
-    Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu, 
-    Database, Globe, Brain, Calculator, Wrench, Building, Instagram, 
-    MessageCircle, Linkedin, BookOpen 
+import {
+    Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu,
+    Database, Globe, Brain, Calculator, Wrench, Building, Instagram,
+    MessageCircle, Linkedin, BookOpen, Github
 } from 'lucide-react';
 
 const Hero = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
   };
 
   const openInstagram = () => {
-    window.open('https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw', '_blank');
+    window.open('https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D', '_blank');
   };
 
   const openWhatsApp = () => {
@@ -60,7 +60,7 @@ const Hero = () => {
             <div className="flex items-center space-x-3 pl-2">
               <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-red-500 via-red-600 to-red-700"></span>
               <p className="text-sm font-semibold text-white">
-                Created by <span className="font-bold text-red-400">csweterner</span>
+                Created by <span className="font-bold text-red-400">VEERABABU JAKKULA</span>
               </p>
             </div>
         
@@ -69,9 +69,19 @@ const Hero = () => {
 
             {/* Social Links */}
             <div className="flex items-center space-x-2">
-              <a 
-                href="https://www.instagram.com/theflash9z?igsh=YjgwZ2toNDMyMHEw"
-                target="_blank" 
+              <a
+                href="https://github.com/JakkulaVeerababu"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub profile"
+                className="flex items-center space-x-2 px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
+              >
+                <Github className="h-4 w-4 text-red-400" />
+                <span className="text-xs font-semibold">GitHub</span>
+              </a>
+              <a
+                href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D"
+                target="_blank"
                 rel="noopener noreferrer"
                 title="Follow on Instagram for updates"
                 className="flex items-center space-x-2 px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
@@ -79,9 +89,9 @@ const Hero = () => {
                 <Instagram className="h-4 w-4 text-red-400" />
                 <span className="text-xs font-semibold">Instagram</span>
               </a>
-              <a 
+              <a
                 href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 title="Connect on LinkedIn"
                 className="flex items-center space-x-2 px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
@@ -157,13 +167,52 @@ const Hero = () => {
             <ChevronRight className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
           
-          <button 
+          <button
             onClick={openInstagram}
             className="group bg-black/80 hover:bg-red-950/80 border border-red-500/50 hover:border-red-400 px-12 py-5 rounded-full text-white font-bold text-xl transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-2xl"
           >
             <Instagram className="h-6 w-6" />
-            <span>FOLLOW @csweterner</span>
+            <span>FOLLOW @thflashz</span>
           </button>
+        </div>
+
+        {/* Coding Profiles Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+          {/* LeetCode */}
+          <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-colors duration-300 shadow-xl">
+            <h4 className="text-xl font-bold text-white mb-4">LeetCode Profiles</h4>
+            <div className="space-y-3">
+              <a
+                href="https://leetcode.com/u/veerababu9z/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-red-950/50 hover:bg-red-900/50 border border-red-500/30 rounded-lg p-3 transition-colors duration-300"
+              >
+                <span className="text-red-400 font-semibold">veerababu9z</span>
+              </a>
+              <a
+                href="https://leetcode.com/u/veerababu_jakkula/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-red-950/50 hover:bg-red-900/50 border border-red-500/30 rounded-lg p-3 transition-colors duration-300"
+              >
+                <span className="text-red-400 font-semibold">veerababu_jakkula</span>
+              </a>
+            </div>
+          </div>
+
+          {/* CodeForces */}
+          <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-colors duration-300 shadow-xl">
+            <h4 className="text-xl font-bold text-white mb-4">CodeForces Profile</h4>
+            <a
+              href="https://codeforces.com/profile/jakkulaveerababu?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn8CQREmyamOsIbQVOYXinvbuIQ9dR-yhwHlMiqBH81EySflX33i45mytZlDE_aem_ikJ7D5-zYd3VCxzh4Xn3Xw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-red-950/50 hover:bg-red-900/50 border border-red-500/30 rounded-lg p-3 transition-colors duration-300"
+            >
+              <span className="text-red-400 font-semibold">jakkulaveerababu</span>
+            </a>
+          </div>
         </div>
 
         {/* Personal Guidance Section */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Heart, Instagram, Phone, Mail, ExternalLink, GraduationCap, Linkedin } from 'lucide-react';
+import { BookOpen, Heart, Instagram, Phone, Mail, ExternalLink, GraduationCap, Linkedin, Github, Code } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -40,7 +40,15 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw=="
+                href="https://github.com/JakkulaVeerababu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-red-400 transition-colors duration-300"
@@ -110,9 +118,27 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Get Help</h4>
             <div className="space-y-3">
-              <a 
-                href="https://wa.me/918008651769" 
-                target="_blank" 
+              <a
+                href="https://github.com/JakkulaVeerababu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+              >
+                <Github className="h-4 w-4" />
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://leetcode.com/u/veerababu9z/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 transition-colors duration-300 text-sm"
+              >
+                <Code className="h-4 w-4" />
+                <span>LeetCode</span>
+              </a>
+              <a
+                href="https://wa.me/918008651769"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm"
               >
@@ -120,7 +146,7 @@ const Footer = () => {
                 <span>+91 8008651769</span>
               </a>
               <a
-                href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw=="
+                href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-300 hover:text-red-400 transition-colors duration-300 text-sm"
