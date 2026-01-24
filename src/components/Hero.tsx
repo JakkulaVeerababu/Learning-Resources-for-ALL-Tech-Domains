@@ -53,51 +53,52 @@ const Hero = () => {
       <div className="container mx-auto text-center relative z-10">
         
         {/* Professional Badge */}
-        <div className="flex justify-center mb-10 -mt-16">
-          <div className="inline-flex items-center space-x-4 bg-black/80 border border-red-500/50 rounded-full p-2 backdrop-blur-sm shadow-2xl">
-            
+        <div className="flex justify-center mb-6 md:mb-10 -mt-12 md:-mt-16 px-2">
+          <div className="inline-flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-black/80 border border-red-500/50 rounded-lg md:rounded-full p-2 md:p-2 backdrop-blur-sm shadow-lg max-w-sm md:max-w-none">
+
             {/* Creator Info */}
-            <div className="flex items-center space-x-3 pl-2">
-              <span className="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-red-500 via-red-600 to-red-700"></span>
-              <p className="text-sm font-semibold text-white">
+            <div className="flex items-center space-x-2 pl-1 md:pl-2 text-center md:text-left">
+              <span className="h-4 w-4 md:h-6 md:w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-red-500 via-red-600 to-red-700"></span>
+              <p className="text-xs md:text-sm font-semibold text-white">
                 Created by <span className="font-bold text-red-400">VEERABABU JAKKULA</span>
               </p>
             </div>
-        
+
             {/* Vertical Separator */}
-            <div className="w-[1px] h-6 bg-red-500/50"></div>
+            <div className="hidden md:block w-[1px] h-6 bg-red-500/50"></div>
+            <div className="block md:hidden h-[1px] w-full bg-red-500/30"></div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center justify-center gap-1 md:gap-2">
               <a
                 href="https://github.com/JakkulaVeerababu"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="GitHub profile"
-                className="flex items-center space-x-2 px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
+                className="flex items-center gap-1 px-2 md:px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
               >
-                <Github className="h-4 w-4 text-red-400" />
-                <span className="text-xs font-semibold">GitHub</span>
+                <Github className="h-3 w-3 md:h-4 md:w-4 text-red-400" />
+                <span className="hidden sm:inline text-xs font-semibold">GitHub</span>
               </a>
               <a
                 href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Follow on Instagram for updates"
-                className="flex items-center space-x-2 px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
+                className="flex items-center gap-1 px-2 md:px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
               >
-                <Instagram className="h-4 w-4 text-red-400" />
-                <span className="text-xs font-semibold">Instagram</span>
+                <Instagram className="h-3 w-3 md:h-4 md:w-4 text-red-400" />
+                <span className="hidden sm:inline text-xs font-semibold">Instagram</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Connect on LinkedIn"
-                className="flex items-center space-x-2 px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
+                className="flex items-center gap-1 px-2 md:px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
               >
-                <Linkedin className="h-4 w-4 text-red-400" />
-                <span className="text-xs font-semibold">LinkedIn</span>
+                <Linkedin className="h-3 w-3 md:h-4 md:w-4 text-red-400" />
+                <span className="hidden sm:inline text-xs font-semibold">LinkedIn</span>
               </a>
             </div>
           </div>
