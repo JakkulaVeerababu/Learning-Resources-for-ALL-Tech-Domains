@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
 import TopScrollingBanner from './components/TopScrollingBanner';
 import Hero from './components/Hero';
@@ -21,36 +22,38 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-black via-red-950 to-black relative overflow-x-hidden transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Professional Meteor Shower Effect */}
-      <MeteorShower />
-      
-      {/* Top Credits Banner */}
-      <TopScrollingBanner />
-      
-      {/* Header */}
-      <Header />
+    <AuthProvider>
+      <div className={`min-h-screen bg-gradient-to-br from-black via-red-950 to-black relative overflow-x-hidden transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+        {/* Professional Meteor Shower Effect */}
+        <MeteorShower />
 
-      {/* Live View Counter */}
-      <ViewCounter />
-      
-      {/* Main Scrolling Banner */}
-      <ScrollingBanner />
-      
-      <main className="relative z-10">
-        <Hero />
-        <ResourcesSection />
-        <CompilerSection />
-        <RoadmapsSection />
-        <FeedbackSection />
-        <ContactSection />
-      </main>
-      
-      <Footer />
-      
-      {/* Powerful AI Assistant */}
-      <PowerfulAI />
-    </div>
+        {/* Top Credits Banner */}
+        <TopScrollingBanner />
+
+        {/* Header */}
+        <Header />
+
+        {/* Live View Counter */}
+        <ViewCounter />
+
+        {/* Main Scrolling Banner */}
+        <ScrollingBanner />
+
+        <main className="relative z-10">
+          <Hero />
+          <ResourcesSection />
+          <CompilerSection />
+          <RoadmapsSection />
+          <FeedbackSection />
+          <ContactSection />
+        </main>
+
+        <Footer />
+
+        {/* Powerful AI Assistant */}
+        <PowerfulAI />
+      </div>
+    </AuthProvider>
   );
 }
 

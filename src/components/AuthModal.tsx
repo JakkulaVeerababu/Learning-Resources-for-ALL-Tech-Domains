@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { X, Github, Mail, Linkedin, Apple, Facebook, Eye, EyeOff, CheckCircle, AlertCircle } from 'lucide-react';
+import { X, Github, Mail, Linkedin, Facebook, Eye, EyeOff, AlertCircle, Loader } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -7,6 +8,7 @@ interface AuthModalProps {
 }
 
 const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
+  const { signUpWithEmail, signInWithEmail, signInWithOAuth } = useAuth();
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -17,6 +19,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   if (!isOpen) return null;
 
@@ -53,39 +56,39 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     if (!validateForm()) return;
 
     setIsLoading(true);
+    setErrors({});
 
-    // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      // Store user data
-      const userData = {
-        email: formData.email,
-        name: formData.name || formData.email.split('@')[0],
-        loginTime: new Date().toISOString()
-      };
-
-      localStorage.setItem('techHubUser', JSON.stringify(userData));
-      onClose();
-
-    } catch (error) {
-      console.error('Auth error:', error);
+      if (isLogin) {
+        await signInWithEmail(formData.email, formData.password);
+        setSuccessMessage('Signed in successfully!');
+        setTimeout(() => {
+          onClose();
+          setSuccessMessage('');
+        }, 1500);
+      } else {
+        await signUpWithEmail(formData.email, formData.password, formData.name);
+        setSuccessMessage('Account created! A confirmation email has been sent.');
+        setTimeout(() => {
+          onClose();
+          setSuccessMessage('');
+        }, 2000);
+      }
+    } catch (error: any) {
+      setErrors({ form: error.message });
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleSocialLogin = (provider: string) => {
-    // Simulate social login
-    const userData = {
-      email: `user@${provider}.com`,
-      name: `${provider} User`,
-      provider,
-      loginTime: new Date().toISOString()
-    };
-
-    localStorage.setItem('techHubUser', JSON.stringify(userData));
-    onClose();
+  const handleSocialLogin = async (provider: 'google' | 'github' | 'facebook' | 'linkedin') => {
+    setIsLoading(true);
+    try {
+      await signInWithOAuth(provider);
+    } catch (error: any) {
+      setErrors({ form: error.message });
+      setIsLoading(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -116,44 +119,55 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             </p>
           </div>
 
-          {/* Social Login Buttons */}
+          {successMessage && (
+            <div className="mb-6 p-4 bg-green-950/50 border border-green-500/50 rounded-lg text-green-400 text-sm">
+              {successMessage}
+            </div>
+          )}
+
+          {errors.form && (
+            <div className="mb-6 flex items-center space-x-2 p-4 bg-red-950/50 border border-red-500/50 rounded-lg text-red-400 text-sm">
+              <AlertCircle className="h-4 w-4 flex-shrink-0" />
+              <span>{errors.form}</span>
+            </div>
+          )}
+
           <div className="space-y-3 mb-6">
             <button
               onClick={() => handleSocialLogin('google')}
-              className="w-full flex items-center justify-center space-x-3 bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg transition-colors font-semibold border border-red-500/50"
+              disabled={isLoading}
+              className="w-full flex items-center justify-center space-x-3 bg-red-600 hover:bg-red-700 disabled:bg-gray-600 text-white py-3 rounded-lg transition-colors font-semibold border border-red-500/50 disabled:cursor-not-allowed"
             >
-              <Mail className="h-5 w-5" />
+              {isLoading ? <Loader className="h-5 w-5 animate-spin" /> : <Mail className="h-5 w-5" />}
               <span>Continue with Google</span>
             </button>
 
             <button
               onClick={() => handleSocialLogin('github')}
-              className="w-full flex items-center justify-center space-x-3 bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-lg transition-colors font-semibold border border-gray-600/50"
+              disabled={isLoading}
+              className="w-full flex items-center justify-center space-x-3 bg-gray-800 hover:bg-gray-900 disabled:bg-gray-600 text-white py-3 rounded-lg transition-colors font-semibold border border-gray-600/50 disabled:cursor-not-allowed"
             >
-              <Github className="h-5 w-5" />
+              {isLoading ? <Loader className="h-5 w-5 animate-spin" /> : <Github className="h-5 w-5" />}
               <span>Continue with GitHub</span>
             </button>
 
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 gap-3">
               <button
                 onClick={() => handleSocialLogin('linkedin')}
-                className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-colors border border-blue-500/50"
+                disabled={isLoading}
+                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white py-3 rounded-lg transition-colors border border-blue-500/50 disabled:cursor-not-allowed font-semibold"
               >
-                <Linkedin className="h-5 w-5" />
-              </button>
-
-              <button
-                onClick={() => handleSocialLogin('apple')}
-                className="flex items-center justify-center bg-black hover:bg-gray-800 text-white py-3 rounded-lg transition-colors border border-gray-600/50"
-              >
-                <Apple className="h-5 w-5" />
+                {isLoading ? <Loader className="h-5 w-5 animate-spin" /> : <Linkedin className="h-5 w-5" />}
+                <span className="hidden sm:inline text-sm">LinkedIn</span>
               </button>
 
               <button
                 onClick={() => handleSocialLogin('facebook')}
-                className="flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg transition-colors border border-blue-400/50"
+                disabled={isLoading}
+                className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-600 text-white py-3 rounded-lg transition-colors border border-blue-400/50 disabled:cursor-not-allowed font-semibold"
               >
-                <Facebook className="h-5 w-5" />
+                {isLoading ? <Loader className="h-5 w-5 animate-spin" /> : <Facebook className="h-5 w-5" />}
+                <span className="hidden sm:inline text-sm">Facebook</span>
               </button>
             </div>
           </div>
@@ -255,11 +269,11 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 disabled:from-gray-600 disabled:to-gray-700 text-white py-3 rounded-lg font-semibold transition-all transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed flex items-center justify-center space-x-2 border border-red-500/50"
+              className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 disabled:from-gray-600 disabled:to-gray-700 text-white py-3 rounded-lg font-semibold transition-all disabled:cursor-not-allowed flex items-center justify-center space-x-2 border border-red-500/50"
             >
               {isLoading ? (
                 <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                  <Loader className="h-5 w-5 animate-spin" />
                   <span>Processing...</span>
                 </>
               ) : (

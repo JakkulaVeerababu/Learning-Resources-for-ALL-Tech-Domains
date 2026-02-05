@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Menu, X, Instagram, Sparkles, GraduationCap, LogIn, User, LogOut, Linkedin } from 'lucide-react';
+import { Menu, X, Instagram, Sparkles, GraduationCap, Linkedin } from 'lucide-react';
 import AuthModal from './AuthModal';
+import UserProfile from './UserProfile';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,18 +16,10 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    // Check for logged in user
-    const userData = localStorage.getItem('techHubUser');
-    if (userData) {
-      setUser(JSON.parse(userData));
-    }
-  }, []);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ 
+      element.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -37,11 +29,6 @@ const Header = () => {
 
   const handleLogoClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem('techHubUser');
-    setUser(null);
   };
 
   return (
@@ -91,37 +78,15 @@ const Header = () => {
                 Roadmaps
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="text-gray-300 hover:text-red-400 transition-colors duration-300 relative group font-medium"
               >
                 Contact
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
-              
-              {user ? (
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-2 bg-red-900/30 border border-red-500/50 px-4 py-2 rounded-full">
-                    <User className="h-4 w-4 text-red-400" />
-                    <span className="text-red-200 font-medium text-sm">{user.name}</span>
-                  </div>
-                  <button
-                    onClick={handleLogout}
-                    className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full text-white font-medium transition-all duration-300"
-                  >
-                    <LogOut className="h-4 w-4" />
-                    <span>Logout</span>
-                  </button>
-                </div>
-              ) : (
-                <button
-                  onClick={() => setIsAuthModalOpen(true)}
-                  className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-6 py-3 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg border border-red-500/50"
-                >
-                  <LogIn className="h-4 w-4" />
-                  <span>Login</span>
-                </button>
-              )}
+
+              <UserProfile onAuthClick={() => setIsAuthModalOpen(true)} />
               
               <a
                 href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw=="
@@ -173,36 +138,16 @@ const Header = () => {
                 >
                   Roadmaps
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('contact')}
                   className="text-gray-300 hover:text-red-400 transition-colors duration-300 font-medium text-left"
                 >
                   Contact
                 </button>
-                
-                {user ? (
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-2 bg-red-900/30 border border-red-500/50 px-4 py-2 rounded-full w-fit">
-                      <User className="h-4 w-4 text-red-400" />
-                      <span className="text-red-200 font-medium text-sm">{user.name}</span>
-                    </div>
-                    <button
-                      onClick={handleLogout}
-                      className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full text-white font-medium transition-all duration-300 w-fit"
-                    >
-                      <LogOut className="h-4 w-4" />
-                      <span>Logout</span>
-                    </button>
-                  </div>
-                ) : (
-                  <button
-                    onClick={() => setIsAuthModalOpen(true)}
-                    className="flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 rounded-full text-white font-medium w-fit border border-red-500/50"
-                  >
-                    <LogIn className="h-4 w-4" />
-                    <span>Login</span>
-                  </button>
-                )}
+
+                <div className="pt-4 border-t border-red-500/30">
+                  <UserProfile onAuthClick={() => setIsAuthModalOpen(true)} />
+                </div>
                 
                 <a
                   href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw=="
