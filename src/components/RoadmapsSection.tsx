@@ -273,7 +273,7 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-              🗺️ Professional Learning Roadmaps
+              Professional Learning Roadmaps
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium">
@@ -313,7 +313,7 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
                   : 'text-gray-300 hover:text-red-400'
               }`}
             >
-              📍 Roadmap
+              Roadmap
             </button>
             <button
               onClick={() => setActiveTab('timetable')}
@@ -323,7 +323,7 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
                   : 'text-gray-300 hover:text-red-400'
               }`}
             >
-              ⏰ Timetable
+              Timetable
             </button>
           </div>
         </div>

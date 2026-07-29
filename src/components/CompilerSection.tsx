@@ -23,7 +23,7 @@ const CompilerSection = () => {
     {
       id: 'python',
       name: 'Python',
-      icon: '🐍',
+      icon: 'Py',
       color: 'from-red-500 to-red-600',
       extension: '.py',
       version: '3.11',
@@ -52,7 +52,7 @@ print(f"Fibonacci(10): {fibonacci(10)}")`
     {
       id: 'java',
       name: 'Java',
-      icon: '☕',
+      icon: 'Jv',
       color: 'from-red-600 to-red-700',
       extension: '.java',
       version: '17',
@@ -89,7 +89,7 @@ public class Main {
     {
       id: 'cpp',
       name: 'C++',
-      icon: '⚙️',
+      icon: 'C++',
       color: 'from-red-700 to-red-800',
       extension: '.cpp',
       version: 'GCC 11',
@@ -131,7 +131,7 @@ int main() {
     {
       id: 'javascript',
       name: 'JavaScript',
-      icon: '📜',
+      icon: 'JS',
       color: 'from-red-500 to-red-700',
       extension: '.js',
       version: 'Node.js 18',
@@ -177,8 +177,8 @@ console.log("Fibonacci(10):", fibonacci(10));`
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Mock output based on language
-      const mockOutput = `✅ Compilation successful!
-📤 Program Output:
+      const mockOutput = `Compilation successful.
+Program Output:
 Hello, World!
 Enter your name: ${input || 'User'}
 Welcome to ${currentLanguage.name}, ${input || 'User'}!
@@ -186,13 +186,13 @@ Original: [1, 2, 3, 4, 5]
 Squared: [1, 4, 9, 16, 25]
 Fibonacci(10): 55
 
-⏱️ Execution time: 0.${Math.floor(Math.random() * 900 + 100)}s
-💾 Memory used: ${Math.floor(Math.random() * 50 + 10)}MB
-🎯 Exit code: 0`;
+Execution time: 0.${Math.floor(Math.random() * 900 + 100)}s
+Memory used: ${Math.floor(Math.random() * 50 + 10)}MB
+Exit code: 0`;
 
       setOutput(mockOutput);
     } catch (error) {
-      setOutput(`❌ Compilation Error:\nError: ${error}\n\nPlease check your code and try again.`);
+      setOutput(`Compilation Error:\nError: ${error}\n\nPlease check your code and try again.`);
     } finally {
       setIsRunning(false);
     }
@@ -226,12 +226,11 @@ Fibonacci(10): 55
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-              💻 Online Compilers & IDEs
+              Online Compilers
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium">
-            Write, compile, and run code in 20+ programming languages directly in your browser! 
-            Perfect for learning, testing, and quick prototyping.
+            Write and run code in Python, Java, C++, and JavaScript directly in your browser. Useful for learning and quick prototyping.
           </p>
         </div>
 
@@ -419,14 +418,14 @@ Fibonacci(10): 55
           <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 text-center hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300">
             <Settings className="h-12 w-12 text-red-700 mx-auto mb-4" />
             <h4 className="text-lg font-bold text-white mb-2">Multiple Languages</h4>
-            <p className="text-gray-400 text-sm">20+ programming languages supported</p>
+            <p className="text-gray-400 text-sm">Several languages supported</p>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto shadow-xl backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">🚀 Start Coding Now!</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Start Coding Now</h3>
             <p className="text-xl text-gray-300 mb-8">
               Choose any programming language above and start writing code immediately. Perfect for learning, 
               testing algorithms, or quick prototyping!
@@ -436,13 +435,13 @@ Fibonacci(10): 55
                 onClick={() => setSelectedLanguage('python')}
                 className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-red-500/50"
               >
-                <span>🐍 Try Python</span>
+                <span>Try Python</span>
               </button>
               <button 
                 onClick={() => setSelectedLanguage('javascript')}
                 className="bg-gradient-to-r from-red-700 to-red-800 hover:from-red-800 hover:to-red-900 px-8 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-red-500/50"
               >
-                <span>📜 Try JavaScript</span>
+                <span>Try JavaScript</span>
               </button>
             </div>
           </div>

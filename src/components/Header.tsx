@@ -52,7 +52,7 @@ const Header = () => {
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
                   Tech Learning Hub
                 </h1>
-                <p className="text-xs text-gray-400 font-medium">Free Resources Forever</p>
+                <p className="text-xs text-gray-400 font-medium">Free Engineering Resources</p>
               </div>
             </div>
 

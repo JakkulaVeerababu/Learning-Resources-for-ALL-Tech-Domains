@@ -166,7 +166,7 @@ const Footer = () => {
             </div>
             <div className="mt-4 p-3 bg-red-950/30 border border-red-500/30 rounded-lg">
               <p className="text-red-300 text-xs">
-                💡 Need personal guidance? Contact us for syllabus help, doubt clearing, and career advice!
+                Need personal guidance? Contact us for syllabus help, doubt clearing, and career advice.
               </p>
             </div>
           </div>
@@ -187,7 +187,7 @@ const Footer = () => {
           
           <div className="mt-4 text-center">
             <p className="text-gray-400 text-xs">
-              🚧 This website is under active development. More features and resources coming soon!
+              This website is under active development. More features and resources coming soon.
             </p>
           </div>
         </div>

@@ -1,14 +1,13 @@
 import React from 'react';
-// Consolidated and added Linkedin icon
 import {
-    Trophy, Target, Clock, Gift, Zap, Star, ChevronRight, Code, Cpu,
-    Database, Globe, Brain, Calculator, Wrench, Building, Instagram,
-    MessageCircle, Linkedin, BookOpen, Github
+  Target, Clock, Gift, Zap, ChevronRight, Code, Cpu,
+  Database, Globe, Brain, Calculator, Wrench, Building, Instagram,
+  MessageCircle, Linkedin, BookOpen, Github
 } from 'lucide-react';
 
 const Hero = () => {
   const features = [
-    { icon: Gift, text: "100% FREE Forever", color: "text-red-400" },
+    { icon: Gift, text: "Free Forever", color: "text-red-400" },
     { icon: Target, text: "All Tech Domains", color: "text-red-500" },
     { icon: Clock, text: "Always Updated", color: "text-red-600" },
     { icon: Zap, text: "No Login Required", color: "text-red-700" }
@@ -28,7 +27,7 @@ const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ 
+      element.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -46,17 +45,14 @@ const Hero = () => {
 
   return (
     <section className="pt-32 pb-20 px-6 relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-red-950 to-black"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,38,38,0.1),transparent_70%)]"></div>
-      
-      <div className="container mx-auto text-center relative z-10">
-        
-        {/* Professional Badge */}
-        <div className="flex justify-center mb-6 md:mb-10 -mt-12 md:-mt-16 px-2">
-          <div className="inline-flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-black/80 border border-red-500/50 rounded-lg md:rounded-full p-2 md:p-2 backdrop-blur-sm shadow-lg max-w-sm md:max-w-none">
 
-            {/* Creator Info */}
+      <div className="container mx-auto text-center relative z-10">
+
+        {/* Creator Badge */}
+        <div className="flex justify-center mb-6 md:mb-10 -mt-12 md:-mt-16 px-2">
+          <div className="inline-flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-black/80 border border-red-500/50 rounded-lg md:rounded-full p-2 backdrop-blur-sm shadow-lg max-w-sm md:max-w-none">
             <div className="flex items-center space-x-2 pl-1 md:pl-2 text-center md:text-left">
               <span className="h-4 w-4 md:h-6 md:w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-red-500 via-red-600 to-red-700"></span>
               <p className="text-xs md:text-sm font-semibold text-white">
@@ -64,11 +60,9 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Vertical Separator */}
             <div className="hidden md:block w-[1px] h-6 bg-red-500/50"></div>
             <div className="block md:hidden h-[1px] w-full bg-red-500/30"></div>
 
-            {/* Social Links */}
             <div className="flex items-center justify-center gap-1 md:gap-2">
               <a
                 href="https://github.com/JakkulaVeerababu"
@@ -104,28 +98,30 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Professional Main Heading */}
+        {/* Main Heading */}
         <div className="mb-12">
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight">
               <span className="block bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent">
-                TECH MASTERY
+                Tech Learning Hub
               </span>
-              <span className="block text-white font-light text-4xl md:text-5xl mt-4">
-                UNLIMITED RESOURCES
+              <span className="block text-white font-light text-3xl md:text-4xl mt-4">
+                Engineering & Programming Resources
               </span>
             </h1>
-            
+
             <div className="w-32 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-4xl mx-auto font-light leading-relaxed">
-              Elite Engineering & Programming Education Platform
+
+            <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto font-light leading-relaxed">
+              A collection of free study materials for GATE preparation, programming, and engineering domains.
             </p>
-            
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <span className="bg-gradient-to-r from-red-600 to-red-700 px-8 py-4 rounded-full text-white font-bold text-lg shadow-2xl border border-red-500/50">
-                GATE • FULL STACK • AI • VLSI • EMBEDDED
-              </span>
+
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              {['GATE', 'Full Stack', 'AI', 'VLSI', 'Embedded'].map((tag) => (
+                <span key={tag} className="bg-red-950/50 border border-red-500/30 px-5 py-2 rounded-full text-red-200 font-medium text-sm">
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -133,7 +129,7 @@ const Hero = () => {
         {/* Domain Icons */}
         <div className="grid grid-cols-4 md:grid-cols-8 gap-4 mb-12 max-w-4xl mx-auto">
           {domains.map((domain, index) => (
-            <div 
+            <div
               key={index}
               className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-4 hover:border-red-400 transition-colors duration-300 shadow-xl cursor-pointer hover:bg-red-950/30"
               onClick={() => scrollToSection('resources')}
@@ -147,7 +143,7 @@ const Hero = () => {
         {/* Feature Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
               className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-colors duration-300 shadow-xl cursor-pointer hover:bg-red-950/30"
               onClick={() => scrollToSection('resources')}
@@ -160,26 +156,25 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-          <button 
+          <button
             onClick={() => scrollToSection('resources')}
-            className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-12 py-5 rounded-full text-white font-bold text-xl transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-2xl hover:shadow-red-500/25 border border-red-500/50"
+            className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-2xl hover:shadow-red-500/25 border border-red-500/50"
           >
-            <span>EXPLORE RESOURCES</span>
-            <ChevronRight className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
+            <span>Explore Resources</span>
+            <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
-          
+
           <button
             onClick={openInstagram}
-            className="group bg-black/80 hover:bg-red-950/80 border border-red-500/50 hover:border-red-400 px-12 py-5 rounded-full text-white font-bold text-xl transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-2xl"
+            className="group bg-black/80 hover:bg-red-950/80 border border-red-500/50 hover:border-red-400 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-2xl"
           >
-            <Instagram className="h-6 w-6" />
-            <span>FOLLOW @thflashz</span>
+            <Instagram className="h-5 w-5" />
+            <span>Follow @thflashz</span>
           </button>
         </div>
 
-        {/* Coding Profiles Section */}
+        {/* Coding Profiles */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-          {/* LeetCode */}
           <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-colors duration-300 shadow-xl">
             <h4 className="text-xl font-bold text-white mb-4">LeetCode Profiles</h4>
             <div className="space-y-3">
@@ -202,11 +197,10 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* CodeForces */}
           <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-colors duration-300 shadow-xl">
             <h4 className="text-xl font-bold text-white mb-4">CodeForces Profile</h4>
             <a
-              href="https://codeforces.com/profile/jakkulaveerababu?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn8CQREmyamOsIbQVOYXinvbuIQ9dR-yhwHlMiqBH81EySflX33i45mytZlDE_aem_ikJ7D5-zYd3VCxzh4Xn3Xw"
+              href="https://codeforces.com/profile/jakkulaveerababu"
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-red-950/50 hover:bg-red-900/50 border border-red-500/30 rounded-lg p-3 transition-colors duration-300"
@@ -216,38 +210,36 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Personal Guidance Section */}
+        {/* Personal Guidance */}
         <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-2xl backdrop-blur-sm">
-          <h3 className="text-3xl font-bold text-white mb-4">🤝 PERSONAL MENTORSHIP</h3>
-          <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-            Get exclusive one-on-one guidance for GATE preparation, career strategy, and technical excellence. 
+          <h3 className="text-2xl font-bold text-white mb-4">Personal Mentorship</h3>
+          <p className="text-gray-300 text-base mb-6 leading-relaxed">
+            One-on-one guidance for GATE preparation, career strategy, and technical excellence.
             Direct access to expert mentorship for your success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
+            <button
               onClick={openWhatsApp}
-              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-8 py-4 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-green-500/50"
+              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-green-500/50"
             >
               <MessageCircle className="h-5 w-5" />
-              <span>WHATSAPP DIRECT</span>
+              <span>WhatsApp</span>
             </button>
-            <button 
+            <button
               onClick={openInstagram}
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-4 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-red-500/50"
+              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-red-500/50"
             >
               <Instagram className="h-5 w-5" />
-              <span>INSTAGRAM DM</span>
+              <span>Instagram DM</span>
             </button>
           </div>
         </div>
 
-        {/* GATE ECE Syllabus Section */}
-        {/* Latest Updates Section */}
+        {/* Latest Updates */}
         <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-2xl backdrop-blur-sm">
-          <h3 className="text-3xl font-bold text-white mb-6 text-center">🚨 LATEST UPDATES</h3>
-          
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">Latest Updates</h3>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* GATE ECE Syllabus */}
             <div className="bg-black/60 border border-red-500/30 rounded-xl p-6 hover:bg-red-950/30 transition-all duration-300">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center">
@@ -255,13 +247,13 @@ const Hero = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-white">GATE ECE Syllabus</h4>
-                  <p className="text-red-400 text-sm font-semibold">📋 Official PDF</p>
+                  <p className="text-red-400 text-sm font-semibold">Official PDF</p>
                 </div>
               </div>
               <p className="text-gray-300 text-sm mb-4">
                 Complete GATE Electronics & Communication Engineering syllabus with detailed topics and weightage.
               </p>
-              <a 
+              <a
                 href="https://drive.google.com/file/d/1pTI8oMHIbnTerPlxJshkiYJ6QJUG6s1s/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -272,7 +264,6 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* GATE 2026 Official Website */}
             <div className="bg-black/60 border border-red-500/30 rounded-xl p-6 hover:bg-red-950/30 transition-all duration-300">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-700 to-red-800 rounded-lg flex items-center justify-center">
@@ -280,13 +271,13 @@ const Hero = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-white">GATE 2026 Official</h4>
-                  <p className="text-red-400 text-sm font-semibold">🌐 Official Website</p>
+                  <p className="text-red-400 text-sm font-semibold">Official Website</p>
                 </div>
               </div>
               <p className="text-gray-300 text-sm mb-4">
                 Official GATE 2026 website for registration, notifications, admit cards, and results.
               </p>
-              <a 
+              <a
                 href="https://gate2026.iitr.ac.in/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -298,26 +289,27 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
-          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer transition-colors duration-300 border border-red-500/30">
-            <div className="text-5xl font-bold text-red-400 mb-2">50+</div>
-            <div className="text-gray-300 font-medium">Tech Domains</div>
+          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-red-500/30">
+            <div className="text-4xl font-bold text-red-400 mb-2">29+</div>
+            <div className="text-gray-300 font-medium">Resource Categories</div>
           </div>
-          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer transition-colors duration-300 border border-red-500/30">
-            <div className="text-5xl font-bold text-red-500 mb-2">2000+</div>
-            <div className="text-gray-300 font-medium">Study Materials</div>
+          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-red-500/30">
+            <div className="text-4xl font-bold text-red-500 mb-2">4</div>
+            <div className="text-gray-300 font-medium">Learning Roadmaps</div>
           </div>
-          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl cursor-pointer transition-colors duration-300 border border-red-500/30">
-            <div className="text-5xl font-bold text-red-600 mb-2">100%</div>
+          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-red-500/30">
+            <div className="text-4xl font-bold text-red-600 mb-2">100%</div>
             <div className="text-gray-300 font-medium">Free Forever</div>
           </div>
         </div>
 
-        {/* Thank You Message */}
+        {/* Footer Note */}
         <div className="bg-gradient-to-r from-red-950/30 to-black/30 border border-red-500/30 rounded-2xl p-6 max-w-3xl mx-auto shadow-xl backdrop-blur-sm">
-          <p className="text-red-200 font-medium text-lg">
-            🙏 Excellence in education, delivered free. Follow for cutting-edge updates and industry insights. 💫
+          <p className="text-red-200 font-medium text-base">
+            Built for students, by a student. Follow for updates and new resources.
           </p>
         </div>
       </div>

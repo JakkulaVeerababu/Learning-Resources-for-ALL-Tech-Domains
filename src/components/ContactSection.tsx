@@ -100,7 +100,7 @@ const ContactSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-              Need Personal Help? 🤝
+              Need Personal Help?
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto font-medium">
@@ -113,7 +113,7 @@ const ContactSection = () => {
           {/* Contact Methods */}
           <div className="space-y-8">
             <h3 className="text-3xl font-bold text-white mb-8 text-center lg:text-left">
-              📞 Get In Touch
+              Get In Touch
             </h3>
 
             {/* WhatsApp */}
@@ -204,7 +204,7 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="space-y-8">
             <h3 className="text-3xl font-bold text-white mb-8 text-center lg:text-left">
-              📧 Send us a Message
+              Send a Message
             </h3>
 
             <div className="bg-black/80 backdrop-blur-sm border border-red-500/30 rounded-2xl p-8 shadow-xl">
@@ -213,7 +213,7 @@ const ContactSection = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent! 🎉</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent</h3>
                   <p className="text-gray-300">We'll get back to you within 24 hours!</p>
                 </div>
               ) : (
@@ -345,7 +345,7 @@ const ContactSection = () => {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto shadow-xl backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">🚀 Ready to Excel in Your Studies?</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Ready to Excel in Your Studies?</h3>
             <p className="text-xl text-gray-300 mb-8">
               Don't let doubts and confusion hold you back. Get personalized guidance from someone who understands your journey.
             </p>

@@ -223,12 +223,11 @@ const ResourcesSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-              📚 Complete Learning Resources
+              Learning Resources
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium">
-            Access thousands of study materials, books, and resources for all engineering branches, programming languages, 
-            and technology domains. Click on any card to access the materials instantly!
+            Study materials for GATE preparation, programming, and engineering domains. Click any card to open the resources.
           </p>
         </div>
 
@@ -283,7 +282,7 @@ const ResourcesSection = () => {
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto shadow-xl backdrop-blur-sm">
-            <h3 className="text-2xl font-bold text-white mb-4">🎯 Special Note for CS Branches</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Special Note for CS Branches</h3>
             <p className="text-gray-300 text-lg">
               For <strong className="text-red-400">Data Science</strong>, <strong className="text-red-400">Artificial Intelligence</strong>, and <strong className="text-red-400">AI & ML</strong> branches, 
               we recommend using the same comprehensive CSE resources as they cover all the fundamental concepts you need!
