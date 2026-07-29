@@ -7,10 +7,10 @@ import {
 
 const Hero = () => {
   const features = [
-    { icon: Gift, text: "Free Forever", color: "text-red-400" },
-    { icon: Target, text: "All Tech Domains", color: "text-red-500" },
-    { icon: Clock, text: "Always Updated", color: "text-red-600" },
-    { icon: Zap, text: "No Login Required", color: "text-red-700" }
+    { icon: Gift, text: "Free Forever" },
+    { icon: Target, text: "All Tech Domains" },
+    { icon: Clock, text: "Always Updated" },
+    { icon: Zap, text: "No Login Required" }
   ];
 
   const domains = [
@@ -27,10 +27,7 @@ const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -44,54 +41,33 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-32 pb-20 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-red-950 to-black"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,38,38,0.1),transparent_70%)]"></div>
-
+    <section className="pt-32 pb-20 px-6 relative overflow-hidden bg-primary">
       <div className="container mx-auto text-center relative z-10">
 
         {/* Creator Badge */}
-        <div className="flex justify-center mb-6 md:mb-10 -mt-12 md:-mt-16 px-2">
-          <div className="inline-flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-black/80 border border-red-500/50 rounded-lg md:rounded-full p-2 backdrop-blur-sm shadow-lg max-w-sm md:max-w-none">
+        <div className="flex justify-center mb-6 md:mb-10 px-2">
+          <div className="inline-flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-card border border-default rounded-lg md:rounded-full p-2 shadow-sm max-w-sm md:max-w-none">
             <div className="flex items-center space-x-2 pl-1 md:pl-2 text-center md:text-left">
-              <span className="h-4 w-4 md:h-6 md:w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-red-500 via-red-600 to-red-700"></span>
-              <p className="text-xs md:text-sm font-semibold text-white">
-                Created by <span className="font-bold text-red-400">VEERABABU JAKKULA</span>
+              <span className="h-4 w-4 md:h-6 md:w-6 flex-shrink-0 rounded-full bg-accent"></span>
+              <p className="text-xs md:text-sm font-semibold text-primary">
+                Created by <span className="font-bold">VEERABABU JAKKULA</span>
               </p>
             </div>
 
-            <div className="hidden md:block w-[1px] h-6 bg-red-500/50"></div>
-            <div className="block md:hidden h-[1px] w-full bg-red-500/30"></div>
+            <div className="hidden md:block w-[1px] h-6 bg-default"></div>
+            <div className="block md:hidden h-[1px] w-full bg-default"></div>
 
             <div className="flex items-center justify-center gap-1 md:gap-2">
-              <a
-                href="https://github.com/JakkulaVeerababu"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="GitHub profile"
-                className="flex items-center gap-1 px-2 md:px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
-              >
-                <Github className="h-3 w-3 md:h-4 md:w-4 text-red-400" />
+              <a href="https://github.com/JakkulaVeerababu" target="_blank" rel="noopener noreferrer" title="GitHub profile" className="flex items-center gap-1 px-2 md:px-3 py-1 rounded-full text-primary hover:bg-secondary transition-colors duration-300">
+                <Github className="h-3 w-3 md:h-4 md:w-4" />
                 <span className="hidden sm:inline text-xs font-semibold">GitHub</span>
               </a>
-              <a
-                href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Follow on Instagram for updates"
-                className="flex items-center gap-1 px-2 md:px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
-              >
-                <Instagram className="h-3 w-3 md:h-4 md:w-4 text-red-400" />
+              <a href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D" target="_blank" rel="noopener noreferrer" title="Follow on Instagram for updates" className="flex items-center gap-1 px-2 md:px-3 py-1 rounded-full text-primary hover:bg-secondary transition-colors duration-300">
+                <Instagram className="h-3 w-3 md:h-4 md:w-4" />
                 <span className="hidden sm:inline text-xs font-semibold">Instagram</span>
               </a>
-              <a
-                href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Connect on LinkedIn"
-                className="flex items-center gap-1 px-2 md:px-3 py-1 rounded-full text-white hover:bg-red-900/50 transition-colors duration-300"
-              >
-                <Linkedin className="h-3 w-3 md:h-4 md:w-4 text-red-400" />
+              <a href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn" className="flex items-center gap-1 px-2 md:px-3 py-1 rounded-full text-primary hover:bg-secondary transition-colors duration-300">
+                <Linkedin className="h-3 w-3 md:h-4 md:w-4" />
                 <span className="hidden sm:inline text-xs font-semibold">LinkedIn</span>
               </a>
             </div>
@@ -102,23 +78,23 @@ const Hero = () => {
         <div className="mb-12">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight">
-              <span className="block bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent">
+              <span className="block text-primary">
                 Tech Learning Hub
               </span>
-              <span className="block text-white font-light text-3xl md:text-4xl mt-4">
+              <span className="block text-secondary font-light text-3xl md:text-4xl mt-4">
                 Engineering & Programming Resources
               </span>
             </h1>
 
-            <div className="w-32 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
+            <div className="w-32 h-1 bg-accent mx-auto mb-8"></div>
 
-            <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-secondary mb-6 max-w-3xl mx-auto font-light leading-relaxed">
               A collection of free study materials for GATE preparation, programming, and engineering domains.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               {['GATE', 'Full Stack', 'AI', 'VLSI', 'Embedded'].map((tag) => (
-                <span key={tag} className="bg-red-950/50 border border-red-500/30 px-5 py-2 rounded-full text-red-200 font-medium text-sm">
+                <span key={tag} className="bg-secondary border border-default px-5 py-2 rounded-full text-primary font-medium text-sm">
                   {tag}
                 </span>
               ))}
@@ -131,11 +107,11 @@ const Hero = () => {
           {domains.map((domain, index) => (
             <div
               key={index}
-              className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-xl p-4 hover:border-red-400 transition-colors duration-300 shadow-xl cursor-pointer hover:bg-red-950/30"
+              className="bg-card border border-default rounded-xl p-4 hover:border-hover transition-colors duration-300 shadow-sm cursor-pointer hover:bg-secondary"
               onClick={() => scrollToSection('resources')}
             >
-              <domain.icon className="h-8 w-8 text-red-400 mx-auto mb-2" />
-              <p className="text-white text-xs font-medium">{domain.name}</p>
+              <domain.icon className="h-8 w-8 text-primary mx-auto mb-2" />
+              <p className="text-primary text-xs font-medium">{domain.name}</p>
             </div>
           ))}
         </div>
@@ -145,11 +121,11 @@ const Hero = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-colors duration-300 shadow-xl cursor-pointer hover:bg-red-950/30"
+              className="bg-card border border-default rounded-2xl p-6 hover:border-hover transition-colors duration-300 shadow-sm cursor-pointer hover:bg-secondary"
               onClick={() => scrollToSection('resources')}
             >
-              <feature.icon className={`h-10 w-10 ${feature.color} mx-auto mb-3`} />
-              <p className="text-white font-semibold">{feature.text}</p>
+              <feature.icon className="h-10 w-10 text-primary mx-auto mb-3" />
+              <p className="text-primary font-semibold">{feature.text}</p>
             </div>
           ))}
         </div>
@@ -158,7 +134,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
           <button
             onClick={() => scrollToSection('resources')}
-            className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-2xl hover:shadow-red-500/25 border border-red-500/50"
+            className="group bg-accent bg-accent-hover px-10 py-4 rounded-full text-accent-text font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-sm border-accent"
           >
             <span>Explore Resources</span>
             <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -166,7 +142,7 @@ const Hero = () => {
 
           <button
             onClick={openInstagram}
-            className="group bg-black/80 hover:bg-red-950/80 border border-red-500/50 hover:border-red-400 px-10 py-4 rounded-full text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-2xl"
+            className="group bg-card hover:bg-secondary border border-default hover:border-hover px-10 py-4 rounded-full text-primary font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-sm"
           >
             <Instagram className="h-5 w-5" />
             <span>Follow @thflashz</span>
@@ -175,59 +151,44 @@ const Hero = () => {
 
         {/* Coding Profiles */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-          <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-colors duration-300 shadow-xl">
-            <h4 className="text-xl font-bold text-white mb-4">LeetCode Profiles</h4>
+          <div className="bg-card border border-default rounded-2xl p-6 hover:border-hover transition-colors duration-300 shadow-sm">
+            <h4 className="text-xl font-bold text-primary mb-4">LeetCode Profiles</h4>
             <div className="space-y-3">
-              <a
-                href="https://leetcode.com/u/veerababu9z/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block bg-red-950/50 hover:bg-red-900/50 border border-red-500/30 rounded-lg p-3 transition-colors duration-300"
-              >
-                <span className="text-red-400 font-semibold">veerababu9z</span>
+              <a href="https://leetcode.com/u/veerababu9z/" target="_blank" rel="noopener noreferrer" className="block bg-secondary hover:bg-tertiary border border-default rounded-lg p-3 transition-colors duration-300">
+                <span className="text-primary font-semibold">veerababu9z</span>
               </a>
-              <a
-                href="https://leetcode.com/u/veerababu_jakkula/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block bg-red-950/50 hover:bg-red-900/50 border border-red-500/30 rounded-lg p-3 transition-colors duration-300"
-              >
-                <span className="text-red-400 font-semibold">veerababu_jakkula</span>
+              <a href="https://leetcode.com/u/veerababu_jakkula/" target="_blank" rel="noopener noreferrer" className="block bg-secondary hover:bg-tertiary border border-default rounded-lg p-3 transition-colors duration-300">
+                <span className="text-primary font-semibold">veerababu_jakkula</span>
               </a>
             </div>
           </div>
 
-          <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400 transition-colors duration-300 shadow-xl">
-            <h4 className="text-xl font-bold text-white mb-4">CodeForces Profile</h4>
-            <a
-              href="https://codeforces.com/profile/jakkulaveerababu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-red-950/50 hover:bg-red-900/50 border border-red-500/30 rounded-lg p-3 transition-colors duration-300"
-            >
-              <span className="text-red-400 font-semibold">jakkulaveerababu</span>
+          <div className="bg-card border border-default rounded-2xl p-6 hover:border-hover transition-colors duration-300 shadow-sm">
+            <h4 className="text-xl font-bold text-primary mb-4">CodeForces Profile</h4>
+            <a href="https://codeforces.com/profile/jakkulaveerababu" target="_blank" rel="noopener noreferrer" className="block bg-secondary hover:bg-tertiary border border-default rounded-lg p-3 transition-colors duration-300">
+              <span className="text-primary font-semibold">jakkulaveerababu</span>
             </a>
           </div>
         </div>
 
         {/* Personal Guidance */}
-        <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-2xl backdrop-blur-sm">
-          <h3 className="text-2xl font-bold text-white mb-4">Personal Mentorship</h3>
-          <p className="text-gray-300 text-base mb-6 leading-relaxed">
+        <div className="bg-card border border-default rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-sm">
+          <h3 className="text-2xl font-bold text-primary mb-4">Personal Mentorship</h3>
+          <p className="text-secondary text-base mb-6 leading-relaxed">
             One-on-one guidance for GATE preparation, career strategy, and technical excellence.
             Direct access to expert mentorship for your success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={openWhatsApp}
-              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-green-500/50"
+              className="bg-accent bg-accent-hover px-8 py-3 rounded-full text-accent-text font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-sm border-accent"
             >
               <MessageCircle className="h-5 w-5" />
               <span>WhatsApp</span>
             </button>
             <button
               onClick={openInstagram}
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-3 rounded-full text-white font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-xl border border-red-500/50"
+              className="bg-card hover:bg-secondary border border-default hover:border-hover px-8 py-3 rounded-full text-primary font-bold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-sm"
             >
               <Instagram className="h-5 w-5" />
               <span>Instagram DM</span>
@@ -236,53 +197,43 @@ const Hero = () => {
         </div>
 
         {/* Latest Updates */}
-        <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-2xl backdrop-blur-sm">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Latest Updates</h3>
+        <div className="bg-card border border-default rounded-2xl p-8 max-w-4xl mx-auto mb-12 shadow-sm">
+          <h3 className="text-2xl font-bold text-primary mb-6 text-center">Latest Updates</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-black/60 border border-red-500/30 rounded-xl p-6 hover:bg-red-950/30 transition-all duration-300">
+            <div className="bg-secondary border border-default rounded-xl p-6 hover:bg-tertiary transition-all duration-300">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center">
-                  <BookOpen className="h-6 w-6 text-white" />
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                  <BookOpen className="h-6 w-6 text-accent-text" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white">GATE ECE Syllabus</h4>
-                  <p className="text-red-400 text-sm font-semibold">Official PDF</p>
+                  <h4 className="text-lg font-bold text-primary">GATE ECE Syllabus</h4>
+                  <p className="text-secondary text-sm font-semibold">Official PDF</p>
                 </div>
               </div>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-secondary text-sm mb-4">
                 Complete GATE Electronics & Communication Engineering syllabus with detailed topics and weightage.
               </p>
-              <a
-                href="https://drive.google.com/file/d/1pTI8oMHIbnTerPlxJshkiYJ6QJUG6s1s/view?usp=drivesdk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-4 py-3 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-red-500/50"
-              >
+              <a href="https://drive.google.com/file/d/1pTI8oMHIbnTerPlxJshkiYJ6QJUG6s1s/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="w-full bg-accent bg-accent-hover px-4 py-3 rounded-lg text-accent-text font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-sm border-accent">
                 <BookOpen className="h-4 w-4" />
                 <span>View Syllabus PDF</span>
               </a>
             </div>
 
-            <div className="bg-black/60 border border-red-500/30 rounded-xl p-6 hover:bg-red-950/30 transition-all duration-300">
+            <div className="bg-secondary border border-default rounded-xl p-6 hover:bg-tertiary transition-all duration-300">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-700 to-red-800 rounded-lg flex items-center justify-center">
-                  <Globe className="h-6 w-6 text-white" />
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                  <Globe className="h-6 w-6 text-accent-text" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white">GATE 2026 Official</h4>
-                  <p className="text-red-400 text-sm font-semibold">Official Website</p>
+                  <h4 className="text-lg font-bold text-primary">GATE 2026 Official</h4>
+                  <p className="text-secondary text-sm font-semibold">Official Website</p>
                 </div>
               </div>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-secondary text-sm mb-4">
                 Official GATE 2026 website for registration, notifications, admit cards, and results.
               </p>
-              <a
-                href="https://gate2026.iitr.ac.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-gradient-to-r from-red-700 to-red-800 hover:from-red-800 hover:to-red-900 px-4 py-3 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg border border-red-500/50"
-              >
+              <a href="https://gate2026.iitr.ac.in/" target="_blank" rel="noopener noreferrer" className="w-full bg-accent bg-accent-hover px-4 py-3 rounded-lg text-accent-text font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-sm border-accent">
                 <Globe className="h-4 w-4" />
                 <span>Visit Official Site</span>
               </a>
@@ -292,23 +243,23 @@ const Hero = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
-          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-red-500/30">
-            <div className="text-4xl font-bold text-red-400 mb-2">29+</div>
-            <div className="text-gray-300 font-medium">Resource Categories</div>
+          <div className="text-center bg-card border border-default rounded-2xl p-6 shadow-sm">
+            <div className="text-4xl font-bold text-primary mb-2">29+</div>
+            <div className="text-secondary font-medium">Resource Categories</div>
           </div>
-          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-red-500/30">
-            <div className="text-4xl font-bold text-red-500 mb-2">4</div>
-            <div className="text-gray-300 font-medium">Learning Roadmaps</div>
+          <div className="text-center bg-card border border-default rounded-2xl p-6 shadow-sm">
+            <div className="text-4xl font-bold text-primary mb-2">4</div>
+            <div className="text-secondary font-medium">Learning Roadmaps</div>
           </div>
-          <div className="text-center bg-black/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-red-500/30">
-            <div className="text-4xl font-bold text-red-600 mb-2">100%</div>
-            <div className="text-gray-300 font-medium">Free Forever</div>
+          <div className="text-center bg-card border border-default rounded-2xl p-6 shadow-sm">
+            <div className="text-4xl font-bold text-primary mb-2">100%</div>
+            <div className="text-secondary font-medium">Free Forever</div>
           </div>
         </div>
 
         {/* Footer Note */}
-        <div className="bg-gradient-to-r from-red-950/30 to-black/30 border border-red-500/30 rounded-2xl p-6 max-w-3xl mx-auto shadow-xl backdrop-blur-sm">
-          <p className="text-red-200 font-medium text-base">
+        <div className="bg-card border border-default rounded-2xl p-6 max-w-3xl mx-auto shadow-sm">
+          <p className="text-primary font-medium text-base">
             Built for students, by a student. Follow for updates and new resources.
           </p>
         </div>

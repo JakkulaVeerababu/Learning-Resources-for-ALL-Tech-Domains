@@ -1,42 +1,28 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, CheckCircle, ArrowRight, Target, BookOpen, Code, Cpu, Database, Globe, Brain, Calculator, Wrench, Building, Zap, Smartphone, Monitor, Palette, Trophy, Star, Play, Download, FileText } from 'lucide-react';
+import { Calendar, Clock, CheckCircle, ArrowRight, Target, BookOpen, Code, Cpu, Database, Globe, Brain, Calendar as CalendarIcon, Trophy, Star, Play, Download, FileText } from 'lucide-react';
 
 const RoadmapsSection = () => {
   const [activeRoadmap, setActiveRoadmap] = useState('gate-cse');
   const [activeTab, setActiveTab] = useState('roadmap');
 
-  const roadmaps = {
+  const roadmaps: Record<string, {
+    title: string;
+    icon: React.ComponentType<{ className?: string }>;
+    duration: string;
+    difficulty: string;
+    phases: { phase: string; duration: string; topics: string[]; milestones: string[] }[];
+    timetable: { daily: { time: string; activity: string; type: string }[]; weekly: { day: string; focus: string }[] };
+  }> = {
     'gate-cse': {
       title: 'GATE CSE',
       icon: Code,
-      color: 'from-red-500 to-red-600',
       duration: '12 Months',
       difficulty: 'Advanced',
       phases: [
-        {
-          phase: 'Foundation Phase',
-          duration: '3 Months',
-          topics: ['Mathematics', 'Digital Logic', 'Programming Basics', 'Data Structures'],
-          milestones: ['Complete basic math concepts', 'Master programming fundamentals', 'Understand digital logic gates']
-        },
-        {
-          phase: 'Core Subjects',
-          duration: '6 Months',
-          topics: ['Algorithms', 'Operating Systems', 'DBMS', 'Computer Networks', 'Computer Architecture'],
-          milestones: ['Solve 500+ DSA problems', 'Complete OS concepts', 'Master database design']
-        },
-        {
-          phase: 'Advanced Topics',
-          duration: '2 Months',
-          topics: ['Compiler Design', 'Theory of Computation', 'Machine Learning Basics'],
-          milestones: ['Understand parsing techniques', 'Master automata theory', 'Complete ML fundamentals']
-        },
-        {
-          phase: 'Revision & Practice',
-          duration: '1 Month',
-          topics: ['Mock Tests', 'Previous Papers', 'Weak Area Focus'],
-          milestones: ['Score 60+ in mocks', 'Complete 10 years papers', 'Achieve target score']
-        }
+        { phase: 'Foundation Phase', duration: '3 Months', topics: ['Mathematics', 'Digital Logic', 'Programming Basics', 'Data Structures'], milestones: ['Complete basic math concepts', 'Master programming fundamentals', 'Understand digital logic gates'] },
+        { phase: 'Core Subjects', duration: '6 Months', topics: ['Algorithms', 'Operating Systems', 'DBMS', 'Computer Networks', 'Computer Architecture'], milestones: ['Solve 500+ DSA problems', 'Complete OS concepts', 'Master database design'] },
+        { phase: 'Advanced Topics', duration: '2 Months', topics: ['Compiler Design', 'Theory of Computation', 'Machine Learning Basics'], milestones: ['Understand parsing techniques', 'Master automata theory', 'Complete ML fundamentals'] },
+        { phase: 'Revision & Practice', duration: '1 Month', topics: ['Mock Tests', 'Previous Papers', 'Weak Area Focus'], milestones: ['Score 60+ in mocks', 'Complete 10 years papers', 'Achieve target score'] }
       ],
       timetable: {
         daily: [
@@ -63,34 +49,13 @@ const RoadmapsSection = () => {
     'full-stack': {
       title: 'Full Stack Development',
       icon: Globe,
-      color: 'from-red-600 to-red-700',
       duration: '8 Months',
       difficulty: 'Intermediate',
       phases: [
-        {
-          phase: 'Frontend Fundamentals',
-          duration: '2 Months',
-          topics: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Responsive Design'],
-          milestones: ['Build 5 static websites', 'Master CSS Grid & Flexbox', 'Complete JS fundamentals']
-        },
-        {
-          phase: 'Frontend Frameworks',
-          duration: '2 Months',
-          topics: ['React.js', 'State Management', 'React Router', 'Component Libraries'],
-          milestones: ['Build 3 React projects', 'Master hooks & context', 'Deploy applications']
-        },
-        {
-          phase: 'Backend Development',
-          duration: '2 Months',
-          topics: ['Node.js', 'Express.js', 'RESTful APIs', 'Authentication'],
-          milestones: ['Create 5 APIs', 'Implement JWT auth', 'Handle file uploads']
-        },
-        {
-          phase: 'Database & Deployment',
-          duration: '2 Months',
-          topics: ['MongoDB', 'SQL Databases', 'Cloud Deployment', 'DevOps Basics'],
-          milestones: ['Design 3 databases', 'Deploy full-stack apps', 'Set up CI/CD']
-        }
+        { phase: 'Frontend Fundamentals', duration: '2 Months', topics: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Responsive Design'], milestones: ['Build 5 static websites', 'Master CSS Grid & Flexbox', 'Complete JS fundamentals'] },
+        { phase: 'Frontend Frameworks', duration: '2 Months', topics: ['React.js', 'State Management', 'React Router', 'Component Libraries'], milestones: ['Build 3 React projects', 'Master hooks & context', 'Deploy applications'] },
+        { phase: 'Backend Development', duration: '2 Months', topics: ['Node.js', 'Express.js', 'RESTful APIs', 'Authentication'], milestones: ['Create 5 APIs', 'Implement JWT auth', 'Handle file uploads'] },
+        { phase: 'Database & Deployment', duration: '2 Months', topics: ['MongoDB', 'SQL Databases', 'Cloud Deployment', 'DevOps Basics'], milestones: ['Design 3 databases', 'Deploy full-stack apps', 'Set up CI/CD'] }
       ],
       timetable: {
         daily: [
@@ -117,34 +82,13 @@ const RoadmapsSection = () => {
     'ai-ml': {
       title: 'AI & Machine Learning',
       icon: Brain,
-      color: 'from-red-700 to-red-800',
       duration: '10 Months',
       difficulty: 'Advanced',
       phases: [
-        {
-          phase: 'Mathematical Foundation',
-          duration: '2 Months',
-          topics: ['Linear Algebra', 'Statistics', 'Calculus', 'Probability'],
-          milestones: ['Master matrix operations', 'Understand distributions', 'Complete calculus basics']
-        },
-        {
-          phase: 'Programming & Tools',
-          duration: '2 Months',
-          topics: ['Python', 'NumPy', 'Pandas', 'Matplotlib', 'Jupyter'],
-          milestones: ['Complete Python mastery', 'Data manipulation skills', 'Visualization expertise']
-        },
-        {
-          phase: 'Machine Learning',
-          duration: '3 Months',
-          topics: ['Supervised Learning', 'Unsupervised Learning', 'Model Evaluation', 'Feature Engineering'],
-          milestones: ['Build 10 ML models', 'Master scikit-learn', 'Understand model selection']
-        },
-        {
-          phase: 'Deep Learning & AI',
-          duration: '3 Months',
-          topics: ['Neural Networks', 'TensorFlow/PyTorch', 'Computer Vision', 'NLP'],
-          milestones: ['Build neural networks', 'Complete CV projects', 'Implement NLP models']
-        }
+        { phase: 'Mathematical Foundation', duration: '2 Months', topics: ['Linear Algebra', 'Statistics', 'Calculus', 'Probability'], milestones: ['Master matrix operations', 'Understand distributions', 'Complete calculus basics'] },
+        { phase: 'Programming & Tools', duration: '2 Months', topics: ['Python', 'NumPy', 'Pandas', 'Matplotlib', 'Jupyter'], milestones: ['Complete Python mastery', 'Data manipulation skills', 'Visualization expertise'] },
+        { phase: 'Machine Learning', duration: '3 Months', topics: ['Supervised Learning', 'Unsupervised Learning', 'Model Evaluation', 'Feature Engineering'], milestones: ['Build 10 ML models', 'Master scikit-learn', 'Understand model selection'] },
+        { phase: 'Deep Learning & AI', duration: '3 Months', topics: ['Neural Networks', 'TensorFlow/PyTorch', 'Computer Vision', 'NLP'], milestones: ['Build neural networks', 'Complete CV projects', 'Implement NLP models'] }
       ],
       timetable: {
         daily: [
@@ -170,34 +114,13 @@ const RoadmapsSection = () => {
     'vlsi': {
       title: 'VLSI Design',
       icon: Cpu,
-      color: 'from-red-800 to-red-900',
       duration: '12 Months',
       difficulty: 'Expert',
       phases: [
-        {
-          phase: 'Digital Fundamentals',
-          duration: '2 Months',
-          topics: ['Digital Logic', 'Boolean Algebra', 'Number Systems', 'Logic Gates'],
-          milestones: ['Master logic design', 'Understand timing concepts', 'Complete combinational circuits']
-        },
-        {
-          phase: 'CMOS Technology',
-          duration: '3 Months',
-          topics: ['CMOS Basics', 'Transistor Theory', 'Layout Design', 'Stick Diagrams'],
-          milestones: ['Design CMOS inverters', 'Create stick diagrams', 'Understand fabrication']
-        },
-        {
-          phase: 'HDL Programming',
-          duration: '3 Months',
-          topics: ['Verilog', 'VHDL', 'Synthesis', 'Simulation'],
-          milestones: ['Write complex HDL code', 'Master testbenches', 'Understand synthesis']
-        },
-        {
-          phase: 'Advanced Design',
-          duration: '4 Months',
-          topics: ['ASIC Design Flow', 'Physical Design', 'DFT', 'Low Power Design'],
-          milestones: ['Complete ASIC flow', 'Master P&R tools', 'Implement DFT techniques']
-        }
+        { phase: 'Digital Fundamentals', duration: '2 Months', topics: ['Digital Logic', 'Boolean Algebra', 'Number Systems', 'Logic Gates'], milestones: ['Master logic design', 'Understand timing concepts', 'Complete combinational circuits'] },
+        { phase: 'CMOS Technology', duration: '3 Months', topics: ['CMOS Basics', 'Transistor Theory', 'Layout Design', 'Stick Diagrams'], milestones: ['Design CMOS inverters', 'Create stick diagrams', 'Understand fabrication'] },
+        { phase: 'HDL Programming', duration: '3 Months', topics: ['Verilog', 'VHDL', 'Synthesis', 'Simulation'], milestones: ['Write complex HDL code', 'Master testbenches', 'Understand synthesis'] },
+        { phase: 'Advanced Design', duration: '4 Months', topics: ['ASIC Design Flow', 'Physical Design', 'DFT', 'Low Power Design'], milestones: ['Complete ASIC flow', 'Master P&R tools', 'Implement DFT techniques'] }
       ],
       timetable: {
         daily: [
@@ -223,13 +146,13 @@ const RoadmapsSection = () => {
 
   const getActivityTypeColor = (type: string) => {
     switch (type) {
-      case 'study': return 'bg-red-900/30 text-red-200 border-red-500/50';
-      case 'practice': return 'bg-red-800/30 text-red-200 border-red-400/50';
-      case 'project': return 'bg-red-700/30 text-red-200 border-red-600/50';
-      case 'break': return 'bg-gray-800/30 text-gray-300 border-gray-600/50';
-      case 'revision': return 'bg-red-600/30 text-red-200 border-red-500/50';
-      case 'test': return 'bg-red-500/30 text-red-200 border-red-400/50';
-      default: return 'bg-gray-800/30 text-gray-300 border-gray-600/50';
+      case 'study': return 'bg-secondary text-primary border-default';
+      case 'practice': return 'bg-secondary text-primary border-default';
+      case 'project': return 'bg-secondary text-primary border-default';
+      case 'break': return 'bg-tertiary text-secondary border-default';
+      case 'revision': return 'bg-secondary text-primary border-default';
+      case 'test': return 'bg-secondary text-primary border-default';
+      default: return 'bg-secondary text-primary border-default';
     }
   };
 
@@ -268,15 +191,13 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
   const currentRoadmap = roadmaps[activeRoadmap];
 
   return (
-    <section id="roadmaps" className="py-20 px-6 bg-gradient-to-br from-black via-red-950 to-black">
+    <section id="roadmaps" className="py-20 px-6 bg-secondary">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-              Professional Learning Roadmaps
-            </span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
+            Professional Learning Roadmaps
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium">
+          <p className="text-xl text-secondary max-w-4xl mx-auto font-medium">
             Structured learning paths with detailed timelines, milestones, and daily schedules to master any tech domain
           </p>
         </div>
@@ -289,28 +210,28 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
               onClick={() => setActiveRoadmap(key)}
               className={`p-4 rounded-xl border-2 transition-all duration-300 transform hover:scale-105 ${
                 activeRoadmap === key
-                  ? 'border-red-500 bg-black/80 shadow-lg shadow-red-500/20'
-                  : 'border-red-500/30 bg-black/60 hover:border-red-400'
+                  ? 'border-accent bg-card shadow-md'
+                  : 'border-default bg-card hover:border-hover'
               }`}
             >
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${roadmap.color} flex items-center justify-center mx-auto mb-3`}>
-                <roadmap.icon className="h-6 w-6 text-white" />
+              <div className="w-12 h-12 rounded-lg bg-secondary border border-default flex items-center justify-center mx-auto mb-3">
+                <roadmap.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="font-bold text-white text-sm">{roadmap.title}</h3>
-              <p className="text-xs text-gray-400 mt-1">{roadmap.duration}</p>
+              <h3 className="font-bold text-primary text-sm">{roadmap.title}</h3>
+              <p className="text-xs text-secondary mt-1">{roadmap.duration}</p>
             </button>
           ))}
         </div>
 
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">
-          <div className="bg-black/80 backdrop-blur-sm border border-red-500/30 rounded-full p-2 shadow-lg">
+          <div className="bg-card border border-default rounded-full p-2 shadow-sm">
             <button
               onClick={() => setActiveTab('roadmap')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeTab === 'roadmap'
-                  ? 'bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg'
-                  : 'text-gray-300 hover:text-red-400'
+                  ? 'bg-accent text-accent-text shadow-sm'
+                  : 'text-secondary hover:text-primary'
               }`}
             >
               Roadmap
@@ -319,8 +240,8 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
               onClick={() => setActiveTab('timetable')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeTab === 'timetable'
-                  ? 'bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg'
-                  : 'text-gray-300 hover:text-red-400'
+                  ? 'bg-accent text-accent-text shadow-sm'
+                  : 'text-secondary hover:text-primary'
               }`}
             >
               Timetable
@@ -333,33 +254,33 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
           {activeTab === 'roadmap' && (
             <div className="space-y-8">
               {/* Roadmap Header */}
-              <div className="bg-black/80 backdrop-blur-sm border border-red-500/30 rounded-2xl p-8 shadow-xl">
-                <div className="flex items-center justify-between mb-6">
+              <div className="bg-card border border-default rounded-2xl p-8 shadow-sm">
+                <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
                   <div className="flex items-center space-x-4">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${currentRoadmap.color} flex items-center justify-center shadow-lg`}>
-                      <currentRoadmap.icon className="h-8 w-8 text-white" />
+                    <div className="w-16 h-16 rounded-xl bg-secondary border border-default flex items-center justify-center shadow-sm">
+                      <currentRoadmap.icon className="h-8 w-8 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-3xl font-bold text-white">{currentRoadmap.title}</h3>
-                      <p className="text-gray-400">Complete Learning Path</p>
+                      <h3 className="text-3xl font-bold text-primary">{currentRoadmap.title}</h3>
+                      <p className="text-secondary">Complete Learning Path</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="text-right">
                       <div className="flex items-center space-x-4 mb-2">
                         <div className="flex items-center space-x-2">
-                          <Clock className="h-5 w-5 text-red-400" />
-                          <span className="font-semibold text-white">{currentRoadmap.duration}</span>
+                          <Clock className="h-5 w-5 text-secondary" />
+                          <span className="font-semibold text-primary">{currentRoadmap.duration}</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <Target className="h-5 w-5 text-red-500" />
-                          <span className="font-semibold text-white">{currentRoadmap.difficulty}</span>
+                          <Target className="h-5 w-5 text-secondary" />
+                          <span className="font-semibold text-primary">{currentRoadmap.difficulty}</span>
                         </div>
                       </div>
                     </div>
                     <button
                       onClick={() => downloadRoadmap(activeRoadmap)}
-                      className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-6 py-3 rounded-full text-white font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 shadow-lg border border-red-500/50"
+                      className="bg-accent bg-accent-hover px-6 py-3 rounded-full text-accent-text font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 shadow-sm border-accent"
                     >
                       <Download className="h-4 w-4" />
                       <span>Download</span>
@@ -371,48 +292,48 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
               {/* Learning Phases */}
               <div className="space-y-6">
                 {currentRoadmap.phases.map((phase, index) => (
-                  <div key={index} className="bg-black/80 backdrop-blur-sm border border-red-500/30 rounded-2xl p-8 shadow-lg hover:shadow-xl hover:shadow-red-500/10 transition-all duration-300">
+                  <div key={index} className="bg-card border border-default rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
-                        <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${currentRoadmap.color} flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
+                        <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-accent-text font-bold text-lg shadow-sm">
                           {index + 1}
                         </div>
                       </div>
                       <div className="flex-1">
-                        <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-2xl font-bold text-white">{phase.phase}</h4>
-                          <div className="flex items-center space-x-2 bg-red-900/30 border border-red-500/50 px-4 py-2 rounded-full">
-                            <Calendar className="h-4 w-4 text-red-400" />
-                            <span className="text-red-200 font-semibold">{phase.duration}</span>
+                        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                          <h4 className="text-2xl font-bold text-primary">{phase.phase}</h4>
+                          <div className="flex items-center space-x-2 bg-secondary border border-default px-4 py-2 rounded-full">
+                            <Calendar className="h-4 w-4 text-secondary" />
+                            <span className="text-primary font-semibold">{phase.duration}</span>
                           </div>
                         </div>
-                        
+
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-semibold text-white mb-3 flex items-center">
-                              <BookOpen className="h-5 w-5 text-red-400 mr-2" />
+                            <h5 className="font-semibold text-primary mb-3 flex items-center">
+                              <BookOpen className="h-5 w-5 text-secondary mr-2" />
                               Topics to Cover
                             </h5>
                             <div className="space-y-2">
                               {phase.topics.map((topic, topicIndex) => (
                                 <div key={topicIndex} className="flex items-center space-x-2">
-                                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                                  <span className="text-gray-300">{topic}</span>
+                                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                                  <span className="text-secondary">{topic}</span>
                                 </div>
                               ))}
                             </div>
                           </div>
-                          
+
                           <div>
-                            <h5 className="font-semibold text-white mb-3 flex items-center">
-                              <Trophy className="h-5 w-5 text-red-500 mr-2" />
+                            <h5 className="font-semibold text-primary mb-3 flex items-center">
+                              <Trophy className="h-5 w-5 text-secondary mr-2" />
                               Key Milestones
                             </h5>
                             <div className="space-y-2">
                               {phase.milestones.map((milestone, milestoneIndex) => (
                                 <div key={milestoneIndex} className="flex items-center space-x-2">
-                                  <CheckCircle className="h-4 w-4 text-red-400" />
-                                  <span className="text-gray-300 text-sm">{milestone}</span>
+                                  <CheckCircle className="h-4 w-4 text-secondary" />
+                                  <span className="text-secondary text-sm">{milestone}</span>
                                 </div>
                               ))}
                             </div>
@@ -420,10 +341,10 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
                         </div>
                       </div>
                     </div>
-                    
+
                     {index < currentRoadmap.phases.length - 1 && (
                       <div className="flex justify-center mt-6">
-                        <ArrowRight className="h-6 w-6 text-red-400" />
+                        <ArrowRight className="h-6 w-6 text-secondary" />
                       </div>
                     )}
                   </div>
@@ -435,15 +356,15 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
           {activeTab === 'timetable' && (
             <div className="space-y-8">
               {/* Daily Schedule */}
-              <div className="bg-black/80 backdrop-blur-sm border border-red-500/30 rounded-2xl p-8 shadow-xl">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-white flex items-center">
-                    <Clock className="h-6 w-6 text-red-400 mr-3" />
+              <div className="bg-card border border-default rounded-2xl p-8 shadow-sm">
+                <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
+                  <h3 className="text-2xl font-bold text-primary flex items-center">
+                    <Clock className="h-6 w-6 text-secondary mr-3" />
                     Daily Study Schedule
                   </h3>
                   <button
                     onClick={() => downloadRoadmap(activeRoadmap)}
-                    className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-4 py-2 rounded-full text-white font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 shadow-lg text-sm border border-red-500/50"
+                    className="bg-accent bg-accent-hover px-4 py-2 rounded-full text-accent-text font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 shadow-sm text-sm border-accent"
                   >
                     <FileText className="h-4 w-4" />
                     <span>Export Schedule</span>
@@ -451,13 +372,13 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
                 </div>
                 <div className="space-y-3">
                   {currentRoadmap.timetable.daily.map((slot, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 bg-red-950/20 border border-red-500/20 rounded-lg hover:bg-red-950/30 transition-colors duration-300">
+                    <div key={index} className="flex items-center justify-between p-4 bg-secondary border border-default rounded-lg hover:bg-tertiary transition-colors duration-300 flex-wrap gap-2">
                       <div className="flex items-center space-x-4">
-                        <div className="w-24 text-sm font-semibold text-gray-300">
+                        <div className="w-24 text-sm font-semibold text-secondary">
                           {slot.time}
                         </div>
                         <div className="flex-1">
-                          <span className="text-white font-medium">{slot.activity}</span>
+                          <span className="text-primary font-medium">{slot.activity}</span>
                         </div>
                       </div>
                       <div className={`px-3 py-1 rounded-full text-xs font-semibold border ${getActivityTypeColor(slot.type)}`}>
@@ -469,62 +390,62 @@ ${roadmap.timetable.weekly.map(day => `${day.day}: ${day.focus}`).join('\n')}
               </div>
 
               {/* Weekly Focus */}
-              <div className="bg-black/80 backdrop-blur-sm border border-red-500/30 rounded-2xl p-8 shadow-xl">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Calendar className="h-6 w-6 text-red-500 mr-3" />
+              <div className="bg-card border border-default rounded-2xl p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-primary mb-6 flex items-center">
+                  <CalendarIcon className="h-6 w-6 text-secondary mr-3" />
                   Weekly Focus Areas
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {currentRoadmap.timetable.weekly.map((day, index) => (
-                    <div key={index} className="bg-gradient-to-br from-red-950/30 to-black/30 border border-red-500/30 rounded-xl p-6 hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300">
+                    <div key={index} className="bg-secondary border border-default rounded-xl p-6 hover:shadow-md transition-all duration-300">
                       <div className="flex items-center space-x-3 mb-3">
-                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${currentRoadmap.color} flex items-center justify-center text-white font-bold`}>
+                        <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-accent-text font-bold">
                           {day.day.charAt(0)}
                         </div>
-                        <h4 className="font-bold text-white">{day.day}</h4>
+                        <h4 className="font-bold text-primary">{day.day}</h4>
                       </div>
-                      <p className="text-gray-300 text-sm">{day.focus}</p>
+                      <p className="text-secondary text-sm">{day.focus}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Study Tips */}
-              <div className="bg-gradient-to-r from-red-950/50 to-black/50 border border-red-500/30 rounded-2xl p-8 shadow-xl backdrop-blur-sm">
-                <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
-                  <Star className="h-6 w-6 text-red-400 mr-3" />
+              <div className="bg-card border border-default rounded-2xl p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-primary mb-4 flex items-center">
+                  <Star className="h-6 w-6 text-secondary mr-3" />
                   Pro Study Tips
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
-                      <Play className="h-5 w-5 text-red-400 mt-1" />
+                      <Play className="h-5 w-5 text-secondary mt-1" />
                       <div>
-                        <h4 className="font-semibold text-white">Consistency is Key</h4>
-                        <p className="text-gray-300 text-sm">Follow the schedule daily, even if for shorter durations</p>
+                        <h4 className="font-semibold text-primary">Consistency is Key</h4>
+                        <p className="text-secondary text-sm">Follow the schedule daily, even if for shorter durations</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <Play className="h-5 w-5 text-red-400 mt-1" />
+                      <Play className="h-5 w-5 text-secondary mt-1" />
                       <div>
-                        <h4 className="font-semibold text-white">Active Learning</h4>
-                        <p className="text-gray-300 text-sm">Practice coding/problems daily, don't just read theory</p>
+                        <h4 className="font-semibold text-primary">Active Learning</h4>
+                        <p className="text-secondary text-sm">Practice coding/problems daily, don't just read theory</p>
                       </div>
                     </div>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
-                      <Play className="h-5 w-5 text-red-400 mt-1" />
+                      <Play className="h-5 w-5 text-secondary mt-1" />
                       <div>
-                        <h4 className="font-semibold text-white">Track Progress</h4>
-                        <p className="text-gray-300 text-sm">Maintain a learning journal and celebrate milestones</p>
+                        <h4 className="font-semibold text-primary">Track Progress</h4>
+                        <p className="text-secondary text-sm">Maintain a learning journal and celebrate milestones</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <Play className="h-5 w-5 text-red-400 mt-1" />
+                      <Play className="h-5 w-5 text-secondary mt-1" />
                       <div>
-                        <h4 className="font-semibold text-white">Stay Flexible</h4>
-                        <p className="text-gray-300 text-sm">Adjust the schedule based on your learning pace</p>
+                        <h4 className="font-semibold text-primary">Stay Flexible</h4>
+                        <p className="text-secondary text-sm">Adjust the schedule based on your learning pace</p>
                       </div>
                     </div>
                   </div>

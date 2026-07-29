@@ -15,7 +15,7 @@ const UserProfile: React.FC<UserProfileProps> = ({ onAuthClick }) => {
     return (
       <button
         onClick={onAuthClick}
-        className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors font-semibold border border-red-500/50"
+        className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-accent bg-accent-hover text-accent-text transition-colors font-semibold border-accent"
       >
         <LogIn className="h-5 w-5" />
         <span>Sign In</span>
@@ -39,9 +39,9 @@ const UserProfile: React.FC<UserProfileProps> = ({ onAuthClick }) => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-red-600/20 hover:bg-red-600/30 text-white transition-colors border border-red-500/50"
+        className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-secondary hover:bg-tertiary text-primary transition-colors border border-default"
       >
-        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+        <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
           {userProfile.avatar_url ? (
             <img
               src={userProfile.avatar_url}
@@ -49,17 +49,17 @@ const UserProfile: React.FC<UserProfileProps> = ({ onAuthClick }) => {
               className="w-full h-full rounded-full object-cover"
             />
           ) : (
-            <User className="h-4 w-4" />
+            <User className="h-4 w-4 text-accent-text" />
           )}
         </div>
         <span className="hidden sm:inline text-sm font-medium">{userProfile.name || 'User'}</span>
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-64 bg-black/95 border border-red-500/30 rounded-lg shadow-2xl z-50 backdrop-blur-sm">
+        <div className="absolute right-0 mt-2 w-64 bg-card border border-default rounded-lg shadow-xl z-50">
           <div className="p-4">
-            <div className="flex items-center space-x-3 pb-4 border-b border-red-500/20">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+            <div className="flex items-center space-x-3 pb-4 border-b border-default">
+              <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
                 {userProfile.avatar_url ? (
                   <img
                     src={userProfile.avatar_url}
@@ -67,33 +67,33 @@ const UserProfile: React.FC<UserProfileProps> = ({ onAuthClick }) => {
                     className="w-full h-full rounded-full object-cover"
                   />
                 ) : (
-                  <User className="h-6 w-6" />
+                  <User className="h-6 w-6 text-accent-text" />
                 )}
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-semibold text-white truncate">{userProfile.name || 'User'}</p>
-                <p className="text-xs text-gray-400 truncate">{userProfile.email}</p>
+                <p className="font-semibold text-primary truncate">{userProfile.name || 'User'}</p>
+                <p className="text-xs text-secondary truncate">{userProfile.email}</p>
               </div>
             </div>
 
-            <div className="space-y-3 py-4 border-b border-red-500/20">
-              <div className="flex items-center space-x-2 text-sm text-gray-300">
-                <Mail className="h-4 w-4 text-red-400" />
+            <div className="space-y-3 py-4 border-b border-default">
+              <div className="flex items-center space-x-2 text-sm text-secondary">
+                <Mail className="h-4 w-4 text-secondary" />
                 <span className="truncate">{userProfile.email}</span>
               </div>
-              <div className="text-xs text-gray-400">
-                Logged in with <span className="capitalize font-semibold text-red-400">{userProfile.provider}</span>
+              <div className="text-xs text-secondary">
+                Logged in with <span className="capitalize font-semibold text-primary">{userProfile.provider}</span>
               </div>
             </div>
 
             <button
               onClick={handleSignOut}
               disabled={isLoading}
-              className="w-full mt-4 flex items-center justify-center space-x-2 px-4 py-2 bg-red-600/20 hover:bg-red-600/30 disabled:bg-gray-600/20 text-red-400 hover:text-red-300 disabled:text-gray-400 transition-colors rounded-lg border border-red-500/50 disabled:border-gray-500/50 disabled:cursor-not-allowed font-medium text-sm"
+              className="w-full mt-4 flex items-center justify-center space-x-2 px-4 py-2 bg-secondary hover:bg-tertiary disabled:opacity-50 text-primary transition-colors rounded-lg border border-default font-medium text-sm"
             >
               {isLoading ? (
                 <>
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-red-400"></div>
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
                   <span>Signing out...</span>
                 </>
               ) : (

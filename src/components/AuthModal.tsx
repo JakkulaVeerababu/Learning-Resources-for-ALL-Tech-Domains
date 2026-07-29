@@ -101,32 +101,32 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-black/90 border border-red-500/30 rounded-2xl shadow-2xl w-full max-w-md relative backdrop-blur-sm">
+      <div className="bg-card border border-default rounded-2xl shadow-xl w-full max-w-md relative">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-red-400 transition-colors"
+          className="absolute top-4 right-4 text-secondary hover:text-primary transition-colors"
         >
           <X className="h-6 w-6" />
         </button>
 
         <div className="p-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">
-              {isLogin ? 'Welcome Back!' : 'Join Us Today!'}
+            <h2 className="text-3xl font-bold text-primary mb-2">
+              {isLogin ? 'Welcome Back' : 'Join Us Today'}
             </h2>
-            <p className="text-gray-400">
+            <p className="text-secondary">
               {isLogin ? 'Sign in to access premium features' : 'Create your account to get started'}
             </p>
           </div>
 
           {successMessage && (
-            <div className="mb-6 p-4 bg-green-950/50 border border-green-500/50 rounded-lg text-green-400 text-sm">
+            <div className="mb-6 p-4 bg-secondary border border-default rounded-lg text-primary text-sm">
               {successMessage}
             </div>
           )}
 
           {errors.form && (
-            <div className="mb-6 flex items-center space-x-2 p-4 bg-red-950/50 border border-red-500/50 rounded-lg text-red-400 text-sm">
+            <div className="mb-6 flex items-center space-x-2 p-4 bg-secondary border border-default rounded-lg text-primary text-sm">
               <AlertCircle className="h-4 w-4 flex-shrink-0" />
               <span>{errors.form}</span>
             </div>
@@ -136,7 +136,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             <button
               onClick={() => handleSocialLogin('google')}
               disabled={isLoading}
-              className="w-full flex items-center justify-center space-x-3 bg-red-600 hover:bg-red-700 disabled:bg-gray-600 text-white py-3 rounded-lg transition-colors font-semibold border border-red-500/50 disabled:cursor-not-allowed"
+              className="w-full flex items-center justify-center space-x-3 bg-accent bg-accent-hover disabled:opacity-50 text-accent-text py-3 rounded-lg transition-colors font-semibold border-accent disabled:cursor-not-allowed"
             >
               {isLoading ? <Loader className="h-5 w-5 animate-spin" /> : <Mail className="h-5 w-5" />}
               <span>Continue with Google</span>
@@ -145,7 +145,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             <button
               onClick={() => handleSocialLogin('github')}
               disabled={isLoading}
-              className="w-full flex items-center justify-center space-x-3 bg-gray-800 hover:bg-gray-900 disabled:bg-gray-600 text-white py-3 rounded-lg transition-colors font-semibold border border-gray-600/50 disabled:cursor-not-allowed"
+              className="w-full flex items-center justify-center space-x-3 bg-secondary hover:bg-tertiary disabled:opacity-50 text-primary py-3 rounded-lg transition-colors font-semibold border border-default disabled:cursor-not-allowed"
             >
               {isLoading ? <Loader className="h-5 w-5 animate-spin" /> : <Github className="h-5 w-5" />}
               <span>Continue with GitHub</span>
@@ -155,7 +155,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
               <button
                 onClick={() => handleSocialLogin('linkedin')}
                 disabled={isLoading}
-                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white py-3 rounded-lg transition-colors border border-blue-500/50 disabled:cursor-not-allowed font-semibold"
+                className="flex items-center justify-center gap-2 bg-secondary hover:bg-tertiary disabled:opacity-50 text-primary py-3 rounded-lg transition-colors border border-default disabled:cursor-not-allowed font-semibold"
               >
                 {isLoading ? <Loader className="h-5 w-5 animate-spin" /> : <Linkedin className="h-5 w-5" />}
                 <span className="hidden sm:inline text-sm">LinkedIn</span>
@@ -164,7 +164,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
               <button
                 onClick={() => handleSocialLogin('facebook')}
                 disabled={isLoading}
-                className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-600 text-white py-3 rounded-lg transition-colors border border-blue-400/50 disabled:cursor-not-allowed font-semibold"
+                className="flex items-center justify-center gap-2 bg-secondary hover:bg-tertiary disabled:opacity-50 text-primary py-3 rounded-lg transition-colors border border-default disabled:cursor-not-allowed font-semibold"
               >
                 {isLoading ? <Loader className="h-5 w-5 animate-spin" /> : <Facebook className="h-5 w-5" />}
                 <span className="hidden sm:inline text-sm">Facebook</span>
@@ -174,14 +174,13 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
           <div className="relative mb-6">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-red-500/30"></div>
+              <div className="w-full border-t border-default"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-black text-gray-400">Or continue with email</span>
+              <span className="px-2 bg-card text-secondary">Or continue with email</span>
             </div>
           </div>
 
-          {/* Email Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             {!isLogin && (
               <div>
@@ -191,11 +190,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Full Name"
-                  className={`w-full px-4 py-3 bg-red-950/30 border rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-red-500/20 focus:border-red-500 transition-all ${errors.name ? 'border-red-500' : 'border-red-500/50'
-                    }`}
+                  className={`w-full px-4 py-3 bg-input border rounded-lg text-primary placeholder:text-tertiary focus:outline-none focus:border-hover transition-all ${errors.name ? 'border-primary' : 'border-default'}`}
                 />
                 {errors.name && (
-                  <div className="flex items-center mt-1 text-red-400 text-sm">
+                  <div className="flex items-center mt-1 text-primary text-sm">
                     <AlertCircle className="h-4 w-4 mr-1" />
                     {errors.name}
                   </div>
@@ -210,11 +208,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="Email Address"
-                className={`w-full px-4 py-3 bg-red-950/30 border rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-red-500/20 focus:border-red-500 transition-all ${errors.email ? 'border-red-500' : 'border-red-500/50'
-                  }`}
+                className={`w-full px-4 py-3 bg-input border rounded-lg text-primary placeholder:text-tertiary focus:outline-none focus:border-hover transition-all ${errors.email ? 'border-primary' : 'border-default'}`}
               />
               {errors.email && (
-                <div className="flex items-center mt-1 text-red-400 text-sm">
+                <div className="flex items-center mt-1 text-primary text-sm">
                   <AlertCircle className="h-4 w-4 mr-1" />
                   {errors.email}
                 </div>
@@ -228,18 +225,17 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 value={formData.password}
                 onChange={handleInputChange}
                 placeholder="Password"
-                className={`w-full px-4 py-3 bg-red-950/30 border rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-red-500/20 focus:border-red-500 transition-all pr-12 ${errors.password ? 'border-red-500' : 'border-red-500/50'
-                  }`}
+                className={`w-full px-4 py-3 bg-input border rounded-lg text-primary placeholder:text-tertiary focus:outline-none focus:border-hover transition-all pr-12 ${errors.password ? 'border-primary' : 'border-default'}`}
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-red-400"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-secondary hover:text-primary"
               >
                 {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
               </button>
               {errors.password && (
-                <div className="flex items-center mt-1 text-red-400 text-sm">
+                <div className="flex items-center mt-1 text-primary text-sm">
                   <AlertCircle className="h-4 w-4 mr-1" />
                   {errors.password}
                 </div>
@@ -254,11 +250,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
                   placeholder="Confirm Password"
-                  className={`w-full px-4 py-3 bg-red-950/30 border rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-red-500/20 focus:border-red-500 transition-all ${errors.confirmPassword ? 'border-red-500' : 'border-red-500/50'
-                    }`}
+                  className={`w-full px-4 py-3 bg-input border rounded-lg text-primary placeholder:text-tertiary focus:outline-none focus:border-hover transition-all ${errors.confirmPassword ? 'border-primary' : 'border-default'}`}
                 />
                 {errors.confirmPassword && (
-                  <div className="flex items-center mt-1 text-red-400 text-sm">
+                  <div className="flex items-center mt-1 text-primary text-sm">
                     <AlertCircle className="h-4 w-4 mr-1" />
                     {errors.confirmPassword}
                   </div>
@@ -269,7 +264,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 disabled:from-gray-600 disabled:to-gray-700 text-white py-3 rounded-lg font-semibold transition-all disabled:cursor-not-allowed flex items-center justify-center space-x-2 border border-red-500/50"
+              className="w-full bg-accent bg-accent-hover disabled:opacity-50 text-accent-text py-3 rounded-lg font-semibold transition-all disabled:cursor-not-allowed flex items-center justify-center space-x-2 border-accent"
             >
               {isLoading ? (
                 <>
@@ -288,7 +283,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 setIsLogin(!isLogin);
                 setErrors({});
               }}
-              className="text-red-400 hover:text-red-300 font-medium"
+              className="text-primary hover:text-secondary font-medium"
             >
               {isLogin ? "Don't have an account? Sign up" : "Already have an account? Sign in"}
             </button>

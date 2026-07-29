@@ -19,56 +19,36 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-black via-red-950 to-black py-16 border-t border-red-500/30">
+    <footer className="bg-primary border-t border-default py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center">
-                <GraduationCap className="h-6 w-6 text-white" />
+              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                <GraduationCap className="h-6 w-6 text-accent-text" />
               </div>
               <div>
-                <h3 className="text-xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                <h3 className="text-xl font-bold text-primary">
                   Tech Learning Hub
                 </h3>
-                <p className="text-xs text-gray-400">Free Resources Forever</p>
+                <p className="text-xs text-secondary">Free Resources Forever</p>
               </div>
             </div>
-            <p className="text-gray-300 text-sm">
+            <p className="text-secondary text-sm">
               Your one-stop destination for free GATE preparation materials, programming resources, and engineering study guides.
             </p>
             <div className="flex space-x-4">
-              <a
-                href="https://github.com/JakkulaVeerababu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-              >
+              <a href="https://github.com/JakkulaVeerababu" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors duration-300">
                 <Github className="h-5 w-5" />
               </a>
-              <a
-                href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-red-400 transition-colors duration-300"
-              >
+              <a href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors duration-300">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
-              >
+              <a href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors duration-300">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a
-                href="https://wa.me/918008651769"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-green-400 transition-colors duration-300"
-              >
+              <a href="https://wa.me/918008651769" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors duration-300">
                 <Phone className="h-5 w-5" />
               </a>
             </div>
@@ -76,16 +56,11 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Popular Resources</h4>
+            <h4 className="text-lg font-semibold text-primary mb-4">Popular Resources</h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-red-400 transition-colors duration-300 text-sm flex items-center space-x-1"
-                  >
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors duration-300 text-sm flex items-center space-x-1">
                     <span>{link.name}</span>
                     <ExternalLink className="h-3 w-3" />
                   </a>
@@ -96,16 +71,11 @@ const Footer = () => {
 
           {/* Subjects */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Core Subjects</h4>
+            <h4 className="text-lg font-semibold text-primary mb-4">Core Subjects</h4>
             <ul className="space-y-2">
               {subjects.map((subject, index) => (
                 <li key={index}>
-                  <a 
-                    href={subject.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-red-400 transition-colors duration-300 text-sm flex items-center space-x-1"
-                  >
+                  <a href={subject.href} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors duration-300 text-sm flex items-center space-x-1">
                     <span>{subject.name}</span>
                     <ExternalLink className="h-3 w-3" />
                   </a>
@@ -116,56 +86,31 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Get Help</h4>
+            <h4 className="text-lg font-semibold text-primary mb-4">Get Help</h4>
             <div className="space-y-3">
-              <a
-                href="https://github.com/JakkulaVeerababu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 text-sm"
-              >
+              <a href="https://github.com/JakkulaVeerababu" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-secondary hover:text-primary transition-colors duration-300 text-sm">
                 <Github className="h-4 w-4" />
                 <span>GitHub</span>
               </a>
-              <a
-                href="https://leetcode.com/u/veerababu9z/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 transition-colors duration-300 text-sm"
-              >
+              <a href="https://leetcode.com/u/veerababu9z/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-secondary hover:text-primary transition-colors duration-300 text-sm">
                 <Code className="h-4 w-4" />
                 <span>LeetCode</span>
               </a>
-              <a
-                href="https://wa.me/918008651769"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm"
-              >
+              <a href="https://wa.me/918008651769" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-secondary hover:text-primary transition-colors duration-300 text-sm">
                 <Phone className="h-4 w-4" />
                 <span>+91 8008651769</span>
               </a>
-              <a
-                href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-300 hover:text-red-400 transition-colors duration-300 text-sm"
-              >
+              <a href="https://www.instagram.com/thflashz?igsh=MTUxeTF6czd5bmE1Mw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-secondary hover:text-primary transition-colors duration-300 text-sm">
                 <Instagram className="h-4 w-4" />
                 <span>@thflashz</span>
               </a>
-              <a
-                href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
-              >
+              <a href="https://www.linkedin.com/in/veerababu9z?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-secondary hover:text-primary transition-colors duration-300 text-sm">
                 <Linkedin className="h-4 w-4" />
                 <span>LinkedIn</span>
               </a>
             </div>
-            <div className="mt-4 p-3 bg-red-950/30 border border-red-500/30 rounded-lg">
-              <p className="text-red-300 text-xs">
+            <div className="mt-4 p-3 bg-secondary border border-default rounded-lg">
+              <p className="text-secondary text-xs">
                 Need personal guidance? Contact us for syllabus help, doubt clearing, and career advice.
               </p>
             </div>
@@ -173,20 +118,20 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-red-500/30 pt-8">
+        <div className="border-t border-default pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2 text-gray-300 text-sm">
+            <div className="flex items-center space-x-2 text-secondary text-sm">
               <span>Made with</span>
-              <Heart className="h-4 w-4 text-red-400 animate-pulse" />
+              <Heart className="h-4 w-4 text-primary" />
               <span>for students by a student</span>
             </div>
-            <div className="text-gray-400 text-sm">
+            <div className="text-secondary text-sm">
               © {currentYear} Tech Learning Hub. All resources are free forever.
             </div>
           </div>
-          
+
           <div className="mt-4 text-center">
-            <p className="text-gray-400 text-xs">
+            <p className="text-tertiary text-xs">
               This website is under active development. More features and resources coming soon.
             </p>
           </div>

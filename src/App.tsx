@@ -1,4 +1,5 @@
 import { AuthProvider } from './contexts/AuthContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ResourcesSection from './components/ResourcesSection';
@@ -10,22 +11,24 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <AuthProvider>
-      <div className="min-h-screen bg-black relative overflow-x-hidden">
-        <Header />
+    <ThemeProvider>
+      <AuthProvider>
+        <div className="min-h-screen bg-primary text-primary relative overflow-x-hidden">
+          <Header />
 
-        <main className="relative z-10">
-          <Hero />
-          <ResourcesSection />
-          <CompilerSection />
-          <RoadmapsSection />
-          <FeedbackSection />
-          <ContactSection />
-        </main>
+          <main className="relative z-10">
+            <Hero />
+            <ResourcesSection />
+            <CompilerSection />
+            <RoadmapsSection />
+            <FeedbackSection />
+            <ContactSection />
+          </main>
 
-        <Footer />
-      </div>
-    </AuthProvider>
+          <Footer />
+        </div>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 
